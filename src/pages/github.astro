@@ -1,0 +1,715 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+import GradientDivider from "../components/GradientDivider.astro";
+---
+
+<DocsLayout
+  title="GitHub Community"
+  description="Report bugs, request features, and join community discussions for every Vox app."
+>
+  <main class="github-page">
+    <section class="hero">
+      <p class="eyebrow">Vox Apps on GitHub</p>
+      <h1 class="hero-title">
+        Report bugs, share ideas, and join the discussion.
+      </h1>
+      <p class="hero-text">
+        GitHub is the shared community hub for reporting problems, suggesting
+        improvements, asking questions, and helping shape the future of every
+        app in the Voxiverse.
+      </p>
+
+      <div class="hero-actions" aria-label="GitHub page shortcuts">
+        <a class="primary-button raised-button" href="#bug-reports">
+          Report a Bug
+        </a>
+        <a class="secondary-button raised-button" href="#discussions">
+          Browse Discussions
+        </a>
+      </div>
+
+      <GradientDivider />
+    </section>
+
+    <section
+      class="content-section"
+      id="bug-reports"
+      aria-labelledby="bug-reports-title"
+    >
+      <div class="section-copy">
+        <p class="eyebrow">Bug Reports</p>
+        <h2 id="bug-reports-title">Report a problem with an app</h2>
+        <p>
+          Each Vox app has its own dedicated bug-report issue on GitHub. Use the
+          menu below to choose the app experiencing the problem, then leave a
+          comment on that app’s bug-report issue with the details of what went
+          wrong.
+        </p>
+        <p>
+          Please describe what happened, what you expected to happen, and the
+          steps that caused the issue. Include your device model, iOS or iPadOS
+          version, app version or TestFlight build number, and screenshots or a
+          screen recording whenever possible.
+        </p>
+        <p>
+          You do not need to create a completely separate issue. Open the
+          correct bug-report page from the dropdown and submit your report as a
+          comment or sub-issue beneath the existing post. This keeps reports
+          organized by app and makes related problems easier to find.
+        </p>
+      </div>
+
+      <details class="app-dropdown">
+        <summary>
+          <span>
+            <span class="dropdown-label">Choose an app</span>
+            <span class="dropdown-description">
+              Open its dedicated bug-report issue
+            </span>
+          </span>
+          <span class="dropdown-chevron" aria-hidden="true">
+            <img src="/img/icons/down.svg" alt="" loading="lazy" />
+          </span>
+        </summary>
+
+        <div class="dropdown-menu">
+          <a
+            href="https://github.com/asteriasmoons/lunixia/issues/1#issue-4928984611"
+            class="app-link"
+          >
+            <span>Lunixia</span>
+            <span>Health, mood, and journaling</span>
+          </a>
+
+          <a
+            href="https://github.com/asteriasmoons/lunessa/issues/1#issue-4929164312"
+            class="app-link"
+          >
+            <span>Lunelia</span>
+            <span>Home management and cleaning</span>
+          </a>
+
+          <a
+            href="https://github.com/asteriasmoons/lurelia/issues/1#issue-4928894244"
+            class="app-link"
+          >
+            <span>Lurelia</span>
+            <span>Habits and reminders</span>
+          </a>
+
+          <a
+            href="https://github.com/asteriasmoons/loomey/issues/1#issue-4929068249"
+            class="app-link"
+          >
+            <span>Loomey</span>
+            <span>Reading companion</span>
+          </a>
+
+          <a
+            href="https://github.com/asteriasmoons/Seery/issues/1#issue-4929100436"
+            class="app-link"
+          >
+            <span>Seery</span>
+            <span>TV series tracking</span>
+          </a>
+
+          <a
+            href="https://github.com/asteriasmoons/Octavia/issues/1#issue-4949424625"
+            class="app-link"
+          >
+            <span>Octavia</span>
+            <span>Music library and playback</span>
+          </a>
+
+          <a
+            href="https://github.com/asteriasmoons/VoxTerm/issues/1#issue-4929017973"
+            class="app-link"
+          >
+            <span>VoxTerm</span>
+            <span>Terminal and developer tools</span>
+          </a>
+
+          <a
+            href="https://github.com/asteriasmoons/Asterium/issues/1#issue-4928936670"
+            class="app-link"
+          >
+            <span>Asterium</span>
+            <span>Digital grimoire</span>
+          </a>
+        </div>
+      </details>
+    </section>
+
+    <GradientDivider />
+
+    <section
+      class="content-section discussion-section"
+      id="discussions"
+      aria-labelledby="discussions-title"
+    >
+      <div class="section-copy">
+        <p class="eyebrow">Community Discussions</p>
+        <h2 id="discussions-title">Join a shared discussion thread</h2>
+        <p>
+          All discussion threads for every Vox app are hosted together inside
+          the Vox Apps website repository rather than being separated across
+          each individual app repository. This creates one central place for
+          community conversations, feedback, questions, feature planning, and
+          app ideas.
+        </p>
+        <p>
+          You are welcome to join any or all of the discussions below. Choose
+          the thread that best matches what you want to talk about, then click
+          its button to open the corresponding GitHub Discussion.
+        </p>
+      </div>
+
+      <div class="discussion-grid" aria-label="GitHub discussion links">
+        <a
+          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/1#discussion-10464071"
+          class="discussion-button featured-discussion"
+        >
+          <span class="discussion-kicker">All Vox Apps</span>
+          <strong>Features &amp; Enhancements</strong>
+          <span>Suggest improvements or additions to existing features.</span>
+        </a>
+
+        <a
+          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/2#discussion-10464092"
+          class="discussion-button featured-discussion"
+        >
+          <span class="discussion-kicker">Website &amp; Guides</span>
+          <strong>Documentation Votes</strong>
+          <span>Vote on which documentation should be written next.</span>
+        </a>
+
+        <a
+          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/3#discussion-10464108"
+          class="discussion-button featured-discussion"
+        >
+          <span class="discussion-kicker">Community Help</span>
+          <strong>General Questions</strong>
+          <span>Ask questions about the apps, website, or ecosystem.</span>
+        </a>
+
+        <a
+          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/4#discussion-10464117"
+          class="discussion-button"
+        >
+          <span class="discussion-kicker">Reading</span>
+          <strong>Ideas for Loomey</strong>
+          <span>Share ideas for the reading companion experience.</span>
+        </a>
+
+        <a
+          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/5#discussion-10464132"
+          class="discussion-button"
+        >
+          <span class="discussion-kicker">Wellness</span>
+          <strong>Ideas for Lunixia</strong>
+          <span>Suggest ideas for journaling, mood, and health features.</span>
+        </a>
+
+        <a
+          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/6#discussion-10464140"
+          class="discussion-button"
+        >
+          <span class="discussion-kicker">Habits &amp; Reminders</span>
+          <strong>Ideas for Lurelia</strong>
+          <span>Share ways to improve habits and reminder tools.</span>
+        </a>
+
+        <a
+          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/7#discussion-10464147"
+          class="discussion-button"
+        >
+          <span class="discussion-kicker">Home Management</span>
+          <strong>Ideas for Lunelia</strong>
+          <span>Suggest cleaning and household management features.</span>
+        </a>
+
+        <a
+          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/9#discussion-10464158"
+          class="discussion-button"
+        >
+          <span class="discussion-kicker">Development</span>
+          <strong>Ideas for VoxTerm</strong>
+          <span>Suggest terminal, host, session, and project features.</span>
+        </a>
+
+        <a
+          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/10#discussion-10464162"
+          class="discussion-button"
+        >
+          <span class="discussion-kicker">Entertainment</span>
+          <strong>Ideas for Seery</strong>
+          <span>Share ideas for tracking and discovering TV series.</span>
+        </a>
+
+        <a
+          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/12#discussion-10476315"
+          class="discussion-button"
+        >
+          <span class="discussion-kicker">Music</span>
+          <strong>Ideas for Octavia</strong>
+          <span>Share ideas for importing, organizing, and playing music.</span>
+        </a>
+
+        <a
+          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/11#discussion-10464166"
+          class="discussion-button"
+        >
+          <span class="discussion-kicker">Mysticism</span>
+          <strong>Ideas for Asterium</strong>
+          <span>Suggest ideas for the grimoire and generated content.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="footer-note" aria-label="GitHub participation note">
+      <h2>Your feedback helps shape what comes next.</h2>
+      <p>
+        Whether you found a small visual problem, have a question, or imagined
+        an entirely new feature, your contribution is welcome. Thank you for
+        helping improve the Voxiverse.
+      </p>
+    </section>
+  </main>
+</DocsLayout>
+
+<style>
+  .github-page {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0 5rem;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    padding: 1rem 0 2rem;
+  }
+
+  .eyebrow {
+    margin-bottom: 1rem;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+  }
+
+  .hero-title {
+    max-width: 820px;
+    margin-bottom: 1rem;
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-text {
+    max-width: 760px;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-bottom: 2rem;
+  }
+
+  .primary-button,
+  .secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    color: #ffffff;
+    text-decoration: none;
+    transition:
+      transform 0.18s ease,
+      border-color 0.18s ease,
+      background 0.18s ease;
+  }
+
+  .primary-button {
+    background: linear-gradient(135deg, #03dbfc, #7d19f7);
+  }
+
+  .secondary-button {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
+  .primary-button:hover,
+  .secondary-button:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.28);
+  }
+
+  .content-section {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+    padding: 2rem 0 3rem;
+  }
+
+  #bug-reports {
+    padding-bottom: 0.85rem;
+  }
+
+  .github-page > #bug-reports + :global(.gradient-divider) {
+    margin-top: 0.9rem;
+  }
+
+  .section-copy {
+    max-width: 820px;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-copy h2,
+  .footer-note h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.7rem, 3vw, 2.45rem);
+    line-height: 1.12;
+  }
+
+  .section-copy p {
+    max-width: 800px;
+  }
+
+  .app-dropdown {
+    position: relative;
+    width: min(100%, 780px);
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    background:
+      linear-gradient(145deg, rgba(4, 7, 17, 0.95), rgba(9, 7, 20, 0.96))
+        padding-box,
+      linear-gradient(
+        135deg,
+        rgba(100, 83, 255, 0.95),
+        rgba(3, 219, 252, 0.82) 48%,
+        rgba(224, 25, 212, 0.72)
+      )
+        border-box;
+    box-shadow:
+      0 24px 70px rgba(0, 0, 0, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    overflow: hidden;
+  }
+
+  .app-dropdown > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 82px;
+    margin: 0;
+    padding: 1.15rem 1.25rem;
+    border-radius: 23px;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(100, 83, 255, 0.93),
+        rgba(3, 219, 252, 0.78) 68%,
+        rgba(224, 25, 212, 0.48)
+      ),
+      rgba(255, 255, 255, 0.035);
+    color: #ffffff;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    list-style: none;
+    user-select: none;
+  }
+
+  .app-dropdown[open] > summary {
+    border-radius: 23px 23px 0 0;
+  }
+
+  .app-dropdown > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .app-dropdown > summary::marker {
+    display: none;
+    content: "";
+  }
+
+  .app-dropdown > summary::after {
+    display: none;
+    content: none;
+    background: none;
+  }
+
+  .dropdown-label,
+  .dropdown-description {
+    display: block;
+  }
+
+  .dropdown-label {
+    margin-bottom: 0.25rem;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #ffffff;
+  }
+
+  .dropdown-description {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+  }
+
+  .dropdown-chevron {
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    width: 38px;
+    height: 38px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+  }
+
+  .dropdown-chevron img {
+    display: block;
+    width: 26px;
+    height: 26px;
+  }
+
+  .app-dropdown[open] .dropdown-chevron {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+    padding: 1rem;
+    border-top: 0;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(3, 219, 252, 0.08),
+        rgba(125, 25, 247, 0.07) 55%,
+        rgba(224, 25, 212, 0.05)
+      ),
+      rgba(0, 0, 0, 0.45);
+    color: inherit;
+  }
+
+  .app-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid transparent;
+    border-radius: 17px;
+    background:
+      linear-gradient(145deg, rgba(14, 17, 30, 0.94), rgba(13, 9, 21, 0.96))
+        padding-box,
+      linear-gradient(
+        135deg,
+        rgba(100, 83, 255, 0.62),
+        rgba(3, 219, 252, 0.4) 50%,
+        rgba(224, 25, 212, 0.5)
+      )
+        border-box;
+    color: #ffffff;
+    text-decoration: none;
+    transition:
+      transform 0.18s ease,
+      background 0.18s ease;
+  }
+
+  .app-link span:first-child {
+    font-weight: 800;
+  }
+
+  .app-link span:last-child {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+  }
+
+  .app-link:hover {
+    transform: translateY(-2px);
+    background:
+      linear-gradient(145deg, rgba(3, 219, 252, 0.14), rgba(125, 25, 247, 0.13))
+        padding-box,
+      linear-gradient(
+        135deg,
+        rgba(3, 219, 252, 0.9),
+        rgba(100, 83, 255, 0.76),
+        rgba(224, 25, 212, 0.72)
+      )
+        border-box;
+  }
+
+  .discussion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .discussion-button {
+    display: flex;
+    flex-direction: column;
+    min-height: 190px;
+    padding: 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.015)
+    );
+    color: inherit;
+    text-decoration: none;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    transition:
+      transform 0.18s ease,
+      border-color 0.18s ease,
+      background 0.18s ease;
+  }
+
+  .discussion-button:hover {
+    transform: translateY(-3px);
+    border-color: rgba(125, 25, 247, 0.32);
+    background: linear-gradient(
+      145deg,
+      rgba(125, 25, 247, 0.1),
+      rgba(3, 219, 252, 0.055)
+    );
+  }
+
+  .featured-discussion {
+    background: linear-gradient(
+      145deg,
+      rgba(3, 219, 252, 0.09),
+      rgba(125, 25, 247, 0.12),
+      rgba(224, 25, 212, 0.07)
+    );
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
+  .discussion-kicker {
+    margin-bottom: 0.85rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+  }
+
+  .discussion-button strong {
+    margin-bottom: 0.65rem;
+    font-size: 1.08rem;
+    color: #ffffff;
+  }
+
+  .discussion-button span:last-child {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+  }
+
+  .footer-note {
+    width: min(100%, 1100px);
+    margin: 2rem auto 0;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 24px;
+    background: linear-gradient(
+      145deg,
+      rgba(125, 25, 247, 0.08),
+      rgba(3, 219, 252, 0.04)
+    );
+  }
+
+  .footer-note p {
+    max-width: 760px;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 900px) {
+    .discussion-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 680px) {
+    .github-page {
+      padding: 0.75rem 0 4rem;
+    }
+
+    .hero {
+      padding: 0.75rem 0 1rem;
+    }
+
+    .hero-text {
+      font-size: 1rem;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .primary-button,
+    .secondary-button {
+      width: 100%;
+    }
+
+    .content-section {
+      padding: 1.5rem 0 2.5rem;
+    }
+
+    .app-dropdown {
+      border-radius: 20px;
+    }
+
+    .app-dropdown > summary {
+      border-radius: 19px;
+      padding: 1rem 1.1rem;
+    }
+
+    .app-dropdown[open] > summary {
+      border-radius: 19px 19px 0 0;
+    }
+
+    .dropdown-menu,
+    .discussion-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .dropdown-menu {
+      gap: 0.85rem;
+      padding: 0.9rem;
+    }
+
+    .discussion-button {
+      min-height: 0;
+    }
+
+    .footer-note {
+      padding: 1.35rem;
+      border-radius: 20px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .primary-button,
+    .secondary-button,
+    .app-link,
+    .discussion-button,
+    .dropdown-chevron {
+      transition: none;
+    }
+  }
+</style>

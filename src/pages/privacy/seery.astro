@@ -1,0 +1,241 @@
+---
+import DocsLayout from "../../layouts/DocsLayout.astro";
+import GradientDivider from "../../components/GradientDivider.astro";
+---
+
+<DocsLayout
+  title="Seery Privacy Policy"
+  description="Privacy policy for the Seery TV series tracking app."
+>
+  <main class="home-page">
+    <section class="hero">
+      <p class="eyebrow">Legal</p>
+      <h1 class="hero-title">Seery Privacy Policy</h1>
+      <p class="hero-text">Last updated: July 2026</p>
+    </section>
+
+    <GradientDivider />
+
+    <section class="policy-grid">
+      <article class="policy-card">
+        <h2>Overview</h2>
+        <p>
+          Seery is a TV series tracking application designed to help users search 
+          for TV shows, manage their personal libraries, discover new content, and 
+          keep track of upcoming episodes.
+        </p>
+
+        <p>
+          This Privacy Policy explains what information Seery processes, how it 
+          interacts with our shared backend, and how you remain in control of your data 
+          during our public beta phase on Apple TestFlight.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Sign in with Apple</h2>
+        <p>
+          Seery requires authentication using Apple's "Sign in with Apple" framework 
+          to verify your account securely as an iOS and iPadOS user.
+        </p>
+
+        <p>
+          This authentication process is handled directly through your Apple ID, and 
+          your credentials are never exposed to our systems.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Data Storage & Backend</h2>
+        <p>
+          Seery routes requests through our secure, shared TypeScript backend application to 
+          fetch TV show data. However, Seery is entirely database-free. 
+        </p>
+
+        <p>
+          Your personal library, tracked shows, preferences, and tracking history 
+          are not saved or stored in a persistent database on our servers. Your data 
+          remains private and stays locally on your device.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Third-Party APIs</h2>
+        <p>
+          To provide accurate TV show information, Seery queries public data from 
+          trusted third-party services, specifically TMDB (The Movie Database) and TVmaze.
+        </p>
+
+        <p>
+          These API requests are handled by our backend as a proxy to fetch metadata, 
+          artwork, and episode schedules. No personally identifiable information is 
+          shared with these external services.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Library & Discover Features</h2>
+        <p>
+          Information related to the TV shows you add, search for, or view in the 
+          Library, Homepage, and Discover tabs is processed strictly to deliver the 
+          app's tracking experience.
+        </p>
+
+        <p>
+          Because this information is stored locally on your device, your personal viewing 
+          habits are not tracked, monitored, or profiled by us.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Upcoming Episodes & Reminders</h2>
+        <p>
+          The Upcoming page displays scheduled air dates for TV shows in your library. 
+          When you tap the bell icon to set a reminder for a specific episode, this activity 
+          is handled entirely on your device.
+        </p>
+
+        <p>
+          Reminders are scheduled as local iOS/iPadOS notifications. We do not use remote 
+          push notifications, and reminder times are never sent to our backend.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Analytics & Tracking</h2>
+        <p>
+          Seery does not sell your information and does not use third-party 
+          advertising networks or behavioral tracking systems.
+        </p>
+
+        <p>
+          Your search terms, tracked shows, and notification schedules are completely 
+          isolated from advertisers and marketing profiles.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>TestFlight Beta Status</h2>
+        <p>
+          Seery is currently available as a public beta via Apple's TestFlight program in 
+          App Store Connect. 
+        </p>
+
+        <p>
+          Any crash logs, diagnostics, or feedback you choose to share through 
+          TestFlight are governed by Apple's TestFlight Terms and are used exclusively 
+          to fix bugs and improve performance before our official App Store release.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Data Deletion</h2>
+        <p>
+          Since your tracking information is stored exclusively on your device and 
+          no personal information is saved in our backend databases, you retain total control.
+        </p>
+
+        <p>
+          Simply removing or deleting the Seery application from your iOS or iPadOS device 
+          permanently erases all local application data, tracked series, and scheduled reminders.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Changes to This Policy</h2>
+        <p>
+          This privacy policy may occasionally be updated to reflect new features, 
+          platform updates, or adjustments to how our shared backend communicates with external APIs.
+        </p>
+
+        <p>
+          Updated versions will be published on this page with a revised effective date.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Contact</h2>
+        <p>
+          If you have questions about this privacy policy or how Seery handles 
+          your information during our public beta, you can contact us:
+        </p>
+
+        <p>
+          <a href="/contact" class="contact-button">Contact</a>
+        </p>
+      </article>
+    </section>
+  </main>
+</DocsLayout>
+
+<style>
+  .policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.25rem;
+    padding-bottom: 5rem;
+  }
+
+  .policy-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 1.5rem;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .policy-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.14);
+  }
+
+  .policy-card h2 {
+    margin: 0 0 1rem;
+    font-size: 1.15rem;
+  }
+
+  .policy-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .policy-card a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    background: var(--overlay-gradient-accent);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-decoration: none;
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .contact-button:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  @media (max-width: 680px) {
+    .policy-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .policy-card {
+      padding: 1.25rem;
+      border-radius: 20px;
+    }
+  }
+</style>

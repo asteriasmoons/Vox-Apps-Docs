@@ -1,0 +1,269 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+import GradientDivider from '../components/GradientDivider.astro'
+---
+
+<DocsLayout
+  title="Vox Apps"
+  description="Official documentation for the Vox iOS and iPadOS apps."
+>
+  <main class="home-page">
+    <section class="hero">
+      <p class="eyebrow">Vox Apps</p>
+      <h1 class="hero-title">Beautiful apps for daily life, growth, developers, mystics and your overall wellbeing.</h1>
+      <p class="hero-text">
+        Explore the Voxiverse ecosystem of apps designed to support organization,
+        productivity, reading, entertainment, music, development, magic, mysticism, self-care, wellness, mindfulness, and everyday life.
+      </p>
+
+      <GradientDivider />
+    </section>
+
+    <section class="home-grid">
+      <a href="/apps/lunixia" class="feature-card">
+        <p class="feature-label">Wellness</p>
+        <h2>Lunixia</h2>
+        <p>
+          A wellness companion featuring mood tracking, journaling, health
+          management, medication tracking, spirituality tools, self-care
+          points, and personal insights.
+        </p>
+      </a>
+
+      <a href="/apps/lunelia" class="feature-card">
+        <p class="feature-label">Household</p>
+        <h2>Lunelia</h2>
+        <p>
+          A housekeeping and home management system for chores, cleaning
+          routines, room organization, household maintenance, inventories,
+          shopping lists, and rewards.
+        </p>
+      </a>
+
+      <a href="/apps/lurelia" class="feature-card">
+        <p class="feature-label">Productivity</p>
+        <h2>Lurelia</h2>
+        <p>
+          Organize your life with reminders, routines, habits, journeys,
+          milestones, goals, schedules, streaks, and achievement systems.
+        </p>
+      </a>
+
+      <a href="/apps/lumey" class="feature-card">
+        <p class="feature-label">Reading</p>
+        <h2>Lumey</h2>
+        <p>
+          A reading companion for tracking books, reading goals, progress,
+          sessions, reviews, statistics, streaks, and personal libraries.
+        </p>
+      </a>
+
+      <a href="/apps/seery" class="feature-card">
+        <p class="feature-label">Entertainment</p>
+        <h2>Seery</h2>
+        <p>
+          Track your favorite TV series, explore new content across TMDB and TVmaze, 
+          manage your custom library, and schedule local reminders for upcoming episodes.
+        </p>
+      </a>
+
+      <a href="/apps/octavia" class="feature-card">
+        <p class="feature-label">Music</p>
+        <h2>Octavia</h2>
+        <p>
+          Import, organize, discover, and enjoy your personal music library with
+          playlists, albums, artists, songs, search, recommendations, and playback.
+        </p>
+      </a>
+
+      <a href="/apps/voxterm" class="feature-card">
+        <p class="feature-label">Development</p>
+        <h2>VoxTerm</h2>
+        <p>
+          A sleek, highly responsive, and privacy-focused terminal emulator designed 
+          for developers to manage scripts and build workflows securely on iOS and iPadOS.
+        </p>
+      </a>
+
+      <a href="/apps/asterium" class="feature-card">
+        <p class="feature-label">Mysticism</p>
+        <h2>Asterium</h2>
+        <p>
+          A personal digital grimoire for magic and mysticism to store your personal spells, 
+          rituals, specific grimoire entries and their types and correspondences securely in the cloud.
+        </p>
+      </a>
+
+      <a href="/contact" class="feature-card">
+        <p class="feature-label">Support</p>
+        <h2>Need Help?</h2>
+        <p>
+          Contact support, report bugs, request features, submit feedback,
+          or get assistance with any Vox application.
+        </p>
+      </a>
+    </section>
+
+    <GradientDivider />
+
+    <section class="home-grid">
+      <div class="feature-card">
+        <p class="feature-label">Unified Experience</p>
+        <h2>Designed to work together</h2>
+        <p>
+          Every Vox app is built with the same philosophy: beautiful
+          design, thoughtful features, privacy-first data handling, and tools
+          that support real life.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <p class="feature-label">Privacy First</p>
+        <h2>Your data stays yours</h2>
+        <p>
+          Vox apps prioritize local storage, cloud synchronization,
+          transparency, and user control over personal information.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <p class="feature-label">Growing Ecosystem</p>
+        <h2>More apps coming</h2>
+        <p>
+          The Voxiverse ecosystem continues to grow with new experiences focused
+          on organization, wellbeing, creativity, magic, software development and personal growth.
+        </p>
+      </div>
+    </section>
+  </main>
+</DocsLayout>
+
+<style>
+  /* =========================
+   Home Page
+========================= */
+
+.home-page {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0 5rem;
+  overflow-x: hidden;
+}
+
+.main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.hero {
+  padding: 1rem 0 2rem;
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.hero-title {
+  max-width: 750px;
+  margin-bottom: 1rem;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.hero-text {
+  max-width: 720px;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  display: block;
+  padding: 1.2rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.015)
+    );
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(125, 25, 247, 0.28);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(125, 25, 247, 0.08),
+      rgba(3, 219, 252, 0.04)
+    );
+}
+
+.feature-label {
+  margin-bottom: 0.65rem;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.feature-card h2 {
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+}
+
+.feature-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .home-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .home-page {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem 0 4rem;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    padding: 0.75rem 0 1rem;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+}
+</style>

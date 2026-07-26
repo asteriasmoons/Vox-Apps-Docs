@@ -1,0 +1,273 @@
+---
+import DocsLayout from "../../layouts/DocsLayout.astro";
+import GradientDivider from "../../components/GradientDivider.astro";
+---
+
+<DocsLayout
+  title="Lurelia Privacy Policy"
+  description="Privacy policy for the Lurelia reminders, routines, habits, journeys, and productivity app."
+>
+  <main class="home-page">
+    <section class="hero">
+      <p class="eyebrow">Legal</p>
+      <h1 class="hero-title">Lurelia Privacy Policy</h1>
+      <p class="hero-text">Last updated: June 2026</p>
+    </section>
+
+    <GradientDivider />
+
+    <section class="policy-grid">
+      <article class="policy-card">
+        <h2>Overview</h2>
+        <p>
+          Lurelia is a personal productivity and organization application
+          designed to help users manage reminders, routines, habits, journeys,
+          goals, schedules, and personal progress.
+        </p>
+
+        <p>
+          This Privacy Policy explains what information Lurelia stores, how it
+          is used, and how you remain in control of your information.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Data You Create</h2>
+        <p>
+          Information created within Lurelia may include reminders, recurring
+          schedules, habits, routines, journeys, milestones, goals, notes,
+          completion history, points, achievements, and user preferences.
+        </p>
+
+        <p>
+          This information is stored locally on your device and may synchronize
+          through your personal iCloud account if CloudKit synchronization is
+          enabled.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>iCloud & CloudKit</h2>
+        <p>
+          Lurelia may use Apple's CloudKit framework to synchronize information
+          between your Apple devices through your personal iCloud account.
+        </p>
+
+        <p>
+          The developer of Lurelia does not have access to your private CloudKit
+          database.
+        </p>
+
+        <p>
+          Apple's handling of iCloud data is governed by Apple's privacy policy.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Reminders & Scheduling</h2>
+        <p>
+          Lurelia uses local notifications to provide reminder alerts, recurring
+          schedules, routine prompts, habit reminders, and journey milestones.
+        </p>
+
+        <p>
+          Notification scheduling occurs directly on your device and is not
+          transmitted to external advertising or marketing services.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Habits, Routines & Progress</h2>
+        <p>
+          Lurelia may store completion history, streaks, statistics, progress
+          information, and activity records related to habits, routines,
+          journeys, and goals.
+        </p>
+
+        <p>
+          This information exists solely to provide app functionality and
+          personal progress tracking.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Journeys & Goals</h2>
+        <p>
+          If you choose to use journey planning, milestones, objectives,
+          timelines, or goal management features, the information you enter is
+          stored solely for your personal organization and productivity.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Points, Rewards & Achievements</h2>
+        <p>
+          Lurelia includes optional points, achievements, rewards, streaks, and
+          progression systems designed to encourage consistency and motivation.
+        </p>
+
+        <p>
+          This information remains private to your account and is not used for
+          advertising, profiling, or marketing purposes.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Widgets</h2>
+        <p>
+          Lurelia may provide Home Screen and Lock Screen widgets displaying
+          reminders, schedules, progress information, habits, routines, points,
+          and productivity insights.
+        </p>
+
+        <p>
+          Widget information is shared locally between the app and widget
+          extensions using Apple's App Group system.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Analytics & Tracking</h2>
+        <p>
+          Lurelia does not use advertising SDKs, targeted advertising
+          technologies, or third-party behavioral tracking systems.
+        </p>
+
+        <p>
+          Lurelia does not sell personal information or share user-generated
+          productivity data with advertisers.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>In-App Purchases</h2>
+        <p>
+          Lurelia may offer optional premium features or subscriptions through
+          Apple's StoreKit framework.
+        </p>
+
+        <p>
+          Payment processing is handled entirely by Apple. Lurelia does not
+          collect, store, or have access to payment information, billing
+          information, or credit card numbers.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Children's Privacy</h2>
+        <p>
+          Lurelia is not directed toward children under the age of 13 and does
+          not knowingly collect personal information from children.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Data Deletion</h2>
+        <p>
+          You maintain control over your information at all times. Reminders,
+          habits, routines, journeys, goals, notes, schedules, and other content
+          may be deleted directly within the app.
+        </p>
+
+        <p>
+          Deleting the app removes locally stored data from your device. If
+          CloudKit synchronization is enabled, synced information may also be
+          managed through your Apple ID and iCloud settings.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Changes to This Policy</h2>
+        <p>
+          This privacy policy may occasionally be updated to reflect new
+          features, legal requirements, platform changes, or improvements to the
+          app. Updated versions will be published on this page with a revised
+          effective date.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Contact</h2>
+        <p>
+          If you have questions about this privacy policy or how Lurelia handles
+          your information, you can contact:
+        </p>
+
+        <p>
+          <a href="/contact" class="contact-button">Contact</a>
+        </p>
+      </article>
+    </section>
+  </main>
+</DocsLayout>
+<style>
+  .policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.25rem;
+    padding-bottom: 5rem;
+  }
+
+  .policy-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 1.5rem;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .policy-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.14);
+  }
+
+  .policy-card h2 {
+    margin: 0 0 1rem;
+    font-size: 1.15rem;
+  }
+
+  .policy-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .policy-card a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    background: var(--overlay-gradient-accent);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-decoration: none;
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .contact-button:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  @media (max-width: 680px) {
+    .policy-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .policy-card {
+      padding: 1.25rem;
+      border-radius: 20px;
+    }
+  }
+</style>

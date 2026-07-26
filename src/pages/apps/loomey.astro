@@ -1,0 +1,940 @@
+---
+import DocsLayout from "../../layouts/DocsLayout.astro";
+import GradientDivider from "../../components/GradientDivider.astro";
+
+const loomeyGalleryImages = [
+  "IMG_3247.PNG",
+  "IMG_3248.PNG",
+  "IMG_3249.PNG",
+  "IMG_3250.PNG",
+  "IMG_3251.PNG",
+  "IMG_3252.PNG",
+  "IMG_3253.PNG",
+  "IMG_3254.PNG",
+  "IMG_3255.PNG",
+  "IMG_3259.PNG",
+  "IMG_3260.PNG",
+  "IMG_3261.PNG",
+  "IMG_3262.PNG",
+  "IMG_3263.PNG",
+  "IMG_3264.PNG",
+  "IMG_3265.PNG",
+  "IMG_3267.PNG",
+  "IMG_3268.PNG",
+  "IMG_3269.PNG",
+  "IMG_3270.PNG",
+  "IMG_3271.PNG",
+  "IMG_3272.PNG",
+  "IMG_3273.PNG",
+  "IMG_3274.PNG",
+  "IMG_3275.PNG",
+  "IMG_3276.PNG",
+  "IMG_3277.PNG",
+  "IMG_3278.PNG",
+  "IMG_3279.PNG",
+  "IMG_3280.PNG",
+  "IMG_3281.PNG",
+  "IMG_3282.PNG",
+  "IMG_3283.PNG",
+  "IMG_3284.PNG",
+  "IMG_3285.PNG",
+  "IMG_3286.PNG",
+  "IMG_3287.PNG",
+  "IMG_3288.PNG",
+  "IMG_3289.PNG",
+  "IMG_3290.PNG",
+  "IMG_3291.PNG",
+  "IMG_3292.PNG",
+  "IMG_3293.PNG",
+  "IMG_3294.PNG",
+  "IMG_3295.PNG",
+  "IMG_3296.PNG",
+  "IMG_3297.PNG",
+].map((fileName, index) => ({
+  alt: `Loomey app screenshot ${index + 1}`,
+  src: `/img/loomey/${fileName}`,
+}));
+---
+
+<DocsLayout
+  title="Loomey"
+  description="Import and read EPUB books, join buddy reads, sprint with other readers, complete challenges, track goals, preserve streaks, and discover your reading DNA."
+>
+  <main class="loomey-page">
+    <section class="hero">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Meet Loomey</p>
+        <h1>Your books, your people, and your entire reading life in one place.</h1>
+        <p class="hero-text">
+          Loomey is a deeply social reading companion with a full book catalog,
+          personal library, EPUB reader, goals, challenges, reading sprints,
+          buddy reads, history, streak protection, statistics, and a reader
+          profile that turns everything you do into a story worth looking back on.
+        </p>
+
+        <div class="hero-actions" aria-label="Loomey links">
+          <a class="primary-button raised-button" href="#features">Explore Features</a>
+          <a class="secondary-button raised-button" href="/contact">Contact Support</a>
+        </div>
+      </div>
+
+      <div class="hero-showcase reveal reveal-delay">
+        <div class="showcase-card main-card">
+          <span class="mini-label">Today in Loomey</span>
+          <h4>Read together. Grow together.</h4>
+          <div class="progress-line"><span></span></div>
+          <div class="showcase-stats">
+            <span><b>42</b> day streak</span>
+            <span><b>1,284</b> pages</span>
+            <span><b>18</b> sprints</span>
+          </div>
+        </div>
+
+        <div class="floating-card floating-card-one">
+          <span>Featured Challenge</span>
+          <strong>Read Somewhere New</strong>
+        </div>
+
+        <div class="floating-card floating-card-two">
+          <span>Live Activity</span>
+          <strong>Reading Timer Running</strong>
+        </div>
+      </div>
+    </section>
+
+    <GradientDivider />
+
+    <section class="intro-section reveal">
+      <p class="eyebrow">More Than a Book Tracker</p>
+      <h2>The reading app that actually understands readers.</h2>
+      <p>
+        Loomey does not stop at logging books. It gives you a place to read,
+        connect, compete, reflect, set ambitious goals, and understand the shape
+        of your reading life over time.
+      </p>
+    </section>
+
+    <section class="loomey-gallery-section reveal" aria-labelledby="loomey-gallery-title">
+      <div class="section-heading gallery-heading">
+        <p class="eyebrow">Inside Loomey</p>
+        <h2 id="loomey-gallery-title">Swipe through the reading experience</h2>
+      </div>
+
+      <div class="loomey-gallery" data-loomey-gallery>
+        <button
+          class="gallery-button gallery-button-left"
+          type="button"
+          aria-label="Previous Loomey screenshot"
+          data-gallery-previous
+        >
+          <img src="/img/icons/right.svg" alt="" aria-hidden="true" />
+        </button>
+
+        <div class="gallery-track-container">
+          <div class="gallery-track" data-gallery-track>
+            {
+              loomeyGalleryImages.map((image, index) => (
+                <figure class:list={["gallery-slide", { "is-active": index === 0 }]}>
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                  />
+                </figure>
+              ))
+            }
+          </div>
+        </div>
+
+        <button
+          class="gallery-button gallery-button-right"
+          type="button"
+          aria-label="Next Loomey screenshot"
+          data-gallery-next
+        >
+          <img src="/img/icons/right.svg" alt="" aria-hidden="true" />
+        </button>
+
+        <div class="gallery-meta" aria-live="polite">
+          <span data-gallery-count>1 / {loomeyGalleryImages.length}</span>
+          <div class="gallery-progress" aria-hidden="true">
+            <span data-gallery-progress></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-grid" id="features" aria-label="Loomey features">
+      <article class="feature-card wide reveal">
+        <p class="card-kicker">Library & Reader</p>
+        <h3>Build a beautiful library and read inside the app</h3>
+        <p>
+          Browse the book catalog, import your own books, organize and sort your
+          collection, and open EPUB files in Loomey’s built-in reader. Your
+          library works like a true personal bookshelf rather than a simple list.
+        </p>
+        <div class="chip-row">
+          <span>Book Catalog</span><span>Imports</span><span>EPUB Reader</span><span>Sorting</span>
+        </div>
+      </article>
+
+      <article class="feature-card reveal">
+        <p class="card-kicker">Buddy Reads</p>
+        <h3>Find your next reading partner</h3>
+        <p>
+          Post a buddy-read announcement globally, let other readers discover it,
+          and review requests from people who want to join you.
+        </p>
+      </article>
+
+      <article class="feature-card reveal">
+        <p class="card-kicker">Reading Sprints</p>
+        <h3>Turn focused reading into a shared event</h3>
+        <p>
+          Start a sprint from chat by entering your starting page and duration.
+          Track all-time sprint progress, compare results on the leaderboard, and
+          view your own mini sprint profile.
+        </p>
+      </article>
+
+      <article class="feature-card reveal">
+        <p class="card-kicker">Daily Challenges</p>
+        <h3>There is always something new to try</h3>
+        <p>
+          A rotating challenge becomes the featured challenge each day, giving
+          readers a fresh reason to open the app, participate, and keep reading.
+        </p>
+      </article>
+
+      <article class="feature-card reveal">
+        <p class="card-kicker">Social Reading</p>
+        <h3>A global feed built around books</h3>
+        <p>
+          Share challenge updates or anything book-related with the entire Loomey
+          community. Like posts, comment, reply to comments, and continue
+          conversations through nested replies.
+        </p>
+      </article>
+
+      <article class="feature-card wide reveal">
+        <p class="card-kicker">Goals & Progress</p>
+        <h3>Create almost any reading goal you can imagine</h3>
+        <p>
+          Track progress through reading sessions with starting pages, ending
+          pages, minutes read, linked books, linked goals, and earned points. For
+          goals that do not fit a session, use a dedicated Goal Check-In instead.
+        </p>
+        <div class="goal-preview">
+          <div><span>Current Progress</span><strong>184 / 300 pages</strong></div>
+          <div class="goal-bar"><span></span></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="spotlight reveal">
+      <div class="spotlight-copy">
+        <p class="eyebrow">Always With You</p>
+        <h2>A reading timer that follows you outside the app</h2>
+        <p>
+          Start a reading timer in Loomey and keep it visible through Dynamic
+          Island and Live Activities while you use other apps. Completed reading
+          time earns points and becomes part of your reading record.
+        </p>
+      </div>
+
+      <div class="timer-demo" aria-label="Reading timer preview">
+        <span class="timer-pill">Loomey Reading</span>
+        <h4>00:42:18</h4>
+        <span>Atomic Habits · Session Active</span>
+      </div>
+    </section>
+
+    <section class="details-section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Everything Else</p>
+        <h2>Open each chapter of the Loomey experience</h2>
+      </div>
+
+      <div class="details-list">
+        <details open>
+          <summary>
+            <span><b>Reading History</b><small>Revisit any day of your reading life</small></span>
+          </summary>
+          <p>
+            Explore a timeline of your reading activity, tap any day to see what
+            happened, and move backward or forward from week to week.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <span><b>Stats, Streaks & Breaks</b><small>Protect momentum without punishing real life</small></span>
+          </summary>
+          <p>
+            Pause active reading to preserve your streak when you need a break,
+            then resume when you are ready. View your heat map, milestones,
+            streaks, logged sessions, and goal check-ins from one place.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <span><b>Reader Profile</b><small>See what makes your reading life yours</small></span>
+          </summary>
+          <p>
+            Your profile brings together personal reading highlights, Reading
+            DNA, all-time achievements, and a Year Wrapped experience built from
+            the books, sessions, goals, and communities that shaped your year.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="community-banner reveal">
+      <div>
+        <p class="eyebrow">Built for Readers</p>
+        <h2>Reading can be personal without being lonely</h2>
+        <p>
+          Loomey gives solo readers the tools to stay motivated and social readers
+          the space to meet, sprint, challenge one another, and celebrate progress.
+        </p>
+      </div>
+      <a class="primary-button raised-button" href="/github">Join the Community</a>
+    </section>
+
+    <section class="cta-section reveal">
+      <p class="eyebrow">Explore Loomey</p>
+      <h2>Your next chapter deserves a better companion</h2>
+      <p>
+        Learn more about the app, report a problem, share an idea, or reach out
+        directly through the Vox Apps support hub.
+      </p>
+
+      <div class="cta-grid">
+        <a href="https://github.com/asteriasmoons/loomey/issues/1#issue-4929068249" class="cta-card">
+          <span class="cta-kicker">Report an Issue</span>
+          <h2>Loomey Bug Reports</h2>
+          <span class="cta-button">Open Reports</span>
+        </a>
+        <a href="/github" class="cta-card">
+          <span class="cta-kicker">Ideas & Discussions</span>
+          <h2>Vox Apps on GitHub</h2>
+          <span class="cta-button">Open GitHub</span>
+        </a>
+        <a href="/contact" class="cta-card">
+          <span class="cta-kicker">Need Help?</span>
+          <h2>Contact Support</h2>
+          <span class="cta-button">Get Support</span>
+        </a>
+      </div>
+    </section>
+  </main>
+</DocsLayout>
+
+<script>
+  const revealItems = document.querySelectorAll(".reveal");
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+
+  document.querySelectorAll<HTMLElement>("[data-loomey-gallery]").forEach((gallery) => {
+    const track = gallery.querySelector<HTMLElement>("[data-gallery-track]");
+    const slides = Array.from(gallery.querySelectorAll<HTMLElement>(".gallery-slide"));
+    const previousButton = gallery.querySelector<HTMLButtonElement>("[data-gallery-previous]");
+    const nextButton = gallery.querySelector<HTMLButtonElement>("[data-gallery-next]");
+    const count = gallery.querySelector<HTMLElement>("[data-gallery-count]");
+    const progress = gallery.querySelector<HTMLElement>("[data-gallery-progress]");
+
+    if (!track || !slides.length || !previousButton || !nextButton) return;
+
+    let currentIndex = 0;
+    let autoplay: number | undefined;
+    let dragStartX = 0;
+
+    const updateGallery = () => {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      slides.forEach((slide, index) => {
+        slide.classList.toggle("is-active", index === currentIndex);
+      });
+
+      if (count) count.textContent = `${currentIndex + 1} / ${slides.length}`;
+      if (progress) progress.style.width = `${((currentIndex + 1) / slides.length) * 100}%`;
+    };
+
+    const showSlide = (index: number) => {
+      currentIndex = (index + slides.length) % slides.length;
+      updateGallery();
+    };
+
+    const startAutoplay = () => {
+      window.clearInterval(autoplay);
+      autoplay = window.setInterval(() => showSlide(currentIndex + 1), 4200);
+    };
+
+    const stopAutoplay = () => window.clearInterval(autoplay);
+
+    nextButton.addEventListener("click", () => {
+      showSlide(currentIndex + 1);
+      startAutoplay();
+    });
+
+    previousButton.addEventListener("click", () => {
+      showSlide(currentIndex - 1);
+      startAutoplay();
+    });
+
+    gallery.addEventListener("pointerdown", (event) => {
+      dragStartX = event.clientX;
+      stopAutoplay();
+    });
+
+    gallery.addEventListener("pointerup", (event) => {
+      const deltaX = event.clientX - dragStartX;
+
+      if (Math.abs(deltaX) > 40) {
+        showSlide(currentIndex + (deltaX < 0 ? 1 : -1));
+      }
+
+      startAutoplay();
+    });
+
+    gallery.addEventListener("mouseenter", stopAutoplay);
+    gallery.addEventListener("mouseleave", startAutoplay);
+    gallery.addEventListener("focusin", stopAutoplay);
+    gallery.addEventListener("focusout", startAutoplay);
+    window.addEventListener("resize", updateGallery);
+
+    updateGallery();
+    startAutoplay();
+  });
+</script>
+
+<style>
+  .loomey-page {
+    position: relative;
+    width: 100%;
+    padding: 1rem 0 5rem;
+    overflow: hidden;
+  }
+
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(310px, 0.8fr);
+    align-items: center;
+    gap: 3rem;
+    min-height: 620px;
+    padding: 4rem 0;
+  }
+
+  .hero-copy,
+  .hero-showcase {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero h1 {
+    max-width: 860px;
+    margin: 0 0 1.25rem;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    line-height: 0.96;
+    letter-spacing: -0.055em;
+  }
+
+  .eyebrow,
+  .card-kicker,
+  .mini-label {
+    margin: 0 0 0.85rem;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .hero-text,
+  .intro-section p,
+  .spotlight p,
+  .community-banner p,
+  .cta-section > p {
+    max-width: 760px;
+    font-size: 1.06rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 2rem;
+  }
+
+  .primary-button,
+  .secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0.9rem 1.3rem;
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 999px;
+    color: #fff;
+    text-decoration: none;
+    transition: transform .2s ease, border-color .2s ease;
+  }
+
+  .primary-button { background: linear-gradient(135deg, #03dbfc, #7d19f7 55%, #e019d4); }
+  .secondary-button { background: rgba(255,255,255,.055); backdrop-filter: blur(18px); }
+  .primary-button:hover, .secondary-button:hover { transform: translateY(-3px); border-color: rgba(255,255,255,.35); }
+
+  .hero-showcase { min-height: 410px; }
+
+  .showcase-card,
+  .floating-card,
+  .feature-card,
+  .timer-demo,
+  .details-list details,
+  .community-banner,
+  .cta-card {
+    border: 1px solid rgba(255,255,255,.1);
+    background: linear-gradient(145deg, rgba(255,255,255,.085), rgba(255,255,255,.025));
+    box-shadow: 0 24px 70px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.06);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+  }
+
+  .main-card {
+    position: absolute;
+    inset: 55px 20px 55px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 30px;
+    transform: rotate(2deg);
+  }
+
+  .main-card h4 {
+    max-width: 420px;
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    line-height: 1.05;
+  }
+  .progress-line { height: 10px; margin: 1.75rem 0; border-radius: 999px; background: rgba(255,255,255,.08); overflow: hidden; }
+  .progress-line span { display: block; width: 72%; height: 100%; border-radius: inherit; background: var(--gradient-heading); animation: pulse-width 3s ease-in-out infinite; }
+  .showcase-stats { display: flex; flex-wrap: wrap; gap: 1rem; color: var(--text-muted); }
+  .showcase-stats b { color: #fff; }
+
+  .floating-card { position: absolute; z-index: 3; padding: 1rem 1.15rem; border-radius: 18px; animation: float 5s ease-in-out infinite; }
+  .floating-card span { display: block; font-size: .72rem; color: var(--text-muted); }
+  .floating-card strong { font-size: .92rem; }
+  .floating-card-one { top: 0; right: 0; }
+  .floating-card-two { bottom: 8px; left: 0; animation-delay: -2.4s; }
+
+  .hero-glow { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .28; pointer-events: none; }
+  .hero-glow-one { width: 360px; height: 360px; right: 4%; top: 5%; background: #7d19f7; }
+  .hero-glow-two { width: 280px; height: 280px; left: 10%; bottom: 0; background: #03dbfc; }
+
+  .intro-section { max-width: 850px; padding: 4rem 0 2rem; }
+  .intro-section h2,
+  .gallery-heading h2,
+  .spotlight h2,
+  .details-section h2,
+  .community-banner h2,
+  .cta-section h2 { margin: 0 0 1rem; font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1.05; }
+
+  .loomey-gallery-section {
+    position: relative;
+    padding: 2rem 0 3.25rem;
+  }
+
+  .gallery-heading {
+    margin-bottom: 1.5rem;
+  }
+
+  .loomey-gallery {
+    position: relative;
+    width: min(100%, 430px);
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 1rem 0 2.75rem;
+    touch-action: pan-y;
+  }
+
+  .gallery-track-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+  }
+
+  .gallery-track {
+    display: flex;
+    align-items: center;
+    will-change: transform;
+    transition: transform .62s cubic-bezier(.2,.8,.2,1);
+  }
+
+  .gallery-slide {
+    flex: 0 0 100%;
+    margin: 0;
+    opacity: .78;
+    transition: opacity .35s ease;
+  }
+
+  .gallery-slide.is-active {
+    opacity: 1;
+  }
+
+  .gallery-slide img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1170 / 2532;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 32px;
+    background: rgba(255,255,255,.035);
+    box-shadow:
+      0 26px 70px rgba(0,0,0,.42),
+      0 0 32px rgba(3,227,252,.12),
+      inset 0 1px 0 rgba(255,255,255,.08);
+  }
+
+  .gallery-button {
+    position: absolute;
+    top: 47%;
+    z-index: 4;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 50%;
+    background: rgba(255,255,255,.09);
+    box-shadow: 0 18px 38px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.12);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    cursor: pointer;
+    transition: transform .18s ease, background .18s ease, border-color .18s ease;
+  }
+
+  .gallery-button:hover {
+    background: rgba(255,255,255,.16);
+    border-color: rgba(255,255,255,.28);
+    transform: translateY(-2px);
+  }
+
+  .gallery-button img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+  }
+
+  .gallery-button-left {
+    left: .35rem;
+  }
+
+  .gallery-button-left img {
+    transform: rotate(180deg);
+  }
+
+  .gallery-button-right {
+    right: .35rem;
+  }
+
+  .gallery-meta {
+    position: absolute;
+    left: 50%;
+    bottom: .55rem;
+    z-index: 4;
+    display: grid;
+    gap: .55rem;
+    width: min(300px, 62%);
+    transform: translateX(-50%);
+    color: var(--text-muted);
+    font-size: .76rem;
+    text-align: center;
+  }
+
+  .gallery-progress {
+    height: 7px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255,255,255,.08);
+  }
+
+  .gallery-progress span {
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--gradient-heading);
+    transition: width .35s ease;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 2rem 0 4rem;
+  }
+
+  .feature-card { min-height: 260px; padding: 1.5rem; border-radius: 24px; transition: transform .22s ease, border-color .22s ease; }
+  .feature-card:hover { transform: translateY(-5px); border-color: rgba(125,25,247,.35); }
+  .feature-card.wide { grid-column: span 2; min-height: 300px; }
+  .feature-card h3 { max-width: 720px; margin: 0 0 .85rem; font-size: clamp(1.45rem, 2.5vw, 2.25rem); }
+  .feature-card p { max-width: 760px; }
+
+  .chip-row { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.25rem; }
+  .chip-row span { padding: .55rem .8rem; border: 1px solid rgba(255,255,255,.09); border-radius: 999px; background: rgba(255,255,255,.045); font-size: .82rem; }
+
+  .goal-preview { max-width: 650px; margin-top: 1.5rem; padding: 1rem; border-radius: 18px; background: rgba(255,255,255,.035); }
+  .goal-preview div:first-child { display: flex; justify-content: space-between; gap: 1rem; }
+  .goal-bar { height: 8px; margin-top: .8rem; border-radius: 999px; background: rgba(255,255,255,.07); overflow: hidden; }
+  .goal-bar span { display: block; width: 61%; height: 100%; background: var(--gradient-heading); }
+
+  .spotlight {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+
+  .timer-demo { display: flex; flex-direction: column; align-items: center; gap: .65rem; padding: 2.2rem 1.5rem; border-radius: 28px; text-align: center; }
+  .timer-demo h4 {
+    margin: 0;
+    font-size: clamp(2.2rem, 6vw, 4.7rem);
+    letter-spacing: 0;
+  }
+  .timer-demo > span:last-child { color: var(--text-muted); }
+  .timer-pill { padding: .45rem .75rem; border-radius: 999px; background: rgba(255,255,255,.07); font-size: .76rem; }
+
+  .details-section { padding: 4rem 0; }
+  .section-heading { max-width: 760px; margin-bottom: 1.5rem; }
+  .details-list { display: grid; gap: .85rem; }
+  .details-list details { border-radius: 20px; overflow: hidden; }
+  .details-list summary { display: flex; justify-content: space-between; gap: 1rem; padding: 1.25rem; cursor: pointer; list-style: none; }
+  .details-list summary::-webkit-details-marker { display: none; }
+  .details-list summary b, .details-list summary small { display: block; }
+  .details-list summary small { margin-top: .25rem; color: var(--text-muted); }
+  .details-list details p { margin: 0; padding: 0 1.25rem 1.25rem; max-width: 850px; }
+  .plus { font-size: 1.5rem; transition: transform .2s ease; }
+  details[open] .plus { transform: rotate(45deg); }
+
+  .community-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 2rem 0 5rem;
+    padding: 2rem;
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(3,219,252,.08), rgba(125,25,247,.13), rgba(224,25,212,.07));
+  }
+  .community-banner > div { max-width: 760px; }
+
+  .cta-section { padding: 1rem 0 2rem; }
+  .cta-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; margin-top: 2rem; }
+  .cta-card { display: flex; flex-direction: column; min-height: 190px; padding: 1.25rem; border-radius: 22px; color: inherit; text-decoration: none; transition: transform .2s ease, border-color .2s ease; }
+  .cta-card:hover { transform: translateY(-4px); border-color: rgba(3,219,252,.3); }
+  .cta-kicker { margin-bottom: auto; font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted); }
+  .cta-card strong { font-size: 1.15rem; color: #fff; }
+  .cta-button {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-top: 1rem;
+    padding: .72rem 1rem;
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 12px;
+    background: linear-gradient(135deg, #03dbfc 0%, #6055f7 54%, #7d19f7 100%);
+    color: #fff;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(0,0,0,.35);
+    box-shadow:
+      0 10px 0 rgba(34,23,82,.98),
+      0 16px 22px rgba(0,0,0,.42),
+      inset 0 1px 0 rgba(255,255,255,.3),
+      inset 0 -6px 12px rgba(18,8,54,.42);
+  }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal-delay { transition-delay: .15s; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+  @keyframes pulse-width { 0%,100% { width: 68%; } 50% { width: 78%; } }
+
+  @media (max-width: 900px) {
+    .hero, .spotlight { grid-template-columns: 1fr; }
+    .hero { min-height: auto; padding: 3rem 0; }
+    .hero-showcase { min-height: 380px; }
+    .cta-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 680px) {
+    :global(.content:has(.loomey-page)) { padding-top: .55rem; }
+
+    .loomey-page { padding: 0 0 2.5rem; }
+    .hero {
+      gap: 1.75rem;
+      padding: .7rem 0 .35rem;
+    }
+    .hero h1 { font-size: clamp(2.75rem, 15vw, 4.5rem); }
+    .hero-actions { flex-direction: column; }
+    .hero-actions {
+      gap: .75rem;
+      margin-top: 1.25rem;
+    }
+    .primary-button, .secondary-button { width: 100%; }
+    .hero-showcase {
+      min-height: 450px;
+      width: 100%;
+      max-width: 100%;
+      overflow: visible;
+    }
+    .main-card {
+      inset: 62px 0 82px;
+      padding: 1.2rem;
+      border-radius: 24px;
+      transform: none;
+    }
+    .main-card h4 {
+      max-width: 100%;
+      font-size: clamp(2rem, 10vw, 2.85rem);
+    }
+    .progress-line {
+      height: 7px;
+      margin: 1.05rem 0;
+    }
+    .showcase-stats {
+      gap: .55rem 1rem;
+      font-size: .86rem;
+    }
+    .floating-card {
+      max-width: min(72%, 284px);
+      padding: .75rem .88rem;
+      border-radius: 15px;
+    }
+    .floating-card span { font-size: .68rem; }
+    .floating-card strong { font-size: .86rem; }
+    .floating-card-one {
+      top: 0;
+      right: 0;
+    }
+    .floating-card-two {
+      bottom: 16px;
+      left: 0;
+      max-width: min(70%, 250px);
+    }
+    .loomey-page :global(.gradient-divider) { margin: .35rem 0; }
+    .hero-text,
+    .intro-section p,
+    .feature-card p,
+    .spotlight p,
+    .community-banner p,
+    .cta-section > p {
+      margin: 0;
+    }
+    .intro-section { padding: .8rem 0 .25rem; }
+    .loomey-gallery-section { padding: .75rem 0 1rem; }
+    .gallery-heading { margin-bottom: .7rem; }
+    .loomey-gallery {
+      padding: .45rem 0 2.35rem;
+    }
+    .gallery-slide img {
+      border-radius: 24px;
+    }
+    .gallery-button {
+      top: 45%;
+      width: 40px;
+      height: 40px;
+    }
+    .gallery-button img {
+      width: 15px;
+      height: 15px;
+    }
+    .gallery-button-left { left: .15rem; }
+    .gallery-button-right { right: .15rem; }
+    .gallery-meta {
+      width: min(250px, 70%);
+      font-size: .7rem;
+    }
+    .feature-grid { grid-template-columns: 1fr; }
+    .feature-grid {
+      gap: .75rem;
+      padding: .45rem 0 .75rem;
+    }
+    .feature-card {
+      min-height: auto;
+      padding: 1.15rem;
+      border-radius: 20px;
+    }
+    .feature-card.wide {
+      grid-column: span 1;
+      min-height: auto;
+    }
+    .goal-preview div:first-child { flex-direction: column; }
+    .spotlight {
+      gap: .85rem;
+      padding: .8rem 0 .7rem;
+    }
+    .timer-demo {
+      padding: 1.25rem 1rem;
+      border-radius: 22px;
+    }
+    .details-section { padding: .85rem 0 .7rem; }
+    .section-heading { margin-bottom: .75rem; }
+    .details-list { gap: .7rem; }
+    .community-banner {
+      align-items: stretch;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin: .35rem 0 1.25rem;
+      padding: 1.2rem;
+      border-radius: 22px;
+    }
+    .community-banner .primary-button { width: 100%; }
+    .cta-section { padding: .35rem 0 1rem; }
+    .cta-grid {
+      gap: .85rem;
+      margin-top: 1.25rem;
+    }
+    .cta-card {
+      min-height: 170px;
+      padding: 1.1rem;
+      border-radius: 20px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .floating-card, .progress-line span { animation: none; }
+    .gallery-track,
+    .gallery-slide,
+    .gallery-progress span {
+      transition: none;
+    }
+  }
+</style>

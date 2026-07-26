@@ -1,0 +1,738 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+import DotDivider from "../components/DotDivider.astro";
+---
+
+<DocsLayout
+  title="Contact & Support"
+  description="Shared support hub for every app in the Voxiverse ecosystem."
+>
+  <main class="home-page">
+    <section class="hero">
+      <p class="eyebrow">Vox Apps Support</p>
+      <h1 class="hero-title">Contact & Support</h1>
+      <p class="hero-text">
+        One shared support page for Lunixia, Lunelia, Lurelia, Lumey,
+        Seery, Octavia, VoxTerm, Asterium and every app created under the Voxiverse ecosystem.
+      </p>
+      <div class="hero-actions" aria-label="Support quick links">
+        <a class="hero-link raised-button" href="#contactForm"
+          >Send a Support Request</a
+        >
+        <a class="hero-link hero-link-soft raised-button" href="#supported-apps"
+          >View Supported Apps</a
+        >
+      </div>
+    </section>
+
+    <DotDivider />
+
+    <section class="support-intro" aria-labelledby="support-title">
+      <div class="support-copy-card">
+        <p class="eyebrow">Support Hub</p>
+        <h2 id="support-title">Help for the whole Voxiverse family</h2>
+        <p>
+          This page is the main place to ask questions, report bugs, send
+          feedback, or request help with any Vox Apps project. Each app
+          will have its own advertisement page and privacy policy, but support
+          requests can all start here. You can also visit the GitHub page to find all of each apps' discussion threads as well.
+        </p>
+      </div>
+
+      <div class="support-note-card">
+        <h3>Before you send a message</h3>
+        <p>
+          Including a few details helps support move faster: the app name, what
+          happened, what you expected to happen, your device model, and your iOS/iPadOS
+          version. Screenshots can be added in the bug reports issue in each apps GitHub repo. Thank you for choosing Vox apps and supporting this solo indie developer, you are truly and genuinely valued.
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="supported-apps"
+      id="supported-apps"
+      aria-labelledby="supported-apps-title"
+    >
+      <div class="section-heading">
+        <p class="eyebrow">Supported Apps</p>
+        <h2 id="supported-apps-title">Choose the app your message is about</h2>
+        <p>
+          Mention one of these app names in your message so your request can be
+          understood quickly.
+        </p>
+      </div>
+
+      <div class="app-support-grid">
+        <article class="app-support-card">
+          <p class="app-kicker">Health & Wellbeing</p>
+          <h3>Lunixia</h3>
+          <p>
+            Health tracking, mental health support, wellbeing tools,
+            spirituality, journaling, and a self-care points system.
+          </p>
+        </article>
+
+        <article class="app-support-card">
+          <p class="app-kicker">Home Management</p>
+          <h3>Lunelia</h3>
+          <p>
+            Cleaning routines, household task planning, home care progress, and
+            a points system for motivation.
+          </p>
+        </article>
+
+        <article class="app-support-card">
+          <p class="app-kicker">Time & Progress</p>
+          <h3>Lurelia</h3>
+          <p>
+            Reminders, routines, habits, journeys, time planning, and a points
+            system for daily momentum.
+          </p>
+        </article>
+
+        <article class="app-support-card">
+          <p class="app-kicker">Reading Companion</p>
+          <h3>Lumey</h3>
+          <p>
+            A reading companion app for books, progress, goals, and reading
+            motivation. Lumey is currently in development.
+          </p>
+        </article>
+
+        <article class="app-support-card">
+          <p class="app-kicker">Entertainment</p>
+          <h3>Seery</h3>
+          <p>
+            Track your favorite TV series, explore new content across TMDB and TVmaze, 
+            manage your custom library, and schedule local reminders for upcoming episodes.
+          </p>
+        </article>
+
+        <article class="app-support-card">
+          <p class="app-kicker">Music</p>
+          <h3>Octavia</h3>
+          <p>
+            Import, organize, discover, and enjoy your personal music library with
+            playlists, albums, artists, songs, search, recommendations, and playback.
+          </p>
+        </article>
+
+        <article class="app-support-card">
+          <p class="app-kicker">Development</p>
+          <h3>VoxTerm</h3>
+          <p>
+            A sleek, highly responsive, and privacy-focused terminal emulator designed 
+            for developers to manage scripts and build workflows securely on iOS and iPadOS.
+          </p>
+        </article>
+
+        <article class="app-support-card">
+          <p class="app-kicker">Mysticism</p>
+          <h3>Asterium</h3>
+          <p>
+            Safely document your spiritual path, manage ritual correspondences, write down 
+            sacred spells, and keep your mystical practice privately organized across your devices.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="support-details" aria-label="Support details">
+      <div class="support-detail-card">
+        <h3>Bug Reports</h3>
+        <p>
+          Send anything that is broken, confusing, missing, stuck, or not
+          behaving the way it should.
+        </p>
+      </div>
+
+      <div class="support-detail-card">
+        <h3>Feature Requests</h3>
+        <p>
+          Share ideas for tools, settings, layouts, automations, widgets, or
+          improvements you would love to see.
+        </p>
+      </div>
+
+      <div class="support-detail-card">
+        <h3>Privacy Policies</h3>
+        <p>
+          Each app has its own privacy policy because each app may use different
+          permissions, features, or data types.
+        </p>
+      </div>
+    </section>
+    
+    <DotDivider />
+
+    <section class="contact-form-section contact-form-section-wide">
+      <div class="section-heading contact-heading">
+        <p class="eyebrow">Send a Message</p>
+        <h2>Contact Vox Apps Support</h2>
+        <p>
+          Use the form below for app support, questions, feedback, bug reports,
+          feature requests, or general messages about the Vox Apps website.
+        </p>
+      </div>
+      <div class="contact-form-card">
+        <form id="contactForm" class="contact-form" novalidate>
+          <!-- Honeypot -->
+          <input
+            id="website"
+            name="website"
+            type="text"
+            autocomplete="off"
+            tabindex="-1"
+            class="contact-hp"
+          />
+
+          <div class="contact-helper-box">
+            <h3>What to include</h3>
+            <p>
+              Please include the app name, a clear description of what you need,
+              and any details that would help explain the request.
+            </p>
+          </div>
+
+          <div class="contact-field">
+            <label for="name" class="contact-label">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              class="contact-input"
+              placeholder="Your name"
+              required
+            />
+          </div>
+
+          <div class="contact-field">
+            <label for="email" class="contact-label">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="contact-input"
+              placeholder="your@email.com"
+              required
+            />
+          </div>
+
+          <div class="contact-field">
+            <label for="message" class="contact-label">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              class="contact-input contact-textarea"
+              placeholder="Tell me which app this is about and how I can help."
+              rows="6"
+              required></textarea>
+          </div>
+
+          <div class="contact-field attachment-field">
+            <label for="attachments" class="contact-label">Attachments</label>
+            <input
+              id="attachments"
+              name="attachments"
+              type="file"
+              class="contact-file-input"
+              accept=".jpg,.jpeg,.png,.webp,.heic,.pdf,.txt,.log,.mov,.mp4,image/*,video/quicktime,video/mp4,application/pdf,text/plain"
+              multiple
+            />
+            <label for="attachments" class="attachment-button raised-button">
+              Upload Files
+            </label>
+            <p
+              class="attachment-summary"
+              id="attachmentSummary"
+              aria-live="polite"
+            >
+              No files selected
+            </p>
+            <p class="contact-field-note">
+              Add up to 3 screenshots, screen recordings, PDFs, or log files.
+            </p>
+          </div>
+
+          <button
+            type="submit"
+            id="sendBtn"
+            class="contact-submit raised-button"
+          >
+            Send Message
+          </button>
+
+          <p class="contact-status" id="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section
+      class="support-footer-note support-footer-note-wide"
+      aria-label="Support response note"
+    >
+      <p>
+        Thank you for using Vox Apps. Every message helps make these apps
+        clearer, calmer, and more useful over time.
+      </p>
+    </section>
+  </main>
+</DocsLayout>
+
+<script>
+  type CloudinarySignatureResponse = {
+    apiKey: string;
+    assetFolder: string;
+    cloudName: string;
+    error?: string;
+    publicIdPrefix: string;
+    signature: string;
+    timestamp: number;
+  };
+
+  type UploadedAttachment = {
+    bytes?: number;
+    format?: string;
+    name: string;
+    resourceType?: string;
+    url: string;
+  };
+
+  const MAX_UPLOAD_FILES = 3;
+  const MAX_UPLOAD_BYTES = 10 * 1024 * 1024;
+
+  const form = document.getElementById("contactForm") as HTMLFormElement | null;
+  const status = document.getElementById("status") as HTMLElement | null;
+  const sendBtn = document.getElementById(
+    "sendBtn",
+  ) as HTMLButtonElement | null;
+  const attachmentInput = document.getElementById(
+    "attachments",
+  ) as HTMLInputElement | null;
+  const attachmentSummary = document.getElementById(
+    "attachmentSummary",
+  ) as HTMLElement | null;
+
+  function selectedAttachmentFiles(form: HTMLFormElement) {
+    const input = form.elements.namedItem("attachments") as HTMLInputElement | null;
+    return Array.from(input?.files ?? []);
+  }
+
+  function updateAttachmentSummary() {
+    if (!attachmentInput || !attachmentSummary) return;
+
+    const files = Array.from(attachmentInput.files ?? []);
+    if (files.length === 0) {
+      attachmentSummary.textContent = "No files selected";
+      return;
+    }
+
+    if (files.length === 1) {
+      attachmentSummary.textContent = files[0].name;
+      return;
+    }
+
+    attachmentSummary.textContent = `${files.length} files selected`;
+  }
+
+  function validateAttachmentFiles(files: File[]) {
+    if (files.length > MAX_UPLOAD_FILES) {
+      throw new Error(`Please attach no more than ${MAX_UPLOAD_FILES} files.`);
+    }
+
+    const oversized = files.find((file) => file.size > MAX_UPLOAD_BYTES);
+    if (oversized) {
+      throw new Error(`${oversized.name} is larger than 10 MB.`);
+    }
+  }
+
+  async function getCloudinarySignature() {
+    const res = await fetch("/api/cloudinary-signature", { method: "POST" });
+    const data = (await res.json().catch(() => ({}))) as CloudinarySignatureResponse;
+
+    if (!res.ok) {
+      throw new Error(data.error || "Could not prepare attachments.");
+    }
+
+    return data;
+  }
+
+  async function uploadAttachment(
+    file: File,
+    signature: CloudinarySignatureResponse,
+  ): Promise<UploadedAttachment> {
+    const uploadData = new FormData();
+    uploadData.append("file", file);
+    uploadData.append("api_key", signature.apiKey);
+    uploadData.append("timestamp", String(signature.timestamp));
+    uploadData.append("signature", signature.signature);
+    uploadData.append("asset_folder", signature.assetFolder);
+    uploadData.append("public_id_prefix", signature.publicIdPrefix);
+
+    const res = await fetch(
+      `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`,
+      { method: "POST", body: uploadData },
+    );
+    const data = await res.json().catch(() => ({}));
+
+    if (!res.ok || typeof data.secure_url !== "string") {
+      throw new Error(data.error?.message || `Could not upload ${file.name}.`);
+    }
+
+    return {
+      bytes: typeof data.bytes === "number" ? data.bytes : file.size,
+      format: typeof data.format === "string" ? data.format : undefined,
+      name: file.name,
+      resourceType:
+        typeof data.resource_type === "string" ? data.resource_type : undefined,
+      url: data.secure_url,
+    };
+  }
+
+  async function uploadAttachments(files: File[]) {
+    if (files.length === 0) return [];
+
+    validateAttachmentFiles(files);
+    status!.textContent = "Uploading attachments...";
+    const signature = await getCloudinarySignature();
+    const uploads: UploadedAttachment[] = [];
+
+    for (const file of files) {
+      uploads.push(await uploadAttachment(file, signature));
+    }
+
+    return uploads;
+  }
+
+  if (form && status && sendBtn) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      status.textContent = "";
+      sendBtn.disabled = true;
+      sendBtn.textContent = "Sending...";
+
+      const name =
+        (form.elements.namedItem("name") as HTMLInputElement)?.value ?? "";
+      const email =
+        (form.elements.namedItem("email") as HTMLInputElement)?.value ?? "";
+      const message =
+        (form.elements.namedItem("message") as HTMLTextAreaElement)?.value ??
+        "";
+      const website =
+        (form.elements.namedItem("website") as HTMLInputElement)?.value ?? "";
+      const files = selectedAttachmentFiles(form);
+
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("message", message);
+      formData.append("website", website);
+
+      try {
+        const attachments = await uploadAttachments(files);
+        formData.append("attachments", JSON.stringify(attachments));
+        status.textContent = "Sending message...";
+
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          body: formData,
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (!res.ok) {
+          status.textContent = data.error || "Something went wrong.";
+          return;
+        }
+
+        form.reset();
+        status.textContent = "Message sent. Thank you.";
+      } catch {
+        status.textContent = "Failed to send. Please try again.";
+      } finally {
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Send Message";
+        updateAttachmentSummary();
+      }
+    });
+  }
+
+  attachmentInput?.addEventListener("change", updateAttachmentSummary);
+</script>
+
+<style>
+  .hero {
+    padding: 1rem 0 2rem;
+  }
+
+  .eyebrow {
+    margin-bottom: 1rem;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+  }
+
+  .hero-title {
+    max-width: 750px;
+    margin-bottom: 1rem;
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .hero-text {
+    max-width: 720px;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+  }
+
+  .hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.15rem;
+    border-radius: 999px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #03dbfc, #7d19f7);
+  }
+
+  .hero-link-soft {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  /* =========================================================
+   CONTACT FORM
+   ========================================================= */
+  .contact-form-section,
+  .contact-form-section-wide {
+    width: min(100%, 1100px);
+    max-width: none;
+    margin: 0 auto;
+    padding: 0 0 6rem;
+    box-sizing: border-box;
+  }
+
+  .contact-form-card {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+
+  .contact-heading,
+  .contact-form-section .section-heading,
+  .contact-form-section-wide .section-heading,
+  .support-footer-note,
+  .support-footer-note-wide {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .contact-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .contact-input {
+    width: 100%;
+    padding: 0.72rem 0.9rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-size: 0.9375rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  .contact-input:focus {
+    border-color: rgba(255, 255, 255, 0.28);
+  }
+
+  .contact-file-input {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  .attachment-button {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-bottom: 1.25rem;
+    padding: 0.72rem 1.5rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #03dbfc 0%, #6055f7 54%, #7d19f7 100%) !important;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    box-shadow:
+      0 12px 0 rgba(34, 23, 82, 0.98),
+      0 18px 24px rgba(0, 0, 0, 0.45),
+      0 0 24px rgba(3, 219, 252, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      inset 0 -7px 14px rgba(18, 8, 54, 0.42) !important;
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .attachment-button::before {
+    z-index: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.24),
+      rgba(255, 255, 255, 0.08) 64%,
+      rgba(255, 255, 255, 0)
+    );
+  }
+
+  .attachment-button:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+    box-shadow:
+      0 13px 0 rgba(34, 23, 82, 1),
+      0 22px 26px rgba(0, 0, 0, 0.5),
+      0 0 30px rgba(3, 219, 252, 0.24),
+      inset 0 1px 0 rgba(255, 255, 255, 0.36),
+      inset 0 -7px 14px rgba(18, 8, 54, 0.4) !important;
+  }
+
+  .attachment-summary {
+    margin: 0;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.65);
+    overflow-wrap: anywhere;
+  }
+
+  .contact-field-note {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  .contact-textarea {
+    min-height: 150px;
+    resize: vertical;
+    font-family: inherit;
+  }
+
+  .contact-submit {
+    align-self: flex-start;
+    padding: 0.72rem 1.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #03dbfc, #7d19f7);
+    color: #fff;
+    cursor: pointer;
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .contact-submit:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+  }
+
+  .contact-submit:disabled {
+    opacity: 0.5;
+    cursor: default;
+    transform: none;
+  }
+
+  .contact-status {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.65);
+    min-height: 1.2em;
+  }
+
+  .contact-hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  /* =========================================================
+   CONTACT FORM - MOBILE
+   ========================================================= */
+
+  @media (max-width: 920px) {
+    .support-intro {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .support-details {
+      padding-bottom: 1.5rem;
+    }
+
+    .contact-form-section,
+    .contact-form-section-wide {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0 0 4rem;
+      box-sizing: border-box;
+    }
+
+    .contact-form-card {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 1.25rem;
+    }
+
+    .contact-heading,
+    .support-footer-note {
+      width: 100%;
+      max-width: none;
+      margin: 0 0 1rem;
+    }
+  }
+</style>

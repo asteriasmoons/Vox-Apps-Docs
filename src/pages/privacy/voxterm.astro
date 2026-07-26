@@ -1,0 +1,197 @@
+---
+import DocsLayout from "../../layouts/DocsLayout.astro";
+import GradientDivider from "../../components/GradientDivider.astro";
+---
+
+<DocsLayout
+  title="VoxTerm Privacy Policy"
+  description="Privacy policy for the VoxTerm developer terminal application."
+>
+  <main class="home-page">
+    <section class="hero">
+      <p class="eyebrow">Legal</p>
+      <h1 class="hero-title">VoxTerm Privacy Policy</h1>
+      <p class="hero-text">Last updated: July 2026</p>
+    </section>
+
+    <GradientDivider />
+
+    <section class="policy-grid">
+      <article class="policy-card">
+        <h2>Overview</h2>
+        <p>
+          VoxTerm is a terminal application designed for developers to interact 
+          with command-line interfaces and manage development workflows.
+        </p>
+
+        <p>
+          This Privacy Policy explains what information VoxTerm processes, how it 
+          routes data through our shared backend, and how your privacy is protected.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Sign in with Apple</h2>
+        <p>
+          VoxTerm requires user authentication using Apple's "Sign in with Apple" 
+          framework to verify your account securely on your iOS and iPadOS devices.
+        </p>
+
+        <p>
+          This authentication process is handled securely through your Apple ID, and 
+          your personal credentials are never exposed to our systems.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>No Backend Storage</h2>
+        <p>
+          While VoxTerm connects to our shared TypeScript backend infrastructure, 
+          the application does not use a persistent database. 
+        </p>
+
+        <p>
+          No command history, configuration files, environment variables, or session logs 
+          are stored or saved on our backend servers. Your active sessions exist entirely 
+          within your device's memory and local storage.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Command & Terminal Data</h2>
+        <p>
+          Any commands you run, inputs you provide, or outputs generated within VoxTerm 
+          are executed locally or securely routed directly to your intended remote hosts.
+        </p>
+
+        <p>
+          We do not monitor, inspect, log, or collect the scripts, commands, or code 
+          you execute inside the terminal.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Analytics & Tracking</h2>
+        <p>
+          VoxTerm does not sell personal information, track user behavior across external websites, 
+          or bundle third-party advertising networks.
+        </p>
+
+        <p>
+          Your development environment information, command workflows, and usage statistics 
+          remain strictly private and are never shared with or exposed to marketing profiles.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Data Deletion</h2>
+        <p>
+          Because VoxTerm does not maintain a database or store user information on our servers, 
+          you remain in absolute control of your data.
+        </p>
+
+        <p>
+          Deleting the VoxTerm application from your iOS or iPadOS device instantly 
+          wipes all locally cached settings, configurations, and terminal session history.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Changes to This Policy</h2>
+        <p>
+          This privacy policy may occasionally be updated to reflect new terminal features, 
+          security updates, or improvements to our shared backend connection.
+        </p>
+
+        <p>
+          Updated versions will be published directly on this page with a revised 
+          effective date.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2>Contact</h2>
+        <p>
+          If you have questions about this privacy policy or how VoxTerm handles 
+          your environment data, you can contact us:
+        </p>
+
+        <p>
+          <a href="/contact" class="contact-button">Contact</a>
+        </p>
+      </article>
+    </section>
+  </main>
+</DocsLayout>
+
+<style>
+  .policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.25rem;
+    padding-bottom: 5rem;
+  }
+
+  .policy-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 1.5rem;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .policy-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.14);
+  }
+
+  .policy-card h2 {
+    margin: 0 0 1rem;
+    font-size: 1.15rem;
+  }
+
+  .policy-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .policy-card a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    background: var(--overlay-gradient-accent);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-decoration: none;
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .contact-button:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  @media (max-width: 680px) {
+    .policy-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .policy-card {
+      padding: 1.25rem;
+      border-radius: 20px;
+    }
+  }
+</style>

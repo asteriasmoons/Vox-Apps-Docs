@@ -1,0 +1,41 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Vox Docs",
+  description = "Documentation for the Vox iOS/iPadOS apps.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+
+  <body>
+    <div class="site-shell">
+      <slot />
+    </div>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-title">Voxiverse</p>
+    <p class="footer-subtle">
+      Built with care, intention, and a little bit of magic.
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
