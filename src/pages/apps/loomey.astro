@@ -826,7 +826,15 @@ const loomeyGalleryImages = [
   .details-list summary::-webkit-details-marker { display: none; }
   .details-list summary b, .details-list summary small { display: block; }
   .details-list summary small { margin-top: .25rem; color: var(--text-muted); }
-  .details-list details p { margin: 0; padding: 0 1.25rem 1.25rem; max-width: 850px; }
+  .details-list details p {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 1.15rem 1.25rem 1.25rem;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.08);
+    background: linear-gradient(135deg, rgba(255,255,255,.055), rgba(3,219,252,.045));
+  }
   .plus { font-size: 1.5rem; transition: transform .2s ease; }
   details[open] .plus { transform: rotate(45deg); }
 
