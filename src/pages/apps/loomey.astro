@@ -550,6 +550,99 @@ const loomeyGalleryImages = [
   .hero-glow-one { width: 360px; height: 360px; right: 4%; top: 5%; background: #7d19f7; }
   .hero-glow-two { width: 280px; height: 280px; left: 10%; bottom: 0; background: #03dbfc; }
 
+  @media (min-width: 901px) {
+    :global(.content:has(.loomey-page)) {
+      max-width: 1280px;
+      padding-inline: clamp(1.5rem, 3vw, 3rem);
+    }
+
+    .hero {
+      grid-template-columns: minmax(0, 1fr) minmax(340px, 380px);
+      gap: clamp(2rem, 3.5vw, 4rem);
+      min-height: 610px;
+      padding: 2.15rem 0 2.65rem;
+    }
+
+    .hero h1 {
+      max-width: 840px;
+      margin-bottom: 1rem;
+      font-size: 4.15rem;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .hero-text {
+      max-width: 660px;
+      font-size: 1rem;
+    }
+
+    .hero-actions {
+      margin-top: 1.5rem;
+    }
+
+    .hero-showcase {
+      align-self: center;
+      justify-self: end;
+      width: 100%;
+      max-width: 380px;
+      min-height: 430px;
+    }
+
+    .main-card {
+      inset: 54px 18px 104px 24px;
+      padding: 1.45rem;
+      border-radius: 26px;
+      transform: rotate(1deg);
+    }
+
+    .main-card h4 {
+      max-width: 320px;
+      font-size: 2.35rem;
+    }
+
+    .progress-line {
+      margin: 1.2rem 0;
+    }
+
+    .showcase-stats {
+      gap: .65rem .9rem;
+      font-size: .9rem;
+    }
+
+    .floating-card-one {
+      top: 8px;
+      right: 4px;
+      max-width: 282px;
+    }
+
+    .floating-card-two {
+      bottom: 16px;
+      left: 8px;
+      max-width: 292px;
+    }
+  }
+
+  @media (min-width: 901px) and (max-width: 1160px) {
+    .hero {
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 340px);
+      gap: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3.7rem;
+    }
+
+    .main-card h4 {
+      font-size: 2.1rem;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .hero h1 {
+      font-size: 4.75rem;
+    }
+  }
+
   .intro-section { max-width: 850px; padding: 4rem 0 2rem; }
   .intro-section h2,
   .gallery-heading h2,
