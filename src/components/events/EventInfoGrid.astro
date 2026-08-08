@@ -1,0 +1,50 @@
+---
+import type { PublicEventData } from "../../lib/events/types";
+import { eventLocation, formatDuration, formatEventDate, formatEventTime, formatRecurrence } from "../../lib/events/format";
+
+interface Props {
+  data: PublicEventData;
+}
+
+const { data } = Astro.props;
+const { event, rsvpSummary, attendeesPreview } = data;
+const counts = event.counts || {};
+const attendeesCount = counts.attendees ?? attendeesPreview.length;
+---
+
+<section class="event-card event-info-grid" aria-label="Event details">
+  <div class="event-stat-tile">
+    <span>Date</span>
+    <strong>{formatEventDate(event)}</strong>
+  </div>
+  <div class="event-stat-tile">
+    <span>Time</span>
+    <strong>{formatEventTime(event)}</strong>
+  </div>
+  <div class="event-stat-tile">
+    <span>Duration</span>
+    <strong>{formatDuration(event)}</strong>
+  </div>
+  <div class="event-stat-tile">
+    <span>Recurrence</span>
+    <strong>{formatRecurrence(event)}</strong>
+  </div>
+  <div class="event-stat-tile">
+    <span>Host</span>
+    <strong>{event.hostDisplayName || "Lurelia host"}</strong>
+  </div>
+  <div class="event-stat-tile">
+    <span>Attendees</span>
+    <strong>{attendeesCount}</strong>
+  </div>
+  <div class="event-stat-tile event-stat-tile--wide">
+    <span>Location</span>
+    <strong>{eventLocation(event)}</strong>
+  </div>
+  <div class="event-stat-tile event-stat-tile--wide">
+    <span>RSVP Summary</span>
+    <strong>
+      {rsvpSummary.going} going · {rsvpSummary.interested} interested · {rsvpSummary.declined} declined
+    </strong>
+  </div>
+</section>

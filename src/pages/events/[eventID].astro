@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EventPage from "../../components/events/EventPage.astro";
+import { fetchPublicEventData } from "../../lib/events/api";
+import { buildEventSEO } from "../../lib/events/seo";
+
+export const prerender = false;
+
+const eventID = Astro.params.eventID || "";
+let data;
+let seo;
+
+try {
+  data = await fetchPublicEventData(eventID);
+  seo = buildEventSEO(data, Astro.url);
+} catch {
+  Astro.response.status = 404;
+}
+---
+
+{data && seo ? (
+  <BaseLayout
+    title={seo.title}
+    description={seo.description}
+    canonicalURL={seo.url}
+    image={seo.image}
+    siteName={seo.siteName}
+    type="website"
+    structuredData={seo.structuredData}
+  >
+    <EventPage data={data} currentUrl={Astro.url} />
+  </BaseLayout>
+) : (
+  <BaseLayout title="Event not found | Lurelia" description="This Lurelia event could not be found.">
+    <main class="event-public-page event-missing-page">
+      <section class="event-card">
+        <p class="event-kicker">Lurelia Event</p>
+        <h1>Event not found</h1>
+        <p>This event link is unavailable or no longer exists.</p>
+        <a class="raised-button event-action event-action--primary" href="/">Return Home</a>
+      </section>
+    </main>
+  </BaseLayout>
+)}

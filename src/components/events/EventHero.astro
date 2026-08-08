@@ -1,0 +1,44 @@
+---
+import type { PublicEventData } from "../../lib/events/types";
+import {
+  eventLocation,
+  formatDuration,
+  formatEventDate,
+  formatEventTime,
+  formatRecurrence,
+} from "../../lib/events/format";
+
+interface Props {
+  data: PublicEventData;
+}
+
+const { data } = Astro.props;
+const { event, artwork } = data;
+const artURL = artwork?.bannerURL || artwork?.url || "";
+const iconLabel = (event.iconName || "event").slice(0, 2).toUpperCase();
+---
+
+<section class="event-hero">
+  <div class="event-hero__art" aria-hidden={artURL ? "false" : "true"}>
+    {artURL ? (
+      <img src={artURL} alt={artwork?.altText || `${event.title} artwork`} loading="eager" />
+    ) : (
+      <div class="event-hero__art-fallback">Lurelia</div>
+    )}
+  </div>
+  <div class="event-hero__content">
+    <div class="event-hero__icon">{iconLabel}</div>
+    <p class="event-kicker">Lurelia Event</p>
+    <h1>{event.title}</h1>
+    <p class="event-description">
+      {event.description || "This event is being shared through Lurelia."}
+    </p>
+    <div class="event-hero__facts">
+      <span>{formatEventDate(event)}</span>
+      <span>{formatEventTime(event)}</span>
+      <span>{formatDuration(event)}</span>
+      <span>{formatRecurrence(event)}</span>
+      <span>{eventLocation(event)}</span>
+    </div>
+  </div>
+</section>

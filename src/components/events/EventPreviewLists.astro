@@ -1,0 +1,80 @@
+---
+import type { PublicEventData } from "../../lib/events/types";
+import { previewText, truncated } from "../../lib/events/format";
+
+interface Props {
+  data: PublicEventData;
+}
+
+const { data } = Astro.props;
+const { attendeesPreview, discussionPreview, postsPreview, announcementsPreview } = data;
+---
+
+<section class="event-preview-grid">
+  <div class="event-card event-preview-card">
+    <div class="event-section-heading">
+      <p>Attendees</p>
+      <span>{data.event.counts?.attendees ?? attendeesPreview.length}</span>
+    </div>
+    <div class="event-avatar-strip">
+      {attendeesPreview.length ? attendeesPreview.map((attendee) => (
+        <div class="event-person-chip">
+          {attendee.avatarURL ? (
+            <img src={attendee.avatarURL} alt="" loading="lazy" />
+          ) : (
+            <span>{attendee.displayName.slice(0, 2).toUpperCase()}</span>
+          )}
+          <div>
+            <strong>{attendee.displayName}</strong>
+            <small>{attendee.role || "member"}</small>
+          </div>
+        </div>
+      )) : <p class="event-empty">No attendees visible yet.</p>}
+    </div>
+  </div>
+
+  <div class="event-card event-preview-card">
+    <div class="event-section-heading">
+      <p>Discussion Preview</p>
+      <span>{data.event.counts?.comments ?? discussionPreview.length}</span>
+    </div>
+    <div class="event-preview-list">
+      {discussionPreview.length ? discussionPreview.map((comment) => (
+        <article class="event-preview-item">
+          <strong>{comment.authorDisplayName || "Guest"}</strong>
+          <p>{truncated(comment.body, 120)}</p>
+        </article>
+      )) : <p class="event-empty">No discussion yet.</p>}
+    </div>
+  </div>
+
+  <div class="event-card event-preview-card">
+    <div class="event-section-heading">
+      <p>Host Posts</p>
+      <span>{data.event.counts?.posts ?? postsPreview.length}</span>
+    </div>
+    <div class="event-preview-list">
+      {postsPreview.length ? postsPreview.map((post) => (
+        <article class="event-preview-item">
+          <strong>{post.title || "Host post"}</strong>
+          <p>{truncated(previewText(post), 130)}</p>
+        </article>
+      )) : <p class="event-empty">No host posts yet.</p>}
+    </div>
+  </div>
+
+  <div class="event-card event-preview-card">
+    <div class="event-section-heading">
+      <p>Announcements</p>
+      <span>{announcementsPreview.length}</span>
+    </div>
+    <div class="event-preview-list">
+      {announcementsPreview.length ? announcementsPreview.map((announcement) => (
+        <article class="event-preview-item">
+          <strong>{announcement.title || "Announcement"}</strong>
+          <p>{truncated(previewText(announcement), 130)}</p>
+        </article>
+      )) : <p class="event-empty">No announcements yet.</p>}
+    </div>
+  </div>
+</section>

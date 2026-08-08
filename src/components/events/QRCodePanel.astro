@@ -1,0 +1,19 @@
+---
+interface Props {
+  qrDataURL: string;
+  shareURL: string;
+  title: string;
+}
+
+const { qrDataURL, shareURL, title } = Astro.props;
+---
+
+<section class="event-qr-page">
+  <div class="event-card event-qr-card">
+    <p class="event-kicker">Lurelia Event QR</p>
+    <h1>{title}</h1>
+    <img src={qrDataURL} alt={`QR code for ${title}`} />
+    <p>{shareURL}</p>
+    <a class="raised-button event-action event-action--primary" href={shareURL}>Back to Event</a>
+  </div>
+</section>

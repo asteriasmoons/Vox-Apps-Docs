@@ -1,0 +1,78 @@
+---
+import type { PublicEventData } from "../../lib/events/types";
+import {
+  eventQRURL,
+  eventShareURL,
+  lureliaDeepLink,
+  lureliaDownloadURL,
+  lureliaUniversalLink,
+} from "../../lib/events/links";
+
+interface Props {
+  data: PublicEventData;
+  currentUrl: URL;
+}
+
+const { data, currentUrl } = Astro.props;
+const eventID = data.event._id || data.event.localID || "";
+const shareURL = eventShareURL(eventID, currentUrl);
+const qrURL = eventQRURL(eventID, currentUrl);
+const deepLink = lureliaDeepLink(data.event);
+const universalLink = lureliaUniversalLink(data.event);
+const downloadURL = lureliaDownloadURL();
+const shareTitle = data.event.title;
+const shareText = data.event.description || `Join ${data.event.title} on Lurelia.`;
+---
+
+<section class="event-card event-actions-card" aria-label="Event actions">
+  <div class="event-section-heading">
+    <p>Share & Join</p>
+    <span>Public link</span>
+  </div>
+  <div class="event-action-grid">
+    <a class="raised-button event-action event-action--primary" href={deepLink} data-open-lurelia data-universal={universalLink}>
+      Join Event
+    </a>
+    <a class="event-action" href={deepLink} data-open-lurelia data-universal={universalLink}>
+      Open in Lurelia
+    </a>
+    <a class="event-action" href={downloadURL}>Download Lurelia</a>
+    <button class="event-action" type="button" data-native-share>Native Share</button>
+    <button class="event-action" type="button" data-copy-link>Copy Link</button>
+    <a class="event-action" href={qrURL}>QR Code</a>
+  </div>
+  <p class="event-copy-status" data-copy-status aria-live="polite"></p>
+</section>
+
+<script define:vars={{ shareURL, shareTitle, shareText, deepLink }}>
+  const shareButton = document.querySelector("[data-native-share]");
+  const copyButton = document.querySelector("[data-copy-link]");
+  const copyStatus = document.querySelector("[data-copy-status]");
+  const appLinks = document.querySelectorAll("[data-open-lurelia]");
+
+  shareButton?.addEventListener("click", async () => {
+    if (navigator.share) {
+      await navigator.share({ title: shareTitle, text: shareText, url: shareURL });
+      return;
+    }
+    await navigator.clipboard?.writeText(shareURL);
+    if (copyStatus) copyStatus.textContent = "Share link copied.";
+  });
+
+  copyButton?.addEventListener("click", async () => {
+    await navigator.clipboard?.writeText(shareURL);
+    if (copyStatus) copyStatus.textContent = "Link copied.";
+  });
+
+  appLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const iframe = document.createElement("iframe");
+      iframe.style.display = "none";
+      iframe.src = deepLink;
+      document.body.appendChild(iframe);
+      window.setTimeout(() => iframe.remove(), 1500);
+      if (copyStatus) copyStatus.textContent = "Trying to open Lurelia. This page stays open if the app is not installed.";
+    });
+  });
+</script>

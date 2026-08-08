@@ -1,0 +1,21 @@
+---
+import type { PublicEventData } from "../../lib/events/types";
+import EventHero from "./EventHero.astro";
+import EventInfoGrid from "./EventInfoGrid.astro";
+import EventPreviewLists from "./EventPreviewLists.astro";
+import EventShareActions from "./EventShareActions.astro";
+
+interface Props {
+  data: PublicEventData;
+  currentUrl: URL;
+}
+
+const { data, currentUrl } = Astro.props;
+---
+
+<main class="event-public-page">
+  <EventHero data={data} />
+  <EventInfoGrid data={data} />
+  <EventPreviewLists data={data} />
+  <EventShareActions data={data} currentUrl={currentUrl} />
+</main>

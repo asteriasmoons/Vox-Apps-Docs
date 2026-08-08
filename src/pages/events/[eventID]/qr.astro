@@ -1,0 +1,50 @@
+---
+import QRCode from "qrcode";
+
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import QRCodePanel from "../../../components/events/QRCodePanel.astro";
+import { fetchPublicEventData } from "../../../lib/events/api";
+import { eventShareURL } from "../../../lib/events/links";
+
+export const prerender = false;
+
+const eventID = Astro.params.eventID || "";
+let data;
+let shareURL = "";
+let qrDataURL = "";
+
+try {
+  data = await fetchPublicEventData(eventID);
+  shareURL = eventShareURL(eventID, Astro.url);
+  qrDataURL = await QRCode.toDataURL(shareURL, {
+    width: 720,
+    margin: 2,
+    color: {
+      dark: "#0a0a0f",
+      light: "#ffffff",
+    },
+  });
+} catch {
+  Astro.response.status = 404;
+}
+---
+
+{data ? (
+  <BaseLayout
+    title={`${data.event.title} QR Code | Lurelia`}
+    description={`QR code for ${data.event.title}.`}
+    canonicalURL={shareURL}
+  >
+    <QRCodePanel qrDataURL={qrDataURL} shareURL={shareURL} title={data.event.title} />
+  </BaseLayout>
+) : (
+  <BaseLayout title="Event QR not found | Lurelia" description="This Lurelia event QR code could not be found.">
+    <main class="event-public-page event-missing-page">
+      <section class="event-card">
+        <p class="event-kicker">Lurelia Event QR</p>
+        <h1>Event not found</h1>
+        <p>This QR code cannot be generated because the event is unavailable.</p>
+      </section>
+    </main>
+  </BaseLayout>
+)}
