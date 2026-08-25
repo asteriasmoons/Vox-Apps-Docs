@@ -7,6 +7,9 @@ dist/
 # vscode folder
 .vscode/
 
+# vercel folder
+.vercel
+
 # dependencies
 node_modules/
 

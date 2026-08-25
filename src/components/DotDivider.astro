@@ -20,8 +20,22 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #6055f7 0%, #03e3fc 100%);
+    background: var(--accent-mint);
     animation: pulse 2s ease-in-out infinite;
+  }
+
+  .dot:nth-child(2),
+  .dot:nth-child(6) {
+    background: var(--accent-powder-blue);
+  }
+
+  .dot:nth-child(3),
+  .dot:nth-child(5) {
+    background: var(--accent-butter-yellow);
+  }
+
+  .dot:nth-child(4) {
+    background: var(--accent-periwinkle);
   }
 
   .dot:nth-child(1) {
