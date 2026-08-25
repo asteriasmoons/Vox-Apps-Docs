@@ -239,13 +239,13 @@ import GradientDivider from "../components/GradientDivider.astro";
   .github-page {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
-    padding: 1rem 0 5rem;
+    margin: -1.25rem auto -1.25rem;
+    padding: 0;
     overflow-x: hidden;
   }
 
   .hero {
-    padding: 1rem 0 2rem;
+    padding: 0;
   }
 
   .eyebrow {
@@ -275,7 +275,7 @@ import GradientDivider from "../components/GradientDivider.astro";
     display: flex;
     flex-wrap: wrap;
     gap: 0.85rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
   }
 
   .primary-button,
@@ -313,7 +313,7 @@ import GradientDivider from "../components/GradientDivider.astro";
   .content-section {
     width: min(100%, 1100px);
     margin: 0 auto;
-    padding: 2rem 0 3rem;
+    padding: 0.5rem 0 0.5rem;
   }
 
   #bug-reports {
@@ -521,8 +521,8 @@ import GradientDivider from "../components/GradientDivider.astro";
 
   .footer-note {
     width: min(100%, 1100px);
-    margin: 2rem auto 0;
-    padding: 2rem;
+    margin: 0.5rem auto 0;
+    padding: 1.5rem;
     border: 1px solid var(--color-border);
     border-radius: 24px;
     background: var(--surface-standard);
@@ -541,11 +541,11 @@ import GradientDivider from "../components/GradientDivider.astro";
 
   @media (max-width: 680px) {
     .github-page {
-      padding: 0.75rem 0 4rem;
+      padding: 0;
     }
 
     .hero {
-      padding: 0.75rem 0 1rem;
+      padding: 0;
     }
 
     .hero-text {
@@ -563,7 +563,7 @@ import GradientDivider from "../components/GradientDivider.astro";
     }
 
     .content-section {
-      padding: 1.5rem 0 2.5rem;
+      padding: 0.5rem 0 0.5rem;
     }
 
     .app-dropdown {
@@ -597,6 +597,16 @@ import GradientDivider from "../components/GradientDivider.astro";
       padding: 1.35rem;
       border-radius: 20px;
     }
+  }
+
+
+  /* Local button legibility overrides (scoped to this page) */
+  .github-page .raised-button {
+    font-family: var(--font-heading) !important;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    font-size: 1.15rem !important;
   }
 
   @media (prefers-reduced-motion: reduce) {
