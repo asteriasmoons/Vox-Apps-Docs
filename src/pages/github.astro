@@ -316,17 +316,10 @@ import GradientDivider from "../components/GradientDivider.astro";
     padding: 0.5rem 0 0.5rem;
   }
 
-  #bug-reports {
-    padding-bottom: 0.85rem;
-  }
-
-  .github-page > #bug-reports + :global(.gradient-divider) {
-    margin-top: 0.9rem;
-  }
-
   .section-copy {
     max-width: 820px;
-    margin-bottom: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
 
   .section-copy h2,
@@ -599,6 +592,35 @@ import GradientDivider from "../components/GradientDivider.astro";
     }
   }
 
+
+
+
+  /* Local raised-button shadow overrides (scoped to this page) */
+  .github-page .raised-button {
+    box-shadow:
+      0 4px 0 var(--surface-raised),
+      0 8px 14px rgba(0, 0, 0, 0.34),
+      inset 0 1px 0 rgba(255, 255, 255, 0.24),
+      inset 0 -6px 12px rgba(14, 13, 18, 0.16) !important;
+  }
+  .github-page .raised-button:hover {
+    box-shadow:
+      0 5px 0 var(--surface-raised),
+      0 10px 16px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.26),
+      inset 0 -6px 12px rgba(14, 13, 18, 0.14) !important;
+  }
+  .github-page .raised-button:active {
+    box-shadow:
+      0 2px 0 var(--surface-raised),
+      0 6px 10px rgba(0, 0, 0, 0.34),
+      inset 0 2px 8px rgba(14, 13, 18, 0.22) !important;
+  }
+
+  /* Tighten shared divider spacing on this page only */
+  .github-page :global(.gradient-divider) {
+    margin: 0.5rem 0 !important;
+  }
 
   /* Local button legibility overrides (scoped to this page) */
   .github-page .raised-button {
