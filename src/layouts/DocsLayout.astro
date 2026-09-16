@@ -141,6 +141,8 @@ Object.keys(allPageFiles).forEach((fileKey) => {
 
   const [sectionSlug, ...childParts] = normalizedRouteParts;
   if (!sectionSlug) return;
+  if (sectionSlug === "events") return;
+  if (normalizedRouteParts.some((part) => part.includes("["))) return;
 
   if (childParts.length === 0) {
     insertPath(
