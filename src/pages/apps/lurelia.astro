@@ -1013,141 +1013,6 @@ const lureliaGalleryImages = [
     line-height: 1.05;
   }
 
-  /*
-  .lurelia-gallery-section {
-    position: relative;
-    padding: 2rem 0 3.25rem;
-  }
-
-  .gallery-heading {
-    margin-bottom: 1.5rem;
-  }
-
-  .lurelia-gallery {
-    position: relative;
-    width: min(100%, 430px);
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 1rem 0 2.75rem;
-    touch-action: pan-y;
-  }
-
-  .gallery-track-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 32px;
-  }
-
-  .gallery-track {
-    display: flex;
-    align-items: center;
-    will-change: transform;
-    transition:
-      transform 0.62s
-      cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-
-  .gallery-slide {
-    flex: 0 0 100%;
-    margin: 0;
-    opacity: 0.78;
-    transition: opacity 0.35s ease;
-  }
-
-  .gallery-slide.is-active {
-    opacity: 1;
-  }
-
-  .gallery-slide img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 1170 / 2532;
-    object-fit: cover;
-    border: 1px solid var(--color-border);
-    border-radius: 32px;
-    background: var(--surface-raised);
-    box-shadow:
-      0 26px 70px rgba(0, 0, 0, 0.42),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  }
-
-  .gallery-button {
-    position: absolute;
-    top: 47%;
-    z-index: 4;
-    display: grid;
-    place-items: center;
-    width: 48px;
-    height: 48px;
-    padding: 0;
-    border: 1px solid var(--color-border-strong);
-    border-radius: 50%;
-    background: var(--surface-raised);
-    box-shadow:
-      0 18px 38px rgba(0, 0, 0, 0.32),
-      inset 0 1px 0 rgba(255, 255, 255, 0.12);
-    cursor: pointer;
-    transition:
-      transform 0.18s ease,
-      background 0.18s ease,
-      border-color 0.18s ease;
-  }
-
-  .gallery-button:hover {
-    background: #2a2733;
-    border-color: var(--accent-periwinkle);
-    transform: translateY(-2px);
-  }
-
-  .gallery-button img {
-    width: 18px;
-    height: 18px;
-    filter: brightness(0) invert(1);
-  }
-
-  .gallery-button-left {
-    left: 0.35rem;
-  }
-
-  .gallery-button-left img {
-    transform: rotate(180deg);
-  }
-
-  .gallery-button-right {
-    right: 0.35rem;
-  }
-
-  .gallery-meta {
-    position: absolute;
-    left: 50%;
-    bottom: 0.55rem;
-    z-index: 4;
-    display: grid;
-    gap: 0.55rem;
-    width: min(300px, 62%);
-    transform: translateX(-50%);
-    color: var(--text-muted);
-    font-size: 0.76rem;
-    text-align: center;
-  }
-
-  .gallery-progress {
-    height: 7px;
-    overflow: hidden;
-    border-radius: 999px;
-    background: var(--surface-raised);
-  }
-
-  .gallery-progress span {
-    display: block;
-    width: 0;
-    height: 100%;
-    border-radius: inherit;
-    background: var(--accent-periwinkle);
-    transition: width 0.35s ease;
-  }
-  */
-
   .feature-grid {
     display: grid;
     grid-template-columns:
@@ -1504,82 +1369,6 @@ const lureliaGalleryImages = [
     }
   }
 
-  @media (min-width: 901px) {
-    :global(.content:has(.lurelia-page)) {
-      max-width: 1280px;
-      padding-inline: clamp(1.5rem, 3vw, 3rem);
-    }
-
-    .hero {
-      grid-template-columns:
-        minmax(0, 1fr)
-        minmax(340px, 380px);
-      gap: clamp(2rem, 3.5vw, 4rem);
-      min-height: 610px;
-      padding: 2.15rem 0 2.65rem;
-    }
-
-    .hero h1 {
-      max-width: 840px;
-      margin-bottom: 1rem;
-      font-size: 4.15rem;
-      line-height: 1;
-      letter-spacing: 0;
-    }
-
-    .hero-text {
-      max-width: 660px;
-      font-size: 1rem;
-    }
-
-    .hero-actions {
-      margin-top: 1.5rem;
-    }
-
-    .hero-showcase {
-      align-self: center;
-      justify-self: end;
-      width: 100%;
-      max-width: 380px;
-      min-height: 430px;
-    }
-
-    .main-card {
-      inset: 58px 16px 104px 16px;
-      padding: 1.45rem;
-      border-radius: 26px;
-      transform: none;
-    }
-
-    .main-card h4 {
-      max-width: 320px;
-      font-size: 2.35rem;
-    }
-  }
-
-  @media (min-width: 901px) and (max-width: 1160px) {
-    .hero {
-      grid-template-columns:
-        minmax(0, 1fr)
-        minmax(320px, 340px);
-      gap: 2rem;
-    }
-
-    .hero h1 {
-      font-size: 3.7rem;
-    }
-
-    .main-card h4 {
-      font-size: 2.1rem;
-    }
-  }
-
-  @media (min-width: 1400px) {
-    .hero h1 {
-      font-size: 4.75rem;
-    }
-  }
-
   @media (max-width: 900px) {
     .hero,
     .spotlight {
@@ -1601,17 +1390,13 @@ const lureliaGalleryImages = [
   }
 
   @media (max-width: 680px) {
-    :global(.content:has(.lurelia-page)) {
-      padding-top: 0.55rem;
-    }
-
     .lurelia-page {
-      padding: 0 0 2.5rem;
+      padding: 0 0 3rem;
     }
 
     .hero {
-      gap: 1.75rem;
-      padding: 0.7rem 0 0.35rem;
+      gap: 1.25rem;
+      padding: 1.5rem 0 2rem;
     }
 
     .hero h1 {
@@ -1620,8 +1405,6 @@ const lureliaGalleryImages = [
 
     .hero-actions {
       flex-direction: column;
-      gap: 0.75rem;
-      margin-top: 1.25rem;
     }
 
     .primary-button,
@@ -1630,38 +1413,19 @@ const lureliaGalleryImages = [
     }
 
     .hero-showcase {
-      min-height: 450px;
-      width: 100%;
-      max-width: 100%;
-      overflow: visible;
+      min-height: 410px;
+      margin-top: 0.5rem;
     }
 
     .main-card {
-      inset: 62px 0 82px;
-      padding: 1.2rem;
-      border-radius: 24px;
+      inset: 55px 0 55px 0;
+      padding: 1.5rem;
+      border-radius: 26px;
       transform: none;
     }
 
     .main-card h4 {
-      max-width: 100%;
-      font-size: clamp(2rem, 10vw, 2.85rem);
-    }
-
-    .progress-line {
-      height: 7px;
-      margin: 1.05rem 0;
-    }
-
-    .showcase-stats {
-      gap: 0.55rem 1rem;
-      font-size: 0.86rem;
-    }
-
-    .floating-card {
-      max-width: min(72%, 284px);
-      padding: 0.75rem 0.88rem;
-      border-radius: 15px;
+      font-size: clamp(2rem, 10vw, 3rem);
     }
 
     .floating-card-one {
@@ -1670,34 +1434,17 @@ const lureliaGalleryImages = [
     }
 
     .floating-card-two {
-      bottom: 16px;
+      bottom: 0;
       left: 0;
-      max-width: min(70%, 250px);
-    }
-
-    .intro-section {
-      padding: 0.8rem 0 0.25rem;
     }
 
     .feature-grid {
       grid-template-columns: 1fr;
-      gap: 0.75rem;
-      padding: 0.45rem 0 0.75rem;
-    }
-
-    .feature-card {
-      min-height: auto;
-      padding: 1.15rem;
-      border-radius: 20px;
+      padding: 1rem 0 3rem;
     }
 
     .feature-card.wide {
       grid-column: span 1;
-      min-height: auto;
-    }
-
-    .timeline-row {
-      grid-template-columns: 50px 1fr;
     }
 
     .journey-info {
@@ -1705,13 +1452,7 @@ const lureliaGalleryImages = [
     }
 
     .spotlight {
-      gap: 0.85rem;
-      padding: 0.8rem 0 0.7rem;
-    }
-
-    .share-demo {
-      padding: 1.25rem 1rem;
-      border-radius: 22px;
+      padding: 2.5rem 0;
     }
 
     .share-row {
@@ -1724,40 +1465,15 @@ const lureliaGalleryImages = [
       text-align: left;
     }
 
-    .details-section {
-      padding: 0.85rem 0 0.7rem;
-    }
-
-    .section-heading {
-      margin-bottom: 0.75rem;
-    }
-
     .community-banner {
       align-items: stretch;
       flex-direction: column;
-      gap: 1.25rem;
-      margin: 0.35rem 0 1.25rem;
-      padding: 1.2rem;
-      border-radius: 22px;
+      margin: 1rem 0 3rem;
+      padding: 1.4rem;
     }
 
     .community-banner .primary-button {
       width: 100%;
-    }
-
-    .cta-section {
-      padding: 0.35rem 0 1rem;
-    }
-
-    .cta-grid {
-      gap: 0.85rem;
-      margin-top: 1.25rem;
-    }
-
-    .cta-card {
-      min-height: 170px;
-      padding: 1.1rem;
-      border-radius: 20px;
     }
   }
 
@@ -1772,13 +1488,5 @@ const lureliaGalleryImages = [
     .progress-line span {
       animation: none;
     }
-
-    /*
-    .gallery-track,
-    .gallery-slide,
-    .gallery-progress span {
-      transition: none;
-    }
-    */
   }
 </style>
