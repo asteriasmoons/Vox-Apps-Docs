@@ -21,7 +21,7 @@ const lureliaGalleryImages = [
 
 <DocsLayout
   title="Lurelia"
-  description="Build routines, track habits, manage reminders and events, organize your schedule, and create a life that works with you in Lurelia."
+  description="Build routines, track habits, manage reminders and events, organize your schedule, and follow meaningful journeys with Lurelia."
 >
   <main class="lurelia-page">
     <section class="hero">
@@ -31,11 +31,11 @@ const lureliaGalleryImages = [
         <h1>Build your days with intention, structure, and room to actually live them.</h1>
 
         <p class="hero-text">
-          Lurelia is a personal planning and routine companion built for the
-          moving parts of everyday life. Create detailed routines, build habits,
-          manage reminders and events, shape your schedule visually, follow
-          longer journeys, and keep the things you want to do connected instead
-          of scattered across separate systems.
+          Lurelia is a personal planning and routine companion built to bring
+          the moving parts of everyday life together. Create detailed routines,
+          build habits, manage reminders and events, organize your schedule
+          visually, follow longer journeys, and keep the things you want to do
+          connected instead of scattered across separate systems.
         </p>
 
         <div class="hero-actions" aria-label="Lurelia links">
@@ -87,79 +87,79 @@ const lureliaGalleryImages = [
 
       <p>
         Lurelia brings routines, habits, reminders, events, journeys, and
-        schedule planning into one personal system. Instead of managing a list
-        of disconnected tasks, you can build structures around when things
-        happen, why they matter, how they fit together, and what progress looks
-        like over time.
+        schedule planning into one personal system. Instead of managing a
+        collection of disconnected tasks, you can build structures around when
+        things happen, how they fit together, and the progress you make over
+        time.
       </p>
     </section>
 
     {/*
-    <section
-      class="lurelia-gallery-section reveal"
-      aria-labelledby="lurelia-gallery-title"
+<section
+  class="lurelia-gallery-section reveal"
+  aria-labelledby="lurelia-gallery-title"
+>
+  <div class="section-heading gallery-heading">
+    <p class="eyebrow">Inside Lurelia</p>
+
+    <h2 id="lurelia-gallery-title">
+      Swipe through your personal planning system
+    </h2>
+  </div>
+
+  <div class="lurelia-gallery" data-lurelia-gallery>
+    <button
+      class="gallery-button gallery-button-left"
+      type="button"
+      aria-label="Previous Lurelia screenshot"
+      data-gallery-previous
     >
-      <div class="section-heading gallery-heading">
-        <p class="eyebrow">Inside Lurelia</p>
+      <img src="/img/icons/right.svg" alt="" aria-hidden="true" />
+    </button>
 
-        <h2 id="lurelia-gallery-title">
-          See your routines, habits, schedule, and progress come together
-        </h2>
+    <div class="gallery-track-container">
+      <div class="gallery-track" data-gallery-track>
+        {
+          lureliaGalleryImages.map((image, index) => (
+            <figure
+              class:list={[
+                "gallery-slide",
+                { "is-active": index === 0 },
+              ]}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding="async"
+              />
+            </figure>
+          ))
+        }
       </div>
+    </div>
 
-      <div class="lurelia-gallery" data-lurelia-gallery>
-        <button
-          class="gallery-button gallery-button-left"
-          type="button"
-          aria-label="Previous Lurelia screenshot"
-          data-gallery-previous
-        >
-          <img src="/img/icons/right.svg" alt="" aria-hidden="true" />
-        </button>
+    <button
+      class="gallery-button gallery-button-right"
+      type="button"
+      aria-label="Next Lurelia screenshot"
+      data-gallery-next
+    >
+      <img src="/img/icons/right.svg" alt="" aria-hidden="true" />
+    </button>
 
-        <div class="gallery-track-container">
-          <div class="gallery-track" data-gallery-track>
-            {
-              lureliaGalleryImages.map((image, index) => (
-                <figure
-                  class:list={[
-                    "gallery-slide",
-                    { "is-active": index === 0 },
-                  ]}
-                >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    loading={index === 0 ? "eager" : "lazy"}
-                    decoding="async"
-                  />
-                </figure>
-              ))
-            }
-          </div>
-        </div>
+    <div class="gallery-meta" aria-live="polite">
+      <span data-gallery-count>
+        1 / {lureliaGalleryImages.length}
+      </span>
 
-        <button
-          class="gallery-button gallery-button-right"
-          type="button"
-          aria-label="Next Lurelia screenshot"
-          data-gallery-next
-        >
-          <img src="/img/icons/right.svg" alt="" aria-hidden="true" />
-        </button>
-
-        <div class="gallery-meta" aria-live="polite">
-          <span data-gallery-count>
-            1 / {lureliaGalleryImages.length}
-          </span>
-
-          <div class="gallery-progress" aria-hidden="true">
-            <span data-gallery-progress></span>
-          </div>
-        </div>
+      <div class="gallery-progress" aria-hidden="true">
+        <span data-gallery-progress></span>
       </div>
-    </section>
-    */}
+    </div>
+  </div>
+</section>
+*/}
 
     <section
       class="feature-grid"
@@ -172,181 +172,100 @@ const lureliaGalleryImages = [
         <h3>Turn the things you want to do into a system you can actually follow</h3>
 
         <p>
-          Build routines from individual tasks, define how those tasks work,
-          open full routine and task detail views, and run routines as active
-          sessions. Lurelia keeps the structure visible while you are doing the
-          routine instead of reducing everything to a generic checklist.
+          Build routines from individual tasks and give each routine the
+          structure it needs to work in real life. Lurelia keeps your routines,
+          their tasks, their details, and their progress together so you can
+          focus on moving through them instead of remembering what comes next.
         </p>
 
         <div class="chip-row">
           <span>Routine Tasks</span>
-          <span>Routine Runs</span>
-          <span>Detailed Tasks</span>
+          <span>Routine Details</span>
           <span>Progress</span>
+          <span>Notifications</span>
           <span>Live Activities</span>
         </div>
       </article>
 
       <article class="feature-card reveal">
-        <p class="card-kicker">Routine Contracts</p>
+        <p class="card-kicker">Routine Tasks</p>
 
-        <h3>Give a routine meaning beyond completion</h3>
+        <h3>Give every action the detail it deserves</h3>
 
         <p>
-          Build dedicated routine contracts that define the structure behind the
-          routine you are creating. Lurelia gives routines room for intention,
-          expectations, and the personal framework that makes following through
-          meaningful.
+          Individual routine tasks have their own dedicated detail experience,
+          allowing the actions inside your routines to carry the information and
+          structure you need instead of becoming another collection of vague
+          task names.
         </p>
       </article>
 
       <article class="feature-card reveal">
-        <p class="card-kicker">Active Routine</p>
+        <p class="card-kicker">Routine Contracts</p>
 
-        <h3>Stay connected to what you are doing right now</h3>
+        <h3>Build the framework behind the routine</h3>
 
         <p>
-          When a routine is running, Lurelia keeps that active state available
-          from the main app experience so you can return to it without hunting
-          through your library. Routine progress can also extend beyond the app
-          through Live Activity support.
+          Routine contracts give you a dedicated place to define the personal
+          structure surrounding a routine, helping turn repeated actions into a
+          system with intention and accountability behind it.
         </p>
       </article>
 
       <article class="feature-card reveal">
         <p class="card-kicker">Habits</p>
 
-        <h3>Build habits with more context than a streak counter</h3>
+        <h3>Build habits as part of your actual life</h3>
 
         <p>
-          Create habits, track completion, review history, and open a dedicated
-          blueprint for the structure behind each habit. Lurelia treats a habit
-          as something you build deliberately rather than a box you mindlessly
-          tap once a day.
+          Create and track habits alongside everything else you are already
+          planning. Dedicated habit details and history make it possible to
+          understand what you are building without separating habits from the
+          rest of your day.
         </p>
       </article>
 
       <article class="feature-card reveal">
-        <p class="card-kicker">Habit History</p>
+        <p class="card-kicker">Reminders</p>
 
-        <h3>Look backward without losing sight of what comes next</h3>
+        <h3>Keep important things from quietly disappearing</h3>
 
         <p>
-          Review previous habit activity and completion history from dedicated
-          history views while keeping current habits connected to the rest of
-          your daily system.
+          Create reminders with dedicated details, notifications, completion
+          tools, and history so the things you need to remember remain connected
+          to the same system you use for routines, habits, events, and your
+          schedule.
         </p>
       </article>
 
       <article class="feature-card wide reveal">
-        <p class="card-kicker">Timeline</p>
+        <p class="card-kicker">Timeline & Kanban</p>
 
         <h3>See the shape of your day instead of another endless task list</h3>
 
         <p>
-          Lurelia's timeline brings scheduled work into a time-based view so you
-          can understand what your day actually looks like. Routine tasks can be
-          organized alongside the rest of your schedule, giving you a clearer
-          sense of sequence, timing, and available space.
+          Lurelia gives routine tasks a visual home through its Kanban and
+          timeline experiences. Organize work into columns, understand where
+          tasks belong, and see scheduled actions in relation to time so your
+          plan feels like a day instead of a pile of disconnected items.
         </p>
 
-        <div class="timeline-preview">
-          <div class="timeline-row">
-            <span class="timeline-time">8:00</span>
-
-            <div class="timeline-task">
-              <strong>Morning Routine</strong>
-              <small>Start the day intentionally</small>
-            </div>
+        <div class="reader-preview">
+          <div class="reader-preview-top">
+            <span>Today's Progress</span>
+            <strong>68%</strong>
           </div>
 
-          <div class="timeline-row">
-            <span class="timeline-time">12:30</span>
-
-            <div class="timeline-task">
-              <strong>Reminder</strong>
-              <small>Something important is due</small>
-            </div>
+          <div class="reader-bar">
+            <span></span>
           </div>
 
-          <div class="timeline-row">
-            <span class="timeline-time">7:00</span>
-
-            <div class="timeline-task">
-              <strong>Evening Flow</strong>
-              <small>Reset before the day ends</small>
-            </div>
+          <div class="reader-meta">
+            <span>Routines</span>
+            <span>Tasks</span>
+            <span>Timeline</span>
           </div>
         </div>
-      </article>
-
-      <article class="feature-card reveal">
-        <p class="card-kicker">Kanban</p>
-
-        <h3>Organize routine work visually</h3>
-
-        <p>
-          Create a Kanban structure around your routine tasks and move through
-          work from a visual board. Lurelia also includes a timeline-based
-          Kanban experience for seeing scheduled cards in relation to time.
-        </p>
-      </article>
-
-      <article class="feature-card reveal">
-        <p class="card-kicker">Time Blocks</p>
-
-        <h3>Give parts of your day actual space</h3>
-
-        <p>
-          Use schedule and time-blocking tools to build a clearer plan for when
-          things happen instead of relying only on due dates and notifications.
-        </p>
-      </article>
-
-      <article class="feature-card wide reveal">
-        <p class="card-kicker">Reminders</p>
-
-        <h3>Keep important things visible before they become forgotten things</h3>
-
-        <p>
-          Create detailed reminders, open dedicated reminder detail pages, track
-          reminder history, and complete supported reminders directly from
-          Lurelia's interactive widgets. Reminders remain part of the same
-          system as your routines, habits, events, and schedule.
-        </p>
-
-        <div class="chip-row">
-          <span>Due Reminders</span>
-          <span>Reminder Details</span>
-          <span>History</span>
-          <span>Notifications</span>
-          <span>Interactive Widgets</span>
-        </div>
-      </article>
-
-      <article class="feature-card reveal">
-        <p class="card-kicker">Events</p>
-
-        <h3>Bring your calendar into the same place as your plans</h3>
-
-        <p>
-          Create and manage Lurelia events through dedicated calendar, agenda,
-          event detail, and scheduling views. Event support also integrates with
-          Apple Calendar so your calendar life does not need to exist separately
-          from everything else you are planning.
-        </p>
-      </article>
-
-      <article class="feature-card reveal">
-        <p class="card-kicker">Calendar Views</p>
-
-        <h3>Switch between dates and details without losing context</h3>
-
-        <p>
-          Move through month and agenda-style calendar experiences, inspect
-          individual event occurrences, manage calendars, and work with both
-          Lurelia events and supported Apple Calendar information.
-        </p>
       </article>
     </section>
 
@@ -354,14 +273,13 @@ const lureliaGalleryImages = [
       <div class="spotlight-copy">
         <p class="eyebrow">Shared Events</p>
 
-        <h2>Plan something that exists beyond your own calendar</h2>
+        <h2>Turn an event into a space people can actually share</h2>
 
         <p>
-          Lurelia's shared events are built for experiences involving other
-          people. Create an event, share access, manage the event as its host,
-          publish updates and posts, participate in comments, work with
-          attachments, and keep shared event information connected to calendar
-          tools.
+          Lurelia's shared events go beyond putting a date on a calendar. Create
+          an event, share it with other people, manage RSVPs, publish posts and
+          announcements, participate in comments, work with attachments, and
+          keep everyone connected to the same event information.
         </p>
       </div>
 
@@ -371,13 +289,13 @@ const lureliaGalleryImages = [
         <h4>Bring people into the plan.</h4>
 
         <div class="share-row">
-          <span>Event</span>
-          <strong>Created and organized</strong>
+          <span>RSVP</span>
+          <strong>Keep responses together</strong>
         </div>
 
         <div class="share-row">
           <span>Updates</span>
-          <strong>Posts from the host</strong>
+          <strong>Posts and announcements</strong>
         </div>
 
         <div class="share-row">
@@ -387,177 +305,42 @@ const lureliaGalleryImages = [
       </div>
     </section>
 
-    <section class="feature-grid secondary-grid">
-      <article class="feature-card wide reveal">
-        <p class="card-kicker">Journeys</p>
-
-        <h3>Turn a bigger direction into milestones you can keep moving through</h3>
-
-        <p>
-          Journeys give longer-term goals and personal changes somewhere to
-          live. Create a journey around a vision, break it into milestones and
-          individual steps, follow progress, add notes, and see the path unfold
-          through a dedicated timeline.
-        </p>
-
-        <div class="journey-preview">
-          <div class="journey-progress-label">
-            <span>Journey Progress</span>
-            <strong>58%</strong>
-          </div>
-
-          <div class="journey-dots" aria-hidden="true">
-            <span class="complete"></span>
-            <span class="complete"></span>
-            <span class="complete"></span>
-            <span class="complete"></span>
-            <span class="complete"></span>
-            <span class="complete"></span>
-            <span class="complete"></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="journey-info">
-            <span>
-              <small>Current Milestone</small>
-              <strong>Build the Foundation</strong>
-            </span>
-
-            <span>
-              <small>Next Step</small>
-              <strong>Continue Forward</strong>
-            </span>
-          </div>
-        </div>
-      </article>
-
-      <article class="feature-card reveal">
-        <p class="card-kicker">Milestones</p>
-
-        <h3>Break a long path into meaningful markers</h3>
-
-        <p>
-          Give each Journey milestones that represent real stages of progress,
-          then work through individual steps without losing sight of the larger
-          direction.
-        </p>
-      </article>
-
-      <article class="feature-card reveal">
-        <p class="card-kicker">Journey Notes</p>
-
-        <h3>Keep the story behind your progress</h3>
-
-        <p>
-          Add notes throughout a Journey so decisions, reflections, discoveries,
-          and changes in direction can stay attached to the path they belong to.
-        </p>
-      </article>
-    </section>
-
     <section class="details-section reveal">
       <div class="section-heading">
-        <p class="eyebrow">Everything Working Together</p>
+        <p class="eyebrow">Everything Else</p>
 
-        <h2>Open up the deeper parts of Lurelia</h2>
+        <h2>Open each part of the Lurelia experience</h2>
       </div>
 
       <div class="details-list">
         <details open>
           <summary>
             <span>
-              <b>Routine Task Details</b>
-              <small>Build tasks with the context they actually need</small>
+              <b>Routine Details</b>
+              <small>See the structure behind what you are building</small>
             </span>
           </summary>
 
           <p>
-            Routine tasks have their own dedicated editor and detail
-            experiences, allowing individual actions inside a routine to carry
-            far more structure than a simple task title. That means your routine
-            can explain what needs to happen instead of forcing you to remember
-            all of the details every time.
+            Open a routine to work with its tasks and the information attached
+            to the routine itself. Dedicated routine and routine-task detail
+            views keep the structure of your routines available without forcing
+            everything into one oversized checklist.
           </p>
         </details>
 
         <details>
           <summary>
             <span>
-              <b>Routine Notifications</b>
-              <small>Bring the routine back to your attention when it matters</small>
+              <b>Routine Notifications & Live Activities</b>
+              <small>Keep active routines close when you need them</small>
             </span>
           </summary>
 
           <p>
-            Lurelia supports notification-driven routine workflows so scheduled
-            tasks and routines can reach outside the app instead of depending on
-            you remembering to open it first.
-          </p>
-        </details>
-
-        <details>
-          <summary>
-            <span>
-              <b>Live Routine Progress</b>
-              <small>Keep an active routine close while you complete it</small>
-            </span>
-          </summary>
-
-          <p>
-            Active routines can remain visible through Lurelia's running-routine
-            interface and Live Activity infrastructure, making it easier to
-            return to the routine currently in progress.
-          </p>
-        </details>
-
-        <details>
-          <summary>
-            <span>
-              <b>Kanban Board & Timeline</b>
-              <small>Two visual ways to understand scheduled work</small>
-            </span>
-          </summary>
-
-          <p>
-            Lurelia includes both a Kanban board and a dedicated Kanban timeline.
-            Use the board to organize work by column and the timeline to
-            understand those cards in relation to time and the rest of your day.
-          </p>
-        </details>
-
-        <details>
-          <summary>
-            <span>
-              <b>Apple Calendar Integration</b>
-              <small>Keep existing events connected to your Lurelia schedule</small>
-            </span>
-          </summary>
-
-          <p>
-            Calendar tools include dedicated handling for Apple Calendar events,
-            event details, calendar settings, event occurrences, and scheduling
-            so Lurelia can work alongside the calendar already used on your
-            device.
-          </p>
-        </details>
-
-        <details>
-          <summary>
-            <span>
-              <b>Shared Event Hosting</b>
-              <small>Create, manage, communicate, and keep attendees informed</small>
-            </span>
-          </summary>
-
-          <p>
-            Shared events include dedicated host-management tools alongside
-            event editing, share tools, calendar synchronization, posts,
-            comments, and attachment support. They are designed to function as
-            living event spaces rather than static calendar entries.
+            Routine notifications help bring scheduled actions back to your
+            attention, while active routine support and Live Activities make it
+            easier to stay connected to a routine that is already in progress.
           </p>
         </details>
 
@@ -565,31 +348,78 @@ const lureliaGalleryImages = [
           <summary>
             <span>
               <b>Interactive Widgets</b>
-              <small>Complete things without opening the full app</small>
+              <small>Work with Lurelia without opening the full app</small>
             </span>
           </summary>
 
           <p>
             Lurelia includes widgets for routines, routine tasks, reminders,
-            habits, the Kanban timeline, upcoming events, and other supported
-            content. Interactive intents allow supported routine tasks,
-            reminders, habits, and routines to be completed directly from
-            widgets.
+            habits, upcoming events, and the Kanban timeline. Supported items can
+            be completed directly through interactive widget actions, keeping
+            everyday progress within easy reach.
           </p>
         </details>
 
         <details>
           <summary>
             <span>
-              <b>Release Notes</b>
-              <small>See what changed when Lurelia evolves</small>
+              <b>Events & Apple Calendar</b>
+              <small>Bring your schedule into the same system as your plans</small>
             </span>
           </summary>
 
           <p>
-            Lurelia includes an in-app release notes experience that can surface
-            new changes from the main app flow so updates are explained inside
-            the product rather than existing only in an external changelog.
+            Create and manage events through Lurelia's calendar and event
+            experiences while working alongside Apple Calendar. Event details,
+            occurrences, scheduling tools, notifications, and calendar
+            integration keep scheduled life connected to the rest of Lurelia.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <span>
+              <b>Shared Events</b>
+              <small>Plan, communicate, and participate together</small>
+            </span>
+          </summary>
+
+          <p>
+            Shared events include sharing tools, RSVPs, host controls, posts and
+            announcements, comments, attachments, and event information designed
+            for experiences involving more than one person.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <span>
+              <b>Kanban Board & Timeline</b>
+              <small>Organize routine tasks visually</small>
+            </span>
+          </summary>
+
+          <p>
+            Create Kanban columns, assign routine tasks, and work with those
+            tasks from visual board and timeline experiences. Supported actions
+            let you work directly with the items in your schedule rather than
+            constantly navigating back to their original routine.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <span>
+              <b>Journeys</b>
+              <small>Give longer paths somewhere to unfold</small>
+            </span>
+          </summary>
+
+          <p>
+            Journeys provide a dedicated space for progress that stretches
+            beyond a single day. Build a larger direction from milestones and
+            steps, keep notes attached to the journey, and follow its progress
+            over time.
           </p>
         </details>
       </div>
@@ -602,11 +432,10 @@ const lureliaGalleryImages = [
         <h2>Structure should support your life, not become another thing to manage.</h2>
 
         <p>
-          Lurelia is built around the idea that routines, reminders, habits,
-          events, and longer goals affect each other. It gives each one its own
-          depth while keeping them connected inside one system, so structure can
-          help you move through the day instead of turning the day into a pile
-          of unrelated lists.
+          Lurelia is built around the idea that routines, habits, reminders,
+          events, schedules, and longer journeys affect one another. Each gets
+          the space it needs while remaining part of one connected system that
+          helps you move through your days with intention.
         </p>
       </div>
 
@@ -618,11 +447,11 @@ const lureliaGalleryImages = [
     <section class="cta-section reveal">
       <p class="eyebrow">Explore Lurelia</p>
 
-      <h2>Build the structure that helps you keep becoming who you mean to be.</h2>
+      <h2>Build a system that helps your days work with you.</h2>
 
       <p>
         Learn more about Lurelia, report a problem, share an idea, or reach out
-        through Voxiverse Support.
+        directly through Voxiverse Support.
       </p>
 
       <div class="cta-grid">
@@ -674,7 +503,6 @@ const lureliaGalleryImages = [
 
   revealItems.forEach((item) => revealObserver.observe(item));
 
-  /*
   document
     .querySelectorAll<HTMLElement>("[data-lurelia-gallery]")
     .forEach((gallery) => {
@@ -811,7 +639,6 @@ const lureliaGalleryImages = [
       updateGallery();
       startAutoplay();
     });
-  */
 </script>
 
 <style>
@@ -997,6 +824,103 @@ const lureliaGalleryImages = [
     animation-delay: -2.4s;
   }
 
+  @media (min-width: 901px) {
+    :global(.content:has(.lurelia-page)) {
+      max-width: 1280px;
+      padding-inline: clamp(1.5rem, 3vw, 3rem);
+    }
+
+    .hero {
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(340px, 380px);
+      gap: clamp(2rem, 3.5vw, 4rem);
+      min-height: 610px;
+      padding: 2.15rem 0 2.65rem;
+    }
+
+    .hero h1 {
+      max-width: 840px;
+      margin-bottom: 1rem;
+      font-size: 4.15rem;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .hero-text {
+      max-width: 660px;
+      font-size: 1rem;
+    }
+
+    .hero-actions {
+      margin-top: 1.5rem;
+    }
+
+    .hero-showcase {
+      align-self: center;
+      justify-self: end;
+      width: 100%;
+      max-width: 380px;
+      min-height: 430px;
+    }
+
+    .main-card {
+      inset: 58px 16px 104px 16px;
+      padding: 1.45rem;
+      border-radius: 26px;
+      transform: none;
+    }
+
+    .main-card h4 {
+      max-width: 320px;
+      font-size: 2.35rem;
+    }
+
+    .progress-line {
+      margin: 1.2rem 0;
+    }
+
+    .showcase-stats {
+      gap: 0.65rem 0.9rem;
+      font-size: 0.9rem;
+    }
+
+    .floating-card-one {
+      top: 0;
+      right: 0;
+      max-width: 282px;
+    }
+
+    .floating-card-two {
+      bottom: 16px;
+      left: 0;
+      max-width: 292px;
+    }
+  }
+
+  @media (min-width: 901px) and (max-width: 1160px) {
+    .hero {
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(320px, 340px);
+      gap: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3.7rem;
+    }
+
+    .main-card h4 {
+      font-size: 2.1rem;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .hero h1 {
+      font-size: 4.75rem;
+    }
+  }
+
   .intro-section {
     max-width: 850px;
     padding: 4rem 0 2rem;
@@ -1013,16 +937,145 @@ const lureliaGalleryImages = [
     line-height: 1.05;
   }
 
+  .lurelia-gallery-section {
+    position: relative;
+    padding: 2rem 0 3.25rem;
+  }
+
+  .gallery-heading {
+    margin-bottom: 1.5rem;
+  }
+
+  .lurelia-gallery {
+    position: relative;
+    width: min(100%, 430px);
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 1rem 0 2.75rem;
+    touch-action: pan-y;
+  }
+
+  .gallery-track-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+  }
+
+  .gallery-track {
+    display: flex;
+    align-items: center;
+    will-change: transform;
+    transition:
+      transform 0.62s
+      cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .gallery-slide {
+    flex: 0 0 100%;
+    margin: 0;
+    opacity: 0.78;
+    transition: opacity 0.35s ease;
+  }
+
+  .gallery-slide.is-active {
+    opacity: 1;
+  }
+
+  .gallery-slide img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1170 / 2532;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 32px;
+    background: var(--surface-raised);
+    box-shadow:
+      0 26px 70px rgba(0, 0, 0, 0.42),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .gallery-button {
+    position: absolute;
+    top: 47%;
+    z-index: 4;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 1px solid var(--color-border-strong);
+    border-radius: 50%;
+    background: var(--surface-raised);
+    box-shadow:
+      0 18px 38px rgba(0, 0, 0, 0.32),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    cursor: pointer;
+    transition:
+      transform 0.18s ease,
+      background 0.18s ease,
+      border-color 0.18s ease;
+  }
+
+  .gallery-button:hover {
+    background: #2a2733;
+    border-color: var(--accent-periwinkle);
+    transform: translateY(-2px);
+  }
+
+  .gallery-button img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+  }
+
+  .gallery-button-left {
+    left: 0.35rem;
+  }
+
+  .gallery-button-left img {
+    transform: rotate(180deg);
+  }
+
+  .gallery-button-right {
+    right: 0.35rem;
+  }
+
+  .gallery-meta {
+    position: absolute;
+    left: 50%;
+    bottom: 0.55rem;
+    z-index: 4;
+    display: grid;
+    gap: 0.55rem;
+    width: min(300px, 62%);
+    transform: translateX(-50%);
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    text-align: center;
+  }
+
+  .gallery-progress {
+    height: 7px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--surface-raised);
+  }
+
+  .gallery-progress span {
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--accent-periwinkle);
+    transition: width 0.35s ease;
+  }
+
   .feature-grid {
     display: grid;
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
     gap: 1rem;
     padding: 2rem 0 4rem;
-  }
-
-  .secondary-grid {
-    padding-top: 0;
   }
 
   .feature-card {
@@ -1071,89 +1124,43 @@ const lureliaGalleryImages = [
     color: var(--accent-mint);
   }
 
-  .timeline-preview,
-  .journey-preview {
-    max-width: 700px;
+  .reader-preview {
+    max-width: 650px;
     margin-top: 1.5rem;
     padding: 1rem;
     border: 1px solid var(--color-border);
-    border-radius: 20px;
+    border-radius: 18px;
     background: var(--surface-raised);
   }
 
-  .timeline-preview {
-    display: grid;
-    gap: 0.75rem;
-  }
-
-  .timeline-row {
-    display: grid;
-    grid-template-columns: 64px 1fr;
-    align-items: center;
-    gap: 0.85rem;
-  }
-
-  .timeline-time {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-  }
-
-  .timeline-task {
-    display: grid;
-    gap: 0.2rem;
-    padding: 0.85rem 1rem;
-    border: 1px solid var(--color-border);
-    border-radius: 14px;
-    background: var(--surface-standard);
-  }
-
-  .timeline-task small {
-    color: var(--text-muted);
-  }
-
-  .journey-progress-label {
+  .reader-preview-top {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
   }
 
-  .journey-dots {
+  .reader-bar {
+    height: 8px;
+    margin-top: 0.8rem;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--surface-standard);
+  }
+
+  .reader-bar span {
+    display: block;
+    width: 68%;
+    height: 100%;
+    background: var(--accent-periwinkle);
+  }
+
+  .reader-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.45rem;
-    margin: 1rem 0;
-  }
-
-  .journey-dots span {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background: var(--surface-standard);
-    border: 1px solid var(--color-border);
-  }
-
-  .journey-dots span.complete {
-    background: var(--accent-periwinkle);
-    border-color: var(--accent-periwinkle);
-  }
-
-  .journey-info {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem;
-  }
-
-  .journey-info > span {
-    display: grid;
-    gap: 0.3rem;
-    padding: 0.85rem;
-    border: 1px solid var(--color-border);
-    border-radius: 14px;
-    background: var(--surface-standard);
-  }
-
-  .journey-info small {
+    margin-top: 0.85rem;
     color: var(--text-muted);
+    font-size: 0.8rem;
   }
 
   .spotlight {
@@ -1262,6 +1269,7 @@ const lureliaGalleryImages = [
     margin: 2rem 0 5rem;
     padding: 2rem;
     border-radius: 28px;
+    background: var(--surface-standard);
   }
 
   .community-banner > div {
@@ -1305,6 +1313,11 @@ const lureliaGalleryImages = [
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--text-muted);
+  }
+
+  .cta-card strong {
+    font-size: 1.15rem;
+    color: var(--heading-small);
   }
 
   .cta-button {
@@ -1390,13 +1403,17 @@ const lureliaGalleryImages = [
   }
 
   @media (max-width: 680px) {
+    :global(.content:has(.lurelia-page)) {
+      padding-top: 0.55rem;
+    }
+
     .lurelia-page {
-      padding: 0 0 3rem;
+      padding: 0 0 2.5rem;
     }
 
     .hero {
-      gap: 1.25rem;
-      padding: 1.5rem 0 2rem;
+      gap: 1.75rem;
+      padding: 0.7rem 0 0.35rem;
     }
 
     .hero h1 {
@@ -1405,6 +1422,8 @@ const lureliaGalleryImages = [
 
     .hero-actions {
       flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
     }
 
     .primary-button,
@@ -1413,19 +1432,46 @@ const lureliaGalleryImages = [
     }
 
     .hero-showcase {
-      min-height: 410px;
-      margin-top: 0.5rem;
+      min-height: 450px;
+      width: 100%;
+      max-width: 100%;
+      overflow: visible;
     }
 
     .main-card {
-      inset: 55px 0 55px 0;
-      padding: 1.5rem;
-      border-radius: 26px;
+      inset: 62px 0 82px;
+      padding: 1.2rem;
+      border-radius: 24px;
       transform: none;
     }
 
     .main-card h4 {
-      font-size: clamp(2rem, 10vw, 3rem);
+      max-width: 100%;
+      font-size: clamp(2rem, 10vw, 2.85rem);
+    }
+
+    .progress-line {
+      height: 7px;
+      margin: 1.05rem 0;
+    }
+
+    .showcase-stats {
+      gap: 0.55rem 1rem;
+      font-size: 0.86rem;
+    }
+
+    .floating-card {
+      max-width: min(72%, 284px);
+      padding: 0.75rem 0.88rem;
+      border-radius: 15px;
+    }
+
+    .floating-card span {
+      font-size: 0.68rem;
+    }
+
+    .floating-card strong {
+      font-size: 0.86rem;
     }
 
     .floating-card-one {
@@ -1434,25 +1480,102 @@ const lureliaGalleryImages = [
     }
 
     .floating-card-two {
-      bottom: 0;
+      bottom: 16px;
       left: 0;
+      max-width: min(70%, 250px);
+    }
+
+    .lurelia-page :global(.gradient-divider) {
+      margin: 0.35rem 0;
+    }
+
+    .hero-text,
+    .intro-section p,
+    .feature-card p,
+    .spotlight p,
+    .community-banner p,
+    .cta-section > p {
+      margin: 0;
+    }
+
+    .intro-section {
+      padding: 0.8rem 0 0.25rem;
+    }
+
+    .lurelia-gallery-section {
+      padding: 0.75rem 0 1rem;
+    }
+
+    .gallery-heading {
+      margin-bottom: 0.7rem;
+    }
+
+    .lurelia-gallery {
+      width: min(68vw, 250px);
+      padding: 0.45rem 0 2.35rem;
+    }
+
+    .gallery-track-container {
+      border-radius: 22px;
+    }
+
+    .gallery-slide img {
+      border-radius: 22px;
+    }
+
+    .gallery-button {
+      top: 45%;
+      width: 34px;
+      height: 34px;
+    }
+
+    .gallery-button img {
+      width: 13px;
+      height: 13px;
+    }
+
+    .gallery-button-left {
+      left: 0.1rem;
+    }
+
+    .gallery-button-right {
+      right: 0.1rem;
+    }
+
+    .gallery-meta {
+      width: min(250px, 70%);
+      font-size: 0.7rem;
     }
 
     .feature-grid {
       grid-template-columns: 1fr;
-      padding: 1rem 0 3rem;
+      gap: 0.75rem;
+      padding: 0.45rem 0 0.75rem;
+    }
+
+    .feature-card {
+      min-height: auto;
+      padding: 1.15rem;
+      border-radius: 20px;
     }
 
     .feature-card.wide {
       grid-column: span 1;
+      min-height: auto;
     }
 
-    .journey-info {
-      grid-template-columns: 1fr;
+    .reader-preview-top {
+      flex-direction: column;
     }
 
     .spotlight {
-      padding: 2.5rem 0;
+      gap: 0.85rem;
+      padding: 0.8rem 0 0.7rem;
+    }
+
+    .share-demo {
+      padding: 1.25rem 1rem;
+      border-radius: 22px;
     }
 
     .share-row {
@@ -1465,15 +1588,44 @@ const lureliaGalleryImages = [
       text-align: left;
     }
 
+    .details-section {
+      padding: 0.85rem 0 0.7rem;
+    }
+
+    .section-heading {
+      margin-bottom: 0.75rem;
+    }
+
+    .details-list {
+      gap: 0.7rem;
+    }
+
     .community-banner {
       align-items: stretch;
       flex-direction: column;
-      margin: 1rem 0 3rem;
-      padding: 1.4rem;
+      gap: 1.25rem;
+      margin: 0.35rem 0 1.25rem;
+      padding: 1.2rem;
+      border-radius: 22px;
     }
 
     .community-banner .primary-button {
       width: 100%;
+    }
+
+    .cta-section {
+      padding: 0.35rem 0 1rem;
+    }
+
+    .cta-grid {
+      gap: 0.85rem;
+      margin-top: 1.25rem;
+    }
+
+    .cta-card {
+      min-height: 170px;
+      padding: 1.1rem;
+      border-radius: 20px;
     }
   }
 
@@ -1487,6 +1639,12 @@ const lureliaGalleryImages = [
     .floating-card,
     .progress-line span {
       animation: none;
+    }
+
+    .gallery-track,
+    .gallery-slide,
+    .gallery-progress span {
+      transition: none;
     }
   }
 </style>
