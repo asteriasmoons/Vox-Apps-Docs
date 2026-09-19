@@ -1390,12 +1390,8 @@ summary {
   position: relative;
   font-family: var(--font-heading);
   list-style: none;
-  background-color: var(--surface-raised);
-  background-image: radial-gradient(circle, var(--color-border) 1.5px, transparent 1.5px);
-  background-size: 8px 3px;
-  background-position: left bottom;
-  background-repeat: repeat-x;
-  border-bottom: 1px solid transparent;
+  background: var(--surface-raised);
+  border-bottom: 0;
   transition: all 0.25s ease;
 }
 
@@ -1431,6 +1427,17 @@ summary::after {
 ========================= */
 details[open] summary::after {
   background: url("/img/icons/down.svg") center / contain no-repeat;
+}
+
+details[open] summary::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  pointer-events: none;
+  background: radial-gradient(circle, var(--color-border) 1.5px, transparent 1.6px) left center / 8px 3px repeat-x;
 }
 
 summary:hover {
