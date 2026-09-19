@@ -255,40 +255,39 @@ const lureliaGalleryImages = [
             <span class="timeline-line"></span>
 
             <div class="timeline-point timeline-point-one">
-              <span>Today</span>
+              <span>Aug 10</span>
             </div>
 
             <div class="timeline-point timeline-point-two">
-              <span>Next</span>
+              <span>Aug 11</span>
             </div>
 
             <div class="timeline-point timeline-point-three">
-              <span>Later</span>
+              <span>Aug 12</span>
+            </div>
+
+            <div class="timeline-point timeline-point-four">
+              <span>Aug 13</span>
             </div>
           </div>
 
           <div class="planning-board" aria-hidden="true">
-            <div class="planning-column">
+            <div class="planning-column planning-column-one">
               <span class="planning-column-label">To Do</span>
               <span class="planning-task planning-task-yellow"></span>
             </div>
 
-            <div class="planning-column">
+            <div class="planning-column planning-column-two">
               <span class="planning-column-label">In Progress</span>
               <span class="planning-task planning-task-periwinkle"></span>
             </div>
 
-            <div class="planning-column">
+            <div class="planning-column planning-column-three">
               <span class="planning-column-label">Done</span>
               <span class="planning-task planning-task-green"></span>
             </div>
           </div>
 
-          <div class="reader-meta">
-            <span>Timeline</span>
-            <span>Kanban</span>
-            <span>Interactive Actions</span>
-          </div>
         </div>
       </article>
     </section>
@@ -1161,28 +1160,29 @@ const lureliaGalleryImages = [
   .planning-preview-title {
     margin-bottom: 1.15rem;
     color: var(--color-text);
+    font-family: "Donuts Chocolate", var(--font-kicker);
     font-size: 1rem;
   }
 
   .planning-timeline {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     align-items: start;
-    min-height: 52px;
-    margin: 0 0 0.75rem;
+    min-height: 72px;
+    margin: 0 0 0.2rem;
   }
 
   .timeline-line {
     position: absolute;
-    top: 8px;
-    left: 16.666%;
-    right: 16.666%;
+    top: 30px;
+    left: 12.5%;
+    right: 12.5%;
     height: 3px;
     border-radius: 999px;
     background: linear-gradient(
       90deg,
-      var(--accent-yellow),
+      var(--accent-periwinkle),
       var(--accent-periwinkle),
       var(--accent-mint)
     );
@@ -1193,33 +1193,50 @@ const lureliaGalleryImages = [
     z-index: 1;
     display: grid;
     justify-items: center;
-    gap: 0.45rem;
-    color: var(--text-muted);
+    gap: 0.4rem;
+    color: var(--accent-periwinkle);
     font-size: 0.72rem;
   }
 
   .timeline-point::before {
     content: "";
+    grid-row: 2;
     width: 17px;
     height: 17px;
     box-sizing: border-box;
     border: 3px solid var(--surface-raised);
     border-radius: 50%;
+    background: currentColor;
     box-shadow: 0 0 0 2px currentColor;
   }
 
-  .timeline-point-one { color: var(--accent-yellow); }
+  .timeline-point::after {
+    content: "";
+    grid-row: 3;
+    width: 2px;
+    height: 25px;
+    background: repeating-linear-gradient(
+      to bottom,
+      currentColor 0 5px,
+      transparent 5px 10px
+    );
+  }
+
+  .timeline-point-one { color: var(--accent-periwinkle); }
   .timeline-point-two { color: var(--accent-periwinkle); }
   .timeline-point-three { color: var(--accent-mint); }
+  .timeline-point-four { color: var(--accent-mint); }
 
   .timeline-point span {
-    color: var(--text-muted);
+    grid-row: 1;
+    color: var(--color-text);
   }
 
   .planning-board {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.65rem;
+    padding: 0 3.5%;
   }
 
   .planning-column {
@@ -1228,6 +1245,18 @@ const lureliaGalleryImages = [
     border: 1px solid var(--color-border);
     border-radius: 12px;
     background: var(--surface-standard);
+  }
+
+  .planning-column-one {
+    border-color: color-mix(in srgb, var(--accent-yellow) 45%, var(--color-border));
+  }
+
+  .planning-column-two {
+    border-color: color-mix(in srgb, var(--accent-periwinkle) 55%, var(--color-border));
+  }
+
+  .planning-column-three {
+    border-color: color-mix(in srgb, var(--accent-mint) 55%, var(--color-border));
   }
 
   .planning-column-label {
