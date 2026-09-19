@@ -388,12 +388,14 @@
   font-family: "Donuts Chocolate";
   src: url("/fonts/Donuts%20Chocolate.woff2") format("woff2");
   font-display: swap;
+  unicode-range: U+0020-0025, U+0027-002B, U+002D, U+002F-007E;
 }
 
 @font-face {
   font-family: "Astromeda";
   src: url("/fonts/Astromeda.woff2") format("woff2");
   font-display: swap;
+  unicode-range: U+0030-0039, U+0041-005A, U+0061-007A;
 }
 
 @font-face {
