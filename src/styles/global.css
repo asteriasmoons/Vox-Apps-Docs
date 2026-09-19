@@ -1440,7 +1440,7 @@ summary:hover {
 details > *:not(summary) {
   padding: 1rem 1.25rem;
   background: var(--surface-standard);
-  border-top: 1px solid var(--color-border);
+  border-top: 0;
   color: var(--color-text);
 }
 
