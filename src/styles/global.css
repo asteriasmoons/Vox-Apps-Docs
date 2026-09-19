@@ -947,7 +947,7 @@ a:hover {
    SIDEBAR + TOPBAR + NAV
    ========================================================= */
 .docs-shell {
-  min-height: 100vh;
+  min-height: 0;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;

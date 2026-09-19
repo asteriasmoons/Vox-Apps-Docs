@@ -885,9 +885,12 @@ const loomeyGalleryImages = [
   }
 
   @media (max-width: 680px) {
+    :global(.site-footer) {
+      margin-top: 0;
+    }
     :global(.content:has(.loomey-page)) { padding-top: .55rem; }
 
-    .loomey-page { padding: 0 0 2.5rem; }
+    .loomey-page { padding: 0 0 0; }
     .hero {
       gap: 1.75rem;
       padding: .7rem 0 .35rem;
@@ -1028,7 +1031,7 @@ const loomeyGalleryImages = [
       border-radius: 22px;
     }
     .community-banner .primary-button { width: 100%; }
-    .cta-section { padding: .35rem 0 1rem; }
+    .cta-section { padding: .35rem 0 0; }
     .cta-grid {
       gap: .85rem;
       margin-top: 1.25rem;

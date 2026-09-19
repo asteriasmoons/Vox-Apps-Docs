@@ -1407,12 +1407,15 @@ const marklyGalleryImages = [
   }
 
   @media (max-width: 680px) {
+    :global(.site-footer) {
+      margin-top: 0;
+    }
     :global(.content:has(.markly-page)) {
       padding-top: 0.55rem;
     }
 
     .markly-page {
-      padding: 0 0 2.5rem;
+      padding: 0 0 0;
     }
 
     .hero {
@@ -1635,7 +1638,7 @@ const marklyGalleryImages = [
     }
 
     .cta-section {
-      padding: 0.35rem 0 1rem;
+      padding: 0.35rem 0 0;
     }
 
     .cta-grid {

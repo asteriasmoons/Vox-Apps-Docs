@@ -1399,12 +1399,15 @@ const lureliaGalleryImages = [
   }
 
   @media (max-width: 680px) {
+    :global(.site-footer) {
+      margin-top: 0;
+    }
     :global(.content:has(.lurelia-page)) {
       padding-top: 0.55rem;
     }
 
     .lurelia-page {
-      padding: 0 0 2.5rem;
+      padding: 0 0 0;
     }
 
     .hero {
@@ -1669,7 +1672,7 @@ const lureliaGalleryImages = [
     }
 
     .cta-section {
-      padding: 0.35rem 0 1rem;
+      padding: 0.35rem 0 0;
     }
 
     .cta-grid {
