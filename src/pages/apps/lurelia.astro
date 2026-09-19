@@ -248,14 +248,40 @@ const lureliaGalleryImages = [
           while keeping it tied back to the same underlying items.
         </p>
 
-        <div class="reader-preview">
-          <div class="reader-preview-top">
-            <span>Planning Views</span>
-            <strong>Connected</strong>
+        <div class="planning-preview" aria-label="Connected Timeline and Kanban planning preview">
+          <div class="planning-preview-title">Planning Views</div>
+
+          <div class="planning-timeline" aria-hidden="true">
+            <span class="timeline-line"></span>
+
+            <div class="timeline-point timeline-point-one">
+              <span>Today</span>
+            </div>
+
+            <div class="timeline-point timeline-point-two">
+              <span>Next</span>
+            </div>
+
+            <div class="timeline-point timeline-point-three">
+              <span>Later</span>
+            </div>
           </div>
 
-          <div class="reader-bar">
-            <span></span>
+          <div class="planning-board" aria-hidden="true">
+            <div class="planning-column">
+              <span class="planning-column-label">To Do</span>
+              <span class="planning-task planning-task-yellow"></span>
+            </div>
+
+            <div class="planning-column">
+              <span class="planning-column-label">In Progress</span>
+              <span class="planning-task planning-task-periwinkle"></span>
+            </div>
+
+            <div class="planning-column">
+              <span class="planning-column-label">Done</span>
+              <span class="planning-task planning-task-green"></span>
+            </div>
           </div>
 
           <div class="reader-meta">
@@ -1123,34 +1149,113 @@ const lureliaGalleryImages = [
     color: var(--accent-mint);
   }
 
-  .reader-preview {
+  .planning-preview {
     max-width: 650px;
     margin-top: 1.5rem;
-    padding: 1rem;
+    padding: 1.15rem;
     border: 1px solid var(--color-border);
     border-radius: 18px;
     background: var(--surface-raised);
   }
 
-  .reader-preview-top {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+  .planning-preview-title {
+    margin-bottom: 1.15rem;
+    color: var(--color-text);
+    font-size: 1rem;
   }
 
-  .reader-bar {
-    height: 8px;
-    margin-top: 0.8rem;
-    overflow: hidden;
+  .planning-timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    min-height: 52px;
+    margin: 0 0 0.75rem;
+  }
+
+  .timeline-line {
+    position: absolute;
+    top: 8px;
+    left: 16.666%;
+    right: 16.666%;
+    height: 3px;
     border-radius: 999px;
+    background: linear-gradient(
+      90deg,
+      var(--accent-yellow),
+      var(--accent-periwinkle),
+      var(--accent-mint)
+    );
+  }
+
+  .timeline-point {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    justify-items: center;
+    gap: 0.45rem;
+    color: var(--text-muted);
+    font-size: 0.72rem;
+  }
+
+  .timeline-point::before {
+    content: "";
+    width: 17px;
+    height: 17px;
+    box-sizing: border-box;
+    border: 3px solid var(--surface-raised);
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px currentColor;
+  }
+
+  .timeline-point-one { color: var(--accent-yellow); }
+  .timeline-point-two { color: var(--accent-periwinkle); }
+  .timeline-point-three { color: var(--accent-mint); }
+
+  .timeline-point span {
+    color: var(--text-muted);
+  }
+
+  .planning-board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.65rem;
+  }
+
+  .planning-column {
+    min-width: 0;
+    padding: 0.65rem;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
     background: var(--surface-standard);
   }
 
-  .reader-bar span {
+  .planning-column-label {
     display: block;
-    width: 68%;
-    height: 100%;
+    min-height: 2.2em;
+    margin-bottom: 0.55rem;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    line-height: 1.1;
+  }
+
+  .planning-task {
+    display: block;
+    width: 100%;
+    height: 13px;
+    border-radius: 5px;
+  }
+
+  .planning-task-yellow {
+    background: var(--accent-yellow);
+  }
+
+  .planning-task-periwinkle {
     background: var(--accent-periwinkle);
+  }
+
+  .planning-task-green {
+    background: var(--accent-mint);
   }
 
   .reader-meta {
