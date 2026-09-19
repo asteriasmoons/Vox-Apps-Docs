@@ -149,54 +149,42 @@ import GradientDivider from "../components/GradientDivider.astro";
       </div>
 
       <div class="discussion-grid" aria-label="GitHub discussion links">
-        <a
-          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/4"
-          class="discussion-button"
-        >
+        <article class="discussion-card">
           <span class="discussion-kicker">Reading</span>
           <strong>Ideas for Loomey</strong>
           <span>Share ideas for the reading companion experience.</span>
-        </a>
-        <a
-          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/5"
-          class="discussion-button"
-        >
+          <a href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/4" class="discussion-link raised-button">Open Discussion</a>
+        </article>
+        <article class="discussion-card">
           <span class="discussion-kicker">Wellness</span>
           <strong>Ideas for Lunixia</strong>
           <span>Suggest ideas for journaling, mood, and health features.</span>
-        </a>
-        <a
-          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/6"
-          class="discussion-button"
-        >
+          <a href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/5" class="discussion-link raised-button">Open Discussion</a>
+        </article>
+        <article class="discussion-card">
           <span class="discussion-kicker">Habits &amp; Reminders</span>
           <strong>Ideas for Lurelia</strong>
           <span>Share ways to improve habits and reminder tools.</span>
-        </a>
-        <a
-          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/9"
-          class="discussion-button"
-        >
+          <a href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/6" class="discussion-link raised-button">Open Discussion</a>
+        </article>
+        <article class="discussion-card">
           <span class="discussion-kicker">Development</span>
           <strong>Ideas for VoxTerm</strong>
           <span>Suggest terminal, host, session, and project features.</span>
-        </a>
-        <a
-          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/21"
-          class="discussion-button"
-        >
+          <a href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/9" class="discussion-link raised-button">Open Discussion</a>
+        </article>
+        <article class="discussion-card">
           <span class="discussion-kicker">Organization</span>
           <strong>Ideas for Markly</strong>
           <span>Let us know how you like to organize your links</span>
-        </a>
-        <a
-          href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/11"
-          class="discussion-button"
-        >
+          <a href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/21" class="discussion-link raised-button">Open Discussion</a>
+        </article>
+        <article class="discussion-card">
           <span class="discussion-kicker">Mysticism</span>
           <strong>Ideas for Sterium</strong>
           <span>Suggest ideas for the grimoire and generated content.</span>
-        </a>
+          <a href="https://github.com/asteriasmoons/Vox-Apps-Docs/discussions/11" class="discussion-link raised-button">Open Discussion</a>
+        </article>
       </div>
     </section>
 
@@ -441,7 +429,7 @@ import GradientDivider from "../components/GradientDivider.astro";
     gap: 1rem;
   }
 
-  .discussion-button {
+  .discussion-card {
     display: flex;
     flex-direction: column;
     min-height: 190px;
@@ -458,7 +446,7 @@ import GradientDivider from "../components/GradientDivider.astro";
       background 0.18s ease;
   }
 
-  .discussion-button:hover {
+  .discussion-card:hover {
     transform: translateY(-3px);
     border-color: var(--accent-periwinkle);
     background: var(--surface-raised);
@@ -477,15 +465,38 @@ import GradientDivider from "../components/GradientDivider.astro";
     color: var(--text-muted);
   }
 
-  .discussion-button strong {
+  .discussion-card strong {
     margin-bottom: 0.65rem;
     font-size: 1.08rem;
     color: var(--heading-small);
   }
 
-  .discussion-button span:last-child {
+  .discussion-card > span:last-of-type {
     font-size: 0.92rem;
     color: var(--text-muted);
+  }
+
+  .discussion-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    margin-top: 1rem;
+    min-height: 44px;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--accent-periwinkle);
+    color: var(--color-bg);
+    font-family: var(--font-heading);
+    font-weight: 900;
+    text-decoration: none;
+    transition: transform 0.18s ease, border-color 0.18s ease;
+  }
+
+  .discussion-link:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-periwinkle);
   }
 
   .footer-note {
@@ -558,7 +569,7 @@ import GradientDivider from "../components/GradientDivider.astro";
       padding: 0.9rem;
     }
 
-    .discussion-button {
+    .discussion-card {
       min-height: 0;
     }
 
@@ -611,7 +622,8 @@ import GradientDivider from "../components/GradientDivider.astro";
     .primary-button,
     .secondary-button,
     .app-link,
-    .discussion-button,
+    .discussion-card,
+    .discussion-link,
     .dropdown-chevron {
       transition: none;
     }
