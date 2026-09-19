@@ -1390,8 +1390,12 @@ summary {
   position: relative;
   font-family: var(--font-heading);
   list-style: none;
-  background: var(--surface-raised);
-  border-bottom: 1px solid var(--color-border);
+  background-color: var(--surface-raised);
+  background-image: radial-gradient(circle, var(--color-border) 1.5px, transparent 1.5px);
+  background-size: 8px 3px;
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  border-bottom: 1px solid transparent;
   transition: all 0.25s ease;
 }
 
