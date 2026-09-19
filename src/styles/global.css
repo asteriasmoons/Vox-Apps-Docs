@@ -449,8 +449,8 @@
 
   --color-accent: var(--accent-periwinkle);
   --color-accent-bright: #A49EFF;
-  --color-border: rgba(242, 239, 231, 0.11);
-  --color-border-strong: rgba(242, 239, 231, 0.19);
+  --color-border: rgba(242, 239, 231, 0.22);
+  --color-border-strong: rgba(242, 239, 231, 0.34);
   --border: var(--color-border);
 
   --bold-text-color: var(--accent-periwinkle);
@@ -1435,9 +1435,9 @@ details[open] summary::before {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 3px;
+  height: 5px;
   pointer-events: none;
-  background: radial-gradient(circle, var(--color-border) 1.5px, transparent 1.6px) left center / 8px 3px repeat-x;
+  background: radial-gradient(circle, var(--color-border) 2px, transparent 2.1px) left center / 10px 5px repeat-x;
 }
 
 summary:hover {
