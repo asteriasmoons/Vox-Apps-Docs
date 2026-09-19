@@ -1416,15 +1416,28 @@ const lureliaGalleryImages = [
       font-size: clamp(2.75rem, 15vw, 4.5rem);
     }
 
+    .hero-copy {
+      min-width: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+
     .hero-actions {
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
       gap: 0.75rem;
       margin-top: 1.25rem;
     }
 
-    .primary-button,
-    .secondary-button {
-      width: 100%;
+    .hero-actions .primary-button,
+    .hero-actions .secondary-button {
+      box-sizing: border-box;
+      width: auto;
+      min-width: 0;
+      max-width: 100%;
     }
 
     .hero-showcase {
