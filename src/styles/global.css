@@ -520,12 +520,20 @@ html {
 .site-shell {
   width: 100%;
   max-width: 100%;
+  min-height: 0;
+  height: auto;
   overflow-x: hidden;
 }
 
 /* -----------------------------
    Base / document styles
 ------------------------------ */
+html,
+body {
+  min-height: 0;
+  height: auto;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
