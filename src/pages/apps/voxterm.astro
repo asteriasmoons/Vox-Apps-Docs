@@ -21,21 +21,21 @@ const voxtermGalleryImages = [
 
 <DocsLayout
   title="VoxTerm"
-  description="Connect to SSH hosts, manage terminal sessions, organize projects, browse remote files, and keep your development workflow close with VoxTerm."
+  description="Connect to SSH hosts, manage persistent terminal sessions, organize reusable projects and commands, browse and edit remote files, and customize your mobile development workspace with VoxTerm."
 >
   <main class="voxterm-page">
     <section class="hero">
       <div class="hero-copy reveal">
         <p class="eyebrow">Meet VoxTerm</p>
 
-        <h1>Connect, code, and manage your terminal workflow from one place.</h1>
+        <h1>Take a real terminal workspace with you, not just a command prompt.</h1>
 
         <p class="hero-text">
-          VoxTerm is a mobile terminal and project workspace built for development
-          away from your desk. Save SSH hosts, open and restore multiple terminal
-          sessions, organize recurring work into projects, run saved commands,
-          browse remote files over SFTP, and keep your development flow moving
-          without rebuilding your setup every time.
+          VoxTerm is a mobile terminal and remote development workspace built for
+          the work that happens beyond a desk. Save SSH hosts, keep multiple
+          terminal sessions alive, organize reusable projects and commands, replace
+          command tokens at run time, browse and edit remote files over SFTP,
+          and customize the terminal environment around the way you actually work.
         </p>
 
         <div class="hero-actions" aria-label="VoxTerm links">
@@ -51,29 +51,29 @@ const voxtermGalleryImages = [
 
       <div class="hero-showcase reveal reveal-delay">
         <div class="showcase-card main-card">
-          <span class="mini-label">Your Workspace in VoxTerm</span>
+          <span class="mini-label">Your Remote Workspace</span>
 
-          <h4>Your terminal, hosts, and projects together.</h4>
+          <h4>Sessions, projects, commands, and files stay connected.</h4>
 
           <div class="progress-line">
             <span></span>
           </div>
 
           <div class="showcase-stats">
-            <span><b>SSH</b> hosts</span>
-            <span><b>Live</b> sessions</span>
-            <span><b>Saved</b> projects</span>
+            <span><b>SSH</b> connections</span>
+            <span><b>Persistent</b> sessions</span>
+            <span><b>Remote</b> editing</span>
           </div>
         </div>
 
         <div class="floating-card floating-card-one">
-          <span>Active Session</span>
-          <strong>Your terminal stays ready</strong>
+          <span>Active Sessions</span>
+          <strong>Minimize, restore, and keep working</strong>
         </div>
 
         <div class="floating-card floating-card-two">
-          <span>Remote Files</span>
-          <strong>SFTP browser available</strong>
+          <span>Remote Editor</span>
+          <strong>Syntax-aware editing with auto-save</strong>
         </div>
       </div>
     </section>
@@ -83,13 +83,13 @@ const voxtermGalleryImages = [
     <section class="intro-section reveal">
       <p class="eyebrow">One Connected Workspace</p>
 
-      <h2>Your hosts, sessions, commands, and projects should not feel disconnected.</h2>
+      <h2>Your terminal workflow should remember the context around every connection.</h2>
 
       <p>
-        VoxTerm brings saved machines, live terminal sessions, reusable commands,
-        projects, and remote file access into one development workspace. Instead
-        of rebuilding context each time you connect, you can move between the
-        machines and workspaces you return to while keeping that structure intact.
+        VoxTerm connects hosts, persistent sessions, reusable commands, project
+        workspaces, remote files, and terminal preferences into one mobile
+        development environment. The pieces you use repeatedly stay attached to
+        the work they belong to instead of being rebuilt each time you reconnect.
       </p>
     </section>
 
@@ -168,88 +168,93 @@ const voxtermGalleryImages = [
       <article class="feature-card wide reveal">
         <p class="card-kicker">Terminal Sessions</p>
 
-        <h3>Keep more than one connection alive without losing your place</h3>
+        <h3>Keep multiple terminals alive without throwing away your state</h3>
 
         <p>
-          Start terminal sessions from saved hosts, give sessions their own names,
-          minimize them, restore them later, and keep multiple active connections
-          available at the same time. VoxTerm preserves the terminal view so your
-          buffer remains there when you return to a session.
+          Create named sessions from saved hosts, run them side by side, minimize
+          them, restore them later, and manage their connection state from a
+          dedicated sessions experience. VoxTerm keeps each terminal view
+          persistent so the buffer survives while you move elsewhere in the app.
         </p>
 
         <div class="chip-row">
           <span>Multiple Sessions</span>
           <span>Minimize & Restore</span>
-          <span>Persistent Buffer</span>
-          <span>Saved Commands</span>
-          <span>Session Status</span>
+          <span>Persistent Terminal Buffer</span>
+          <span>Session Detail</span>
+          <span>Active Session Sheet</span>
         </div>
       </article>
 
       <article class="feature-card reveal">
         <p class="card-kicker">SSH Hosts</p>
 
-        <h3>Save the machines you connect to again and again</h3>
+        <h3>Save the machines behind your work and reconnect quickly</h3>
 
         <p>
-          Store host names, usernames, ports, authentication methods, favorites,
-          and connection details so recurring SSH connections are ready when you
-          need them instead of being rebuilt from scratch.
+          Add and manage SSH hosts with names, hostnames, usernames, ports,
+          favorites, and password or key authentication. Passwords can be kept in
+          Keychain when you choose, letting familiar machines stay ready without
+          making you re-enter the same connection details every time.
         </p>
       </article>
 
       <article class="feature-card reveal">
         <p class="card-kicker">Projects</p>
 
-        <h3>Turn recurring terminal work into reusable workspaces</h3>
+        <h3>Turn recurring development work into reusable terminal workspaces</h3>
 
         <p>
-          Create projects for the development work you return to, associate them
-          with a host and working directory, add notes, favorite or archive them,
-          and keep project-specific commands attached to the workspace.
+          Create projects with a name, purpose, host, working directory, notes,
+          icon, and reusable command set. Search them, favorite them, duplicate
+          them, archive and restore them, or open the full project detail
+          experience when you need the context behind the terminal session.
         </p>
       </article>
 
       <article class="feature-card reveal">
-        <p class="card-kicker">Saved Commands</p>
+        <p class="card-kicker">Commands & Tokens</p>
 
-        <h3>Keep common commands close instead of retyping them every time</h3>
+        <h3>Make repeatable commands flexible enough for real work</h3>
 
         <p>
-          Store reusable commands for a session or project, add explanations when
-          useful, and run them directly from the terminal workflow when you need
-          to repeat a familiar task.
+          Save commands at the session or project level, name and explain them,
+          edit them later, and run them directly from the terminal workflow.
+          Commands can include named tokens that VoxTerm asks you to replace at
+          execution time, so one saved command can adapt to changing values.
         </p>
       </article>
 
       <article class="feature-card reveal">
-        <p class="card-kicker">Remote Files</p>
+        <p class="card-kicker">SFTP Workspace</p>
 
-        <h3>Move from the shell to the server's files without leaving the session</h3>
+        <h3>Browse, create, rename, delete, and edit remote files from the same connection</h3>
 
         <p>
-          Open VoxTerm's SFTP browser directly from a connected terminal session
-          to inspect and work with remote files while staying inside the same
-          connection and development context.
+          Open the SFTP workspace from a connected terminal to navigate remote
+          directories with breadcrumbs and search, create files and folders,
+          rename or delete items, refresh directory contents, and open editable
+          files without leaving the host you are already working on.
         </p>
       </article>
 
       <article class="feature-card wide reveal">
-        <p class="card-kicker">Terminal Workspace</p>
+        <p class="card-kicker">Remote Code Editor</p>
 
-        <h3>Work like a terminal app without giving up the structure around it</h3>
+        <h3>Edit code on the remote machine with an editor built into VoxTerm</h3>
 
         <p>
-          VoxTerm combines a persistent terminal view with command input, keyboard
-          shortcuts, control-key actions, session commands, project commands,
-          connection status, current directory context, and remote file access so
-          the terminal can stay at the center of the workflow.
+          Remote files open in a Runestone-powered editor with line numbers,
+          line wrapping, monospaced editing, syntax highlighting, manual save,
+          debounced auto-save, and external-change detection before overwriting a
+          file that changed remotely. The same SFTP connection bridges the editor
+          directly back to the machine.
         </p>
 
         <div class="reader-preview">
           <div class="reader-preview-top">
-            <span>Session Status</span>
-            <strong>Connected</strong>
+            <span>Remote Editing</span>
+            <strong>Auto-save enabled</strong>
           </div>
 
           <div class="reader-bar">
@@ -257,9 +262,9 @@ const voxtermGalleryImages = [
           </div>
 
           <div class="reader-meta">
-            <span>Terminal</span>
-            <span>Commands</span>
-            <span>SFTP</span>
+            <span>Syntax Highlighting</span>
+            <span>Line Numbers</span>
+            <span>Change Detection</span>
           </div>
         </div>
       </article>
@@ -267,36 +272,36 @@ const voxtermGalleryImages = [
 
     <section class="spotlight reveal">
       <div class="spotlight-copy">
-        <p class="eyebrow">Live Sessions</p>
+        <p class="eyebrow">Terminal Controls</p>
 
-        <h2>Leave a terminal session and come back without starting over</h2>
+        <h2>Make a touch keyboard behave more like the keyboard a terminal expects</h2>
 
         <p>
-          VoxTerm keeps active sessions separate from the page you are viewing.
-          Minimize a terminal, move through the rest of the app, and restore that
-          same session later while keeping the session's connection state and
-          persistent terminal buffer available.
+          VoxTerm adds a terminal-focused accessory toolbar with Done, Ctrl, Esc,
+          Tab, saved Commands, and common control characters. The command field
+          stays connected to the live terminal while session and project commands
+          remain one tap away when repetitive shell work needs to move faster.
         </p>
       </div>
 
-      <div class="share-demo" aria-label="VoxTerm session preview">
-        <span class="share-pill">Active Sessions</span>
+      <div class="share-demo" aria-label="VoxTerm terminal control preview">
+        <span class="share-pill">Terminal Toolbar</span>
 
-        <h4>Keep your connections moving.</h4>
+        <h4>Keep shell controls within reach.</h4>
 
         <div class="share-row">
-          <span>Restore</span>
-          <strong>Return to an active terminal</strong>
+          <span>Ctrl / Esc / Tab</span>
+          <strong>Terminal-specific keys on mobile</strong>
         </div>
 
         <div class="share-row">
-          <span>Minimize</span>
-          <strong>Keep working elsewhere in VoxTerm</strong>
+          <span>Commands</span>
+          <strong>Run saved session or project commands</strong>
         </div>
 
         <div class="share-row">
-          <span>Disconnect</span>
-          <strong>End a connection when you are done</strong>
+          <span>Directory</span>
+          <strong>See current remote context</strong>
         </div>
       </div>
     </section>
@@ -313,89 +318,94 @@ const voxtermGalleryImages = [
           <summary>
             <span>
               <b>Home Dashboard</b>
-              <small>See recent hosts, sessions, projects, and quick actions</small>
+              <small>Return to recent hosts, active sessions, projects, and shortcuts</small>
             </span>
           </summary>
 
           <p>
-            The Home page brings your recent hosts, active sessions, recent
-            projects, and quick actions together so the things you are most likely
-            to need are available without digging through the app first.
+            The Home page surfaces recent hosts, active sessions, recent projects,
+            and quick actions for creating or returning to the parts of VoxTerm
+            you use most. Active-session state is visible throughout the main app
+            so live connections never disappear into the background.
           </p>
         </details>
 
         <details>
           <summary>
             <span>
-              <b>Session Manager</b>
-              <small>Start, restore, disconnect, and remove terminal sessions</small>
+              <b>Session Details & Active Session Management</b>
+              <small>Inspect, restore, disconnect, minimize, and remove sessions</small>
             </span>
           </summary>
 
           <p>
-            VoxTerm gives active sessions their own management view where you can
-            resume a terminal, disconnect a live connection, remove a session,
-            and start a new one from one of your saved hosts.
+            Sessions have both a dedicated list and detail flow, while the active
+            sessions sheet makes current connections accessible from elsewhere in
+            the app. You can resume, minimize, disconnect, or remove sessions and
+            create additional sessions from saved hosts.
           </p>
         </details>
 
         <details>
           <summary>
             <span>
-              <b>Password & Key Authentication</b>
-              <small>Connect using the authentication method configured for each host</small>
+              <b>Authentication & Sign-In</b>
+              <small>Use SSH credentials and Voxiverse account authentication where needed</small>
             </span>
           </summary>
 
           <p>
-            Saved hosts can use password or key authentication. VoxTerm can remember
-            SSH passwords in Keychain when you choose to keep them so repeated
-            connections require less setup.
+            SSH hosts support password or key authentication, with optional
+            Keychain storage for remembered passwords. VoxTerm also includes its
+            own sign-in experience for the account-facing parts of the app.
           </p>
         </details>
 
         <details>
           <summary>
             <span>
-              <b>Project Search & Filters</b>
-              <small>Keep active, favorite, and archived workspaces organized</small>
+              <b>Project Search, Filters & Editing</b>
+              <small>Find, organize, duplicate, archive, and revise reusable workspaces</small>
             </span>
           </summary>
 
           <p>
-            Search projects by name or details and filter them between active,
-            favorites, and archived workspaces. Projects can also be duplicated,
-            favorited, archived, restored, or deleted from their management view.
+            Search projects by name or details and filter between active,
+            favorite, and archived workspaces. Project editor and detail views
+            handle the deeper configuration, while context actions support
+            duplication, favoriting, archiving, restoring, and deletion.
           </p>
         </details>
 
         <details>
           <summary>
             <span>
-              <b>Project Commands</b>
-              <small>Attach reusable command sets to the work they belong to</small>
+              <b>Command Editor & Token Replacement</b>
+              <small>Build reusable commands that can request values before they run</small>
             </span>
           </summary>
 
           <p>
-            Project-specific commands stay attached to a project so the commands
-            you repeatedly use for one workspace can remain separate from
-            commands you save for another session or project.
+            The command editor keeps names, shell commands, explanations, and
+            execution behavior together. Insert named token placeholders while
+            editing and let VoxTerm collect replacement values before running the
+            command from either project or terminal command flows.
           </p>
         </details>
 
         <details>
           <summary>
             <span>
-              <b>Terminal Controls</b>
-              <small>Use mobile-friendly keys and shortcuts while working in the shell</small>
+              <b>SFTP Browser & File Operations</b>
+              <small>Navigate remote folders and manage files from iPhone or iPad</small>
             </span>
           </summary>
 
           <p>
-            The terminal includes an accessory toolbar for Done, Ctrl, Esc, Tab,
-            saved Commands, and common control characters so terminal work remains
-            practical on a touch keyboard.
+            The SFTP browser adapts between an iPhone navigation stack and an
+            iPad split view. Search the current directory, follow breadcrumb paths,
+            create files or folders, rename and delete items, refresh contents,
+            and open files directly into the remote editor.
           </p>
         </details>
 
@@ -403,14 +413,15 @@ const voxtermGalleryImages = [
           <summary>
             <span>
               <b>Themes, Profile & Settings</b>
-              <small>Adjust the app around the way you prefer to work</small>
+              <small>Customize the terminal environment and account-facing experience</small>
             </span>
           </summary>
 
           <p>
-            VoxTerm includes Profile and Settings areas alongside its primary
-            terminal workflow, with theme-aware interface styling used throughout
-            the app's hosts, sessions, projects, and terminal experiences.
+            VoxTerm includes dedicated Profile and Settings areas, plus selectable
+            themes with terminal previews and color swatches. Theme changes flow
+            through the app's terminal, host, session, project, and editor
+            interfaces so the workspace can match the environment you prefer.
           </p>
         </details>
       </div>
@@ -418,15 +429,15 @@ const voxtermGalleryImages = [
 
     <section class="community-banner reveal">
       <div>
-        <p class="eyebrow">Built Around Real Development Work</p>
+        <p class="eyebrow">Built Around Real Remote Work</p>
 
-        <h2>Your terminal should remember the context around the command line.</h2>
+        <h2>The command line is only one part of a useful mobile development workspace.</h2>
 
         <p>
-          VoxTerm is built around the way development work actually repeats:
-          familiar hosts, recurring projects, commands you use again, and sessions
-          you may need to leave and restore. Each part gets its own place while
-          staying connected to the same terminal-centered workflow.
+          VoxTerm is built around the full context of remote development: hosts you
+          trust, sessions you keep alive, projects you return to, commands you
+          repeat, files you need to inspect or edit, and a terminal environment
+          that should remain comfortable across all of it.
         </p>
       </div>
 
@@ -438,7 +449,7 @@ const voxtermGalleryImages = [
     <section class="cta-section reveal">
       <p class="eyebrow">Explore VoxTerm</p>
 
-      <h2>Keep your terminal workflow close, organized, and ready to resume.</h2>
+      <h2>Keep a complete remote development workflow within reach.</h2>
 
       <p>
         Learn more about VoxTerm, report a problem, share an idea, or reach out
