@@ -1,0 +1,1707 @@
+---
+import DocsLayout from "../../layouts/DocsLayout.astro";
+import GradientDivider from "../../components/GradientDivider.astro";
+
+/*
+const steriumGalleryImages = [
+  "IMG_0001.PNG",
+  "IMG_0002.PNG",
+  "IMG_0003.PNG",
+  "IMG_0004.PNG",
+  "IMG_0005.PNG",
+  "IMG_0006.PNG",
+  "IMG_0007.PNG",
+  "IMG_0008.PNG",
+].map((fileName, index) => ({
+  alt: `Sterium app screenshot ${index + 1}`,
+  src: `/img/sterium/${fileName}`,
+}));
+*/
+---
+
+<DocsLayout
+  title="Sterium"
+  description="Explore correspondences, generate and save spells, track lunar and planetary timing, and build a living digital grimoire with Sterium."
+>
+  <main class="sterium-page">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Meet Sterium</p>
+
+        <h1>Keep your magical practice connected, searchable, and alive in one place.</h1>
+
+        <p class="hero-text">
+          Sterium is a personal magical practice companion built around the tools,
+          records, and timing that shape your path. Explore correspondences,
+          generate and save spells, follow the moon and planetary hours, keep a
+          detailed grimoire, and bring your daily practice into one connected
+          space instead of scattering it across notes and separate references.
+        </p>
+
+        <div class="hero-actions" aria-label="Sterium links">
+          <a class="primary-button raised-button" href="#features">
+            Explore Features
+          </a>
+
+          <a class="secondary-button raised-button" href="/contact">
+            Contact Support
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-showcase reveal reveal-delay">
+        <div class="showcase-card main-card">
+          <span class="mini-label">Your Practice in Sterium</span>
+
+          <h4>Everything magical, gathered together.</h4>
+
+          <div class="progress-line">
+            <span></span>
+          </div>
+
+          <div class="showcase-stats">
+            <span><b>Moon</b> timing</span>
+            <span><b>Spells</b> saved</span>
+            <span><b>Grimoire</b> growing</span>
+          </div>
+        </div>
+
+        <div class="floating-card floating-card-one">
+          <span>Planetary Hour</span>
+          <strong>Your current timing is ready</strong>
+        </div>
+
+        <div class="floating-card floating-card-two">
+          <span>Current Moon</span>
+          <strong>Phase and zodiac in view</strong>
+        </div>
+      </div>
+    </section>
+
+    <GradientDivider />
+
+    <section class="intro-section reveal">
+      <p class="eyebrow">One Connected Practice</p>
+
+      <h2>Your correspondences, timing, spellwork, and records belong together.</h2>
+
+      <p>
+        Sterium brings daily spiritual timing, correspondence research, spell
+        creation, saved spells, and a structured grimoire into one system. Instead
+        of switching between disconnected references and notes, you can keep the
+        pieces of your practice close enough to actually work together.
+      </p>
+    </section>
+
+    {/*
+<section
+  class="sterium-gallery-section reveal"
+  aria-labelledby="sterium-gallery-title"
+>
+  <div class="section-heading gallery-heading">
+    <p class="eyebrow">Inside Sterium</p>
+
+    <h2 id="sterium-gallery-title">
+      Swipe through your magical practice
+    </h2>
+  </div>
+
+  <div class="sterium-gallery" data-sterium-gallery>
+    <button
+      class="gallery-button gallery-button-left"
+      type="button"
+      aria-label="Previous Sterium screenshot"
+      data-gallery-previous
+    >
+      <img src="/img/icons/right.svg" alt="" aria-hidden="true" />
+    </button>
+
+    <div class="gallery-track-container">
+      <div class="gallery-track" data-gallery-track>
+        {
+          steriumGalleryImages.map((image, index) => (
+            <figure
+              class:list={[
+                "gallery-slide",
+                { "is-active": index === 0 },
+              ]}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding="async"
+              />
+            </figure>
+          ))
+        }
+      </div>
+    </div>
+
+    <button
+      class="gallery-button gallery-button-right"
+      type="button"
+      aria-label="Next Sterium screenshot"
+      data-gallery-next
+    >
+      <img src="/img/icons/right.svg" alt="" aria-hidden="true" />
+    </button>
+
+    <div class="gallery-meta" aria-live="polite">
+      <span data-gallery-count>
+        1 / {steriumGalleryImages.length}
+      </span>
+
+      <div class="gallery-progress" aria-hidden="true">
+        <span data-gallery-progress></span>
+      </div>
+    </div>
+  </div>
+</section>
+*/}
+
+    <section
+      class="feature-grid"
+      id="features"
+      aria-label="Sterium features"
+    >
+      <article class="feature-card wide reveal">
+        <p class="card-kicker">Grimoire</p>
+
+        <h3>Build a living record of the practice you are actually creating</h3>
+
+        <p>
+          Sterium's grimoire supports dedicated entry types for journals, workings,
+          results, dreams, synchronicities, pathwork, moon phases, deity devotion,
+          divination, meditation, shadow work, manifestation, and personal
+          experiences. Search entries, filter by type, and keep each record inside
+          a structure made for what it actually represents.
+        </p>
+
+        <div class="chip-row">
+          <span>Workings</span>
+          <span>Dreams</span>
+          <span>Divination</span>
+          <span>Moon Phases</span>
+          <span>Shadow Work</span>
+        </div>
+      </article>
+
+      <article class="feature-card reveal">
+        <p class="card-kicker">Correspondences</p>
+
+        <h3>Research magical associations without flattening them into a tiny list</h3>
+
+        <p>
+          Browse correspondence types, search for a specific item, generate a
+          detailed correspondence, and save the result. Entries can include
+          intentions, purposes, planets, zodiac signs, elements, deities, chakras,
+          numerology, tarot, lunar phases, seasons, days, colors, spellwork uses,
+          history, folklore, and warnings.
+        </p>
+      </article>
+
+      <article class="feature-card reveal">
+        <p class="card-kicker">Spells</p>
+
+        <h3>Start with intention and build a spell from there</h3>
+
+        <p>
+          Choose a spell category and intention, select your experience level, add
+          the situation and outcome you want to support, and generate a structured
+          spell. Saved spells remain browsable by category so the work you create
+          can become part of your ongoing practice.
+        </p>
+      </article>
+
+      <article class="feature-card reveal">
+        <p class="card-kicker">Moon</p>
+
+        <h3>Keep the current lunar context close to the rest of your practice</h3>
+
+        <p>
+          The home experience surfaces the current moon phase, zodiac sign,
+          illumination, moon day, time until the next phase, and an energy
+          description so lunar timing is visible without becoming a separate
+          research task.
+        </p>
+      </article>
+
+      <article class="feature-card reveal">
+        <p class="card-kicker">Planetary Timing</p>
+
+        <h3>See the planetary day and hour while the timing still matters</h3>
+
+        <p>
+          Sterium calculates the planetary day and current planetary hour, shows
+          what comes next, and surfaces lucky hours for different purposes so you
+          can work with timing directly from the app's home experience.
+        </p>
+      </article>
+
+      <article class="feature-card wide reveal">
+        <p class="card-kicker">Today</p>
+
+        <h3>Open the app and immediately see the magical context around the day</h3>
+
+        <p>
+          Sterium's home page brings together the current moon, the next Sabbat,
+          planetary day and hour, current correspondences, and lucky hours. The
+          result is a practical daily overview that connects timing and
+          correspondences before you decide what kind of work you want to do.
+        </p>
+
+        <div class="reader-preview">
+          <div class="reader-preview-top">
+            <span>Today's Practice</span>
+            <strong>Aligned</strong>
+          </div>
+
+          <div class="reader-bar">
+            <span></span>
+          </div>
+
+          <div class="reader-meta">
+            <span>Moon</span>
+            <span>Planetary Hour</span>
+            <span>Correspondences</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="spotlight reveal">
+      <div class="spotlight-copy">
+        <p class="eyebrow">Correspondence Engine</p>
+
+        <h2>Turn a single search into a full magical reference you can keep</h2>
+
+        <p>
+          Sterium's correspondence flow starts with a type and a name, then builds
+          a detailed entry that can be saved and reopened later. Instead of a
+          shallow keyword lookup, the result can connect practical spellwork use
+          with planetary, elemental, lunar, symbolic, historical, and folkloric
+          context.
+        </p>
+      </div>
+
+      <div class="share-demo" aria-label="Sterium correspondence preview">
+        <span class="share-pill">Generated Correspondence</span>
+
+        <h4>Build a reference worth returning to.</h4>
+
+        <div class="share-row">
+          <span>Associations</span>
+          <strong>Planets, elements, zodiac and more</strong>
+        </div>
+
+        <div class="share-row">
+          <span>Practice</span>
+          <strong>Spellwork, ritual and divination</strong>
+        </div>
+
+        <div class="share-row">
+          <span>Context</span>
+          <strong>History, folklore and warnings</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="details-section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Everything Else</p>
+
+        <h2>Open each part of the Sterium experience</h2>
+      </div>
+
+      <div class="details-list">
+        <details open>
+          <summary>
+            <span>
+              <b>Grimoire Entry Types</b>
+              <small>Give each kind of magical record the structure it needs</small>
+            </span>
+          </summary>
+
+          <p>
+            Sterium's grimoire supports journals, working documents, working
+            results, dreams, synchronicities, pathwork, moon phases, deity
+            devotion, divination, meditation, shadow work, manifestation, and
+            experience entries in one searchable library.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <span>
+              <b>Current Moon & Sabbats</b>
+              <small>Keep lunar and seasonal timing visible on the home page</small>
+            </span>
+          </summary>
+
+          <p>
+            See the current moon phase, zodiac sign, illumination, moon day, and
+            next phase alongside the next Sabbat and its countdown so lunar and
+            seasonal context stay part of the same daily view.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <span>
+              <b>Planetary Day, Hour & Lucky Hours</b>
+              <small>Work with timing without calculating it somewhere else</small>
+            </span>
+          </summary>
+
+          <p>
+            Sterium shows the planetary ruler of the day, calculates the current
+            planetary hour and the next change, and surfaces lucky hours for
+            different kinds of work directly from the home experience.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <span>
+              <b>Current Correspondences</b>
+              <small>Bring the day's magical associations into one compact view</small>
+            </span>
+          </summary>
+
+          <p>
+            The home page surfaces a current correspondence set that can include
+            planet, element, color, crystal, and herb, giving you a quick reference
+            for the day's energy before you move into deeper research.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <span>
+              <b>Spell Categories & Intentions</b>
+              <small>Start spell creation from what you actually want to support</small>
+            </span>
+          </summary>
+
+          <p>
+            Browse spell categories, choose an intention, select a practitioner
+            level, and add the situation and desired outcome before generating a
+            spell. Saved spells can be revisited by category later.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <span>
+              <b>Correspondence Library</b>
+              <small>Generate detailed references and keep the useful ones saved</small>
+            </span>
+          </summary>
+
+          <p>
+            Search within a correspondence type, generate an entry, review its
+            detailed associations and practical uses, and keep generated
+            correspondences available in the saved list for that category.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <span>
+              <b>Search & Filters in the Grimoire</b>
+              <small>Find the record you need without digging through everything</small>
+            </span>
+          </summary>
+
+          <p>
+            Search grimoire entries by title or filter the library by entry type,
+            then open the matching detail view. The grimoire is designed to keep
+            many kinds of records together without making them indistinguishable.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="community-banner reveal">
+      <div>
+        <p class="eyebrow">Built Around a Living Practice</p>
+
+        <h2>Your practice grows through what you study, do, record, and revisit.</h2>
+
+        <p>
+          Sterium is built around the idea that correspondences, timing, spellwork,
+          reflection, and magical records should inform one another. Each part gets
+          its own dedicated space while remaining connected enough to support a
+          practice that keeps evolving instead of becoming a pile of disconnected
+          notes.
+        </p>
+      </div>
+
+      <a class="primary-button raised-button" href="https://discord.gg/SaZJKF3d9U">
+        Join the Community
+      </a>
+    </section>
+
+    <section class="cta-section reveal">
+      <p class="eyebrow">Explore Sterium</p>
+
+      <h2>Give your magical practice one place to grow.</h2>
+
+      <p>
+        Learn more about Sterium, report a problem, share an idea, or reach out
+        directly through Voxiverse Support.
+      </p>
+
+      <div class="cta-grid">
+        <a
+          href="https://github.com/asteriasmoons/Sterium/issues/1"
+          class="cta-card"
+        >
+          <span class="cta-kicker">Report an Issue</span>
+
+          <h2>Sterium Bug Reports</h2>
+
+          <span class="cta-button">Open Reports</span>
+        </a>
+
+        <a href="/github" class="cta-card">
+          <span class="cta-kicker">Ideas & Discussions</span>
+
+          <h2>Voxiverse on GitHub</h2>
+
+          <span class="cta-button">Open GitHub</span>
+        </a>
+
+        <a href="/contact" class="cta-card">
+          <span class="cta-kicker">Need Help?</span>
+
+          <h2>Contact Support</h2>
+
+          <span class="cta-button">Get Support</span>
+        </a>
+      </div>
+    </section>
+  </main>
+</DocsLayout>
+
+<script>
+  const revealItems = document.querySelectorAll(".reveal");
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+
+  document
+    .querySelectorAll<HTMLElement>("[data-sterium-gallery]")
+    .forEach((gallery) => {
+      const track =
+        gallery.querySelector<HTMLElement>("[data-gallery-track]");
+
+      const slides = Array.from(
+        gallery.querySelectorAll<HTMLElement>(".gallery-slide")
+      );
+
+      const previousButton =
+        gallery.querySelector<HTMLButtonElement>(
+          "[data-gallery-previous]"
+        );
+
+      const nextButton =
+        gallery.querySelector<HTMLButtonElement>(
+          "[data-gallery-next]"
+        );
+
+      const count =
+        gallery.querySelector<HTMLElement>("[data-gallery-count]");
+
+      const progress =
+        gallery.querySelector<HTMLElement>("[data-gallery-progress]");
+
+      if (
+        !track ||
+        !slides.length ||
+        !previousButton ||
+        !nextButton
+      ) {
+        return;
+      }
+
+      let currentIndex = 0;
+      let autoplay: number | undefined;
+      let dragStartX = 0;
+
+      const updateGallery = () => {
+        track.style.transform =
+          `translateX(-${currentIndex * 100}%)`;
+
+        slides.forEach((slide, index) => {
+          slide.classList.toggle(
+            "is-active",
+            index === currentIndex
+          );
+        });
+
+        if (count) {
+          count.textContent =
+            `${currentIndex + 1} / ${slides.length}`;
+        }
+
+        if (progress) {
+          progress.style.width =
+            `${((currentIndex + 1) / slides.length) * 100}%`;
+        }
+      };
+
+      const showSlide = (index: number) => {
+        currentIndex =
+          (index + slides.length) % slides.length;
+
+        updateGallery();
+      };
+
+      const startAutoplay = () => {
+        window.clearInterval(autoplay);
+
+        autoplay = window.setInterval(
+          () => showSlide(currentIndex + 1),
+          4200
+        );
+      };
+
+      const stopAutoplay = () => {
+        window.clearInterval(autoplay);
+      };
+
+      nextButton.addEventListener("click", () => {
+        showSlide(currentIndex + 1);
+        startAutoplay();
+      });
+
+      previousButton.addEventListener("click", () => {
+        showSlide(currentIndex - 1);
+        startAutoplay();
+      });
+
+      gallery.addEventListener("pointerdown", (event) => {
+        dragStartX = event.clientX;
+        stopAutoplay();
+      });
+
+      gallery.addEventListener("pointerup", (event) => {
+        const deltaX = event.clientX - dragStartX;
+
+        if (Math.abs(deltaX) > 40) {
+          showSlide(
+            currentIndex + (deltaX < 0 ? 1 : -1)
+          );
+        }
+
+        startAutoplay();
+      });
+
+      gallery.addEventListener(
+        "mouseenter",
+        stopAutoplay
+      );
+
+      gallery.addEventListener(
+        "mouseleave",
+        startAutoplay
+      );
+
+      gallery.addEventListener(
+        "focusin",
+        stopAutoplay
+      );
+
+      gallery.addEventListener(
+        "focusout",
+        startAutoplay
+      );
+
+      window.addEventListener(
+        "resize",
+        updateGallery
+      );
+
+      updateGallery();
+      startAutoplay();
+    });
+</script>
+
+<style>
+  .sterium-page {
+    position: relative;
+    width: 100%;
+    padding: 1rem 0 5rem;
+    overflow: hidden;
+  }
+
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1.2fr)
+      minmax(310px, 0.8fr);
+    align-items: center;
+    gap: 3rem;
+    min-height: 620px;
+    padding: 4rem 0;
+  }
+
+  .hero-copy,
+  .hero-showcase {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero h1 {
+    max-width: 860px;
+    margin: 0 0 1.25rem;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    line-height: 0.96;
+    letter-spacing: -0.055em;
+  }
+
+  .eyebrow,
+  .card-kicker,
+  .mini-label {
+    margin: 0 0 0.85rem;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .hero-text,
+  .intro-section p,
+  .spotlight p,
+  .community-banner p,
+  .cta-section > p {
+    max-width: 760px;
+    font-size: 1.06rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 2rem;
+  }
+
+  .primary-button,
+  .secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0.9rem 1.3rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-bg);
+    text-decoration: none;
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .primary-button {
+    background: var(--accent-periwinkle);
+  }
+
+  .secondary-button {
+    background: var(--surface-raised) !important;
+    color: var(--color-text) !important;
+  }
+
+  .primary-button:hover,
+  .secondary-button:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-periwinkle);
+  }
+
+  .hero-showcase {
+    min-height: 410px;
+  }
+
+  .showcase-card,
+  .floating-card,
+  .feature-card,
+  .share-demo,
+  .details-list details,
+  .community-banner,
+  .cta-card {
+    border: 1px solid var(--color-border);
+    background: var(--surface-standard);
+    box-shadow: var(--glass-shadow-soft);
+  }
+
+  .main-card {
+    position: absolute;
+    inset: 55px 20px 55px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 30px;
+    transform: rotate(2deg);
+  }
+
+  .main-card h4 {
+    max-width: 420px;
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    line-height: 1.05;
+  }
+
+  .progress-line {
+    height: 10px;
+    margin: 1.75rem 0;
+    border-radius: 999px;
+    background: var(--surface-raised);
+    overflow: hidden;
+  }
+
+  .progress-line span {
+    display: block;
+    width: 72%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--accent-periwinkle);
+    animation: pulse-width 3s ease-in-out infinite;
+  }
+
+  .showcase-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: var(--text-muted);
+  }
+
+  .showcase-stats b {
+    color: var(--color-text);
+  }
+
+  .floating-card {
+    position: absolute;
+    z-index: 3;
+    padding: 1rem 1.15rem;
+    border-radius: 18px;
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .floating-card span {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+  }
+
+  .floating-card strong {
+    font-size: 0.92rem;
+  }
+
+  .floating-card-one {
+    top: 0;
+    right: 0;
+  }
+
+  .floating-card-two {
+    bottom: 8px;
+    left: 0;
+    animation-delay: -2.4s;
+  }
+
+  @media (min-width: 901px) {
+    :global(.content:has(.sterium-page)) {
+      max-width: 1280px;
+      padding-inline: clamp(1.5rem, 3vw, 3rem);
+    }
+
+    .hero {
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(340px, 380px);
+      gap: clamp(2rem, 3.5vw, 4rem);
+      min-height: 610px;
+      padding: 2.15rem 0 2.65rem;
+    }
+
+    .hero h1 {
+      max-width: 840px;
+      margin-bottom: 1rem;
+      font-size: 4.15rem;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .hero-text {
+      max-width: 660px;
+      font-size: 1rem;
+    }
+
+    .hero-actions {
+      margin-top: 1.5rem;
+    }
+
+    .hero-showcase {
+      align-self: center;
+      justify-self: end;
+      width: 100%;
+      max-width: 380px;
+      min-height: 430px;
+    }
+
+    .main-card {
+      inset: 58px 16px 104px 16px;
+      padding: 1.45rem;
+      border-radius: 26px;
+      transform: none;
+    }
+
+    .main-card h4 {
+      max-width: 320px;
+      font-size: 2.35rem;
+    }
+
+    .progress-line {
+      margin: 1.2rem 0;
+    }
+
+    .showcase-stats {
+      gap: 0.65rem 0.9rem;
+      font-size: 0.9rem;
+    }
+
+    .floating-card-one {
+      top: 0;
+      right: 0;
+      max-width: 282px;
+    }
+
+    .floating-card-two {
+      bottom: 16px;
+      left: 0;
+      max-width: 292px;
+    }
+  }
+
+  @media (min-width: 901px) and (max-width: 1160px) {
+    .hero {
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(320px, 340px);
+      gap: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3.7rem;
+    }
+
+    .main-card h4 {
+      font-size: 2.1rem;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .hero h1 {
+      font-size: 4.75rem;
+    }
+  }
+
+  .intro-section {
+    max-width: 850px;
+    padding: 4rem 0 2rem;
+  }
+
+  .intro-section h2,
+  .gallery-heading h2,
+  .spotlight h2,
+  .details-section h2,
+  .community-banner h2,
+  .cta-section h2 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    line-height: 1.05;
+  }
+
+  .sterium-gallery-section {
+    position: relative;
+    padding: 2rem 0 3.25rem;
+  }
+
+  .gallery-heading {
+    margin-bottom: 1.5rem;
+  }
+
+  .sterium-gallery {
+    position: relative;
+    width: min(100%, 430px);
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 1rem 0 2.75rem;
+    touch-action: pan-y;
+  }
+
+  .gallery-track-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+  }
+
+  .gallery-track {
+    display: flex;
+    align-items: center;
+    will-change: transform;
+    transition:
+      transform 0.62s
+      cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .gallery-slide {
+    flex: 0 0 100%;
+    margin: 0;
+    opacity: 0.78;
+    transition: opacity 0.35s ease;
+  }
+
+  .gallery-slide.is-active {
+    opacity: 1;
+  }
+
+  .gallery-slide img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1170 / 2532;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 32px;
+    background: var(--surface-raised);
+    box-shadow:
+      0 26px 70px rgba(0, 0, 0, 0.42),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .gallery-button {
+    position: absolute;
+    top: 47%;
+    z-index: 4;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 1px solid var(--color-border-strong);
+    border-radius: 50%;
+    background: var(--surface-raised);
+    box-shadow:
+      0 18px 38px rgba(0, 0, 0, 0.32),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    cursor: pointer;
+    transition:
+      transform 0.18s ease,
+      background 0.18s ease,
+      border-color 0.18s ease;
+  }
+
+  .gallery-button:hover {
+    background: #2a2733;
+    border-color: var(--accent-periwinkle);
+    transform: translateY(-2px);
+  }
+
+  .gallery-button img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+  }
+
+  .gallery-button-left {
+    left: 0.35rem;
+  }
+
+  .gallery-button-left img {
+    transform: rotate(180deg);
+  }
+
+  .gallery-button-right {
+    right: 0.35rem;
+  }
+
+  .gallery-meta {
+    position: absolute;
+    left: 50%;
+    bottom: 0.55rem;
+    z-index: 4;
+    display: grid;
+    gap: 0.55rem;
+    width: min(300px, 62%);
+    transform: translateX(-50%);
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    text-align: center;
+  }
+
+  .gallery-progress {
+    height: 7px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--surface-raised);
+  }
+
+  .gallery-progress span {
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--accent-periwinkle);
+    transition: width 0.35s ease;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 2rem 0 4rem;
+  }
+
+  .feature-card {
+    min-height: 260px;
+    padding: 1.5rem;
+    border-radius: 24px;
+    transition:
+      transform 0.22s ease,
+      border-color 0.22s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-periwinkle);
+    background: var(--surface-raised);
+  }
+
+  .feature-card.wide {
+    grid-column: span 2;
+    min-height: 300px;
+  }
+
+  .feature-card h3 {
+    max-width: 720px;
+    margin: 0 0 0.85rem;
+    font-size: clamp(1.45rem, 2.5vw, 2.25rem);
+  }
+
+  .feature-card p {
+    max-width: 760px;
+  }
+
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 1.25rem;
+  }
+
+  .chip-row span {
+    padding: 0.55rem 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--surface-raised);
+    font-size: 0.82rem;
+    color: var(--accent-mint);
+  }
+
+  .reader-preview {
+    max-width: 650px;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    background: var(--surface-raised);
+  }
+
+  .reader-preview-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .reader-bar {
+    height: 8px;
+    margin-top: 0.8rem;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--surface-standard);
+  }
+
+  .reader-bar span {
+    display: block;
+    width: 68%;
+    height: 100%;
+    background: var(--accent-periwinkle);
+  }
+
+  .reader-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.85rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+
+  .spotlight {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+
+  .share-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 2.2rem 1.5rem;
+    border-radius: 28px;
+  }
+
+  .share-demo h4 {
+    margin: 0.5rem 0 0.75rem;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    line-height: 1;
+  }
+
+  .share-pill {
+    align-self: flex-start;
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    background: var(--surface-raised);
+    font-size: 0.76rem;
+  }
+
+  .share-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .share-row span {
+    color: var(--text-muted);
+  }
+
+  .share-row strong {
+    text-align: right;
+  }
+
+  .details-section {
+    padding: 4rem 0;
+  }
+
+  .section-heading {
+    max-width: 760px;
+    margin-bottom: 1.5rem;
+  }
+
+  .details-list {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .details-list details {
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .details-list summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .details-list summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .details-list summary b,
+  .details-list summary small {
+    display: block;
+  }
+
+  .details-list summary small {
+    margin-top: 0.25rem;
+    color: var(--text-muted);
+  }
+
+  .details-list details p {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 1.15rem 1.25rem 1.25rem;
+    box-sizing: border-box;
+    border-top: 1px solid var(--color-border);
+    background: var(--surface-raised);
+  }
+
+  .community-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 2rem 0 5rem;
+    padding: 2rem;
+    border-radius: 28px;
+    background: var(--surface-standard);
+  }
+
+  .community-banner > div {
+    max-width: 760px;
+  }
+
+  .cta-section {
+    padding: 1rem 0 2rem;
+  }
+
+  .cta-grid {
+    display: grid;
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .cta-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 190px;
+    padding: 1.25rem;
+    border-radius: 22px;
+    color: inherit;
+    text-decoration: none;
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .cta-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-periwinkle);
+    background: var(--surface-raised);
+  }
+
+  .cta-kicker {
+    margin-bottom: auto;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+  }
+
+  .cta-card strong {
+    font-size: 1.15rem;
+    color: var(--heading-small);
+  }
+
+  .cta-button {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-top: 1rem;
+    padding: 0.72rem 1rem;
+    border: 1px solid rgba(242, 239, 231, 0.12);
+    border-radius: 12px;
+    background: var(--accent-periwinkle);
+    color: var(--color-bg);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow:
+      0 10px 0 #5f58b8,
+      0 16px 22px rgba(0, 0, 0, 0.42),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      inset 0 -6px 12px rgba(18, 8, 54, 0.42);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+
+  .reveal-delay {
+    transition-delay: 0.15s;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-9px);
+    }
+  }
+
+  @keyframes pulse-width {
+    0%,
+    100% {
+      width: 68%;
+    }
+
+    50% {
+      width: 78%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .hero,
+    .spotlight {
+      grid-template-columns: 1fr;
+    }
+
+    .hero {
+      min-height: auto;
+      padding: 3rem 0;
+    }
+
+    .hero-showcase {
+      min-height: 380px;
+    }
+
+    .cta-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 680px) {
+    :global(.site-footer) {
+      margin-top: 0;
+    }
+    :global(.content:has(.sterium-page)) {
+      padding-top: 0.55rem;
+    }
+
+    .sterium-page {
+      padding: 0 0 0;
+    }
+
+    .hero {
+      gap: 1.75rem;
+      padding: 0.7rem 0 0.35rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.35rem, 11vw, 3.4rem);
+    }
+
+    .hero-copy {
+      min-width: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .hero-actions {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .hero-actions .primary-button,
+    .hero-actions .secondary-button {
+      box-sizing: border-box;
+      width: auto;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .cta-card {
+      min-height: 0;
+      padding: 1rem;
+    }
+
+    .cta-kicker {
+      margin-bottom: 0.2rem;
+    }
+
+    .cta-card h2 {
+      margin: 0;
+    }
+
+    .cta-button {
+      margin-top: 0.15rem;
+    }
+
+    .hero-showcase {
+      min-height: 450px;
+      width: 100%;
+      max-width: 100%;
+      overflow: visible;
+    }
+
+    .main-card {
+      inset: 62px 0 82px;
+      padding: 1.2rem;
+      border-radius: 24px;
+      transform: none;
+    }
+
+    .showcase-card,
+    .floating-card {
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    .floating-card-one {
+      left: auto;
+      right: 0;
+      width: min(72%, 284px);
+      max-width: none;
+    }
+
+    .floating-card-two {
+      left: 0;
+      right: auto;
+      width: min(70%, 250px);
+      max-width: none;
+    }
+
+    .floating-card strong {
+      display: block;
+      overflow-wrap: break-word;
+    }
+
+    .main-card h4 {
+      max-width: 100%;
+      font-size: clamp(2rem, 10vw, 2.85rem);
+    }
+
+    .progress-line {
+      height: 7px;
+      margin: 1.05rem 0;
+    }
+
+    .showcase-stats {
+      gap: 0.55rem 1rem;
+      font-size: 0.86rem;
+    }
+
+    .floating-card {
+      max-width: min(72%, 284px);
+      padding: 0.75rem 0.88rem;
+      border-radius: 15px;
+    }
+
+    .floating-card span {
+      font-size: 0.68rem;
+    }
+
+    .floating-card strong {
+      font-size: 0.86rem;
+    }
+
+    .floating-card-one {
+      top: 0;
+      right: 0;
+    }
+
+    .floating-card-two {
+      bottom: 16px;
+      left: 0;
+      max-width: min(70%, 250px);
+    }
+
+    .sterium-page :global(.gradient-divider) {
+      margin: 0.35rem 0;
+    }
+
+    .hero-text,
+    .intro-section p,
+    .feature-card p,
+    .spotlight p,
+    .community-banner p,
+    .cta-section > p {
+      margin: 0;
+    }
+
+    .intro-section {
+      padding: 0.8rem 0 0.25rem;
+    }
+
+    .sterium-gallery-section {
+      padding: 0.75rem 0 1rem;
+    }
+
+    .gallery-heading {
+      margin-bottom: 0.7rem;
+    }
+
+    .sterium-gallery {
+      width: min(68vw, 250px);
+      padding: 0.45rem 0 2.35rem;
+    }
+
+    .gallery-track-container {
+      border-radius: 22px;
+    }
+
+    .gallery-slide img {
+      border-radius: 22px;
+    }
+
+    .gallery-button {
+      top: 45%;
+      width: 34px;
+      height: 34px;
+    }
+
+    .gallery-button img {
+      width: 13px;
+      height: 13px;
+    }
+
+    .gallery-button-left {
+      left: 0.1rem;
+    }
+
+    .gallery-button-right {
+      right: 0.1rem;
+    }
+
+    .gallery-meta {
+      width: min(250px, 70%);
+      font-size: 0.7rem;
+    }
+
+    .feature-grid {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      padding: 0.45rem 0 0.75rem;
+    }
+
+    .feature-card {
+      min-height: auto;
+      padding: 1.15rem;
+      border-radius: 20px;
+    }
+
+    .feature-card.wide {
+      grid-column: span 1;
+      min-height: auto;
+    }
+
+    .reader-preview-top {
+      flex-direction: column;
+    }
+
+    .spotlight {
+      gap: 0.85rem;
+      padding: 0.8rem 0 0.7rem;
+    }
+
+    .share-demo {
+      padding: 1.25rem 1rem;
+      border-radius: 22px;
+    }
+
+    .share-row {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .share-row strong {
+      text-align: left;
+    }
+
+    .details-section {
+      padding: 0.85rem 0 0.7rem;
+    }
+
+    .section-heading {
+      margin-bottom: 0.75rem;
+    }
+
+    .details-list {
+      gap: 0.7rem;
+    }
+
+    .community-banner {
+      align-items: stretch;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin: 0.35rem 0 1.25rem;
+      padding: 1.2rem 1.2rem 2.5rem;
+      border-radius: 22px;
+    }
+
+    .community-banner .primary-button {
+      width: 100%;
+    }
+
+    .cta-section {
+      padding: 0.35rem 0 0;
+    }
+
+    .cta-grid {
+      gap: 0.85rem;
+      margin-top: 1.25rem;
+    }
+
+    .cta-card {
+      min-height: 170px;
+      padding: 1.1rem;
+      border-radius: 20px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .floating-card,
+    .progress-line span {
+      animation: none;
+    }
+
+    .gallery-track,
+    .gallery-slide,
+    .gallery-progress span {
+      transition: none;
+    }
+  }
+</style>
