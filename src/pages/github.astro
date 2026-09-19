@@ -609,6 +609,16 @@ import GradientDivider from "../components/GradientDivider.astro";
     margin: 0.5rem 0 !important;
   }
 
+  /* Use the page heading font on every GitHub-page button/control */
+  .github-page .primary-button,
+  .github-page .secondary-button,
+  .github-page .discussion-link,
+  .github-page .app-link,
+  .github-page .app-dropdown > summary {
+    font-family: var(--font-heading) !important;
+    font-weight: 900;
+  }
+
   /* Local button legibility overrides (scoped to this page) */
   .github-page .raised-button {
     font-family: var(--font-heading) !important;
