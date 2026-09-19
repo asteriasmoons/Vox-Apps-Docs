@@ -1430,20 +1430,44 @@ const lureliaGalleryImages = [
     .hero-showcase {
       min-height: 450px;
       width: 100%;
-      min-width: 0;
       max-width: 100%;
-      justify-self: stretch;
       overflow: visible;
     }
 
     .main-card {
       inset: 62px 0 82px;
-      width: auto;
-      min-width: 0;
-      max-width: 100%;
       padding: 1.2rem;
       border-radius: 24px;
       transform: none;
+    }
+
+    /* Lurelia's longer showcase copy changes the intrinsic size of the
+       absolutely-positioned cards. On phones, size those cards from the
+       showcase viewport instead of from their text so they stay anchored
+       exactly like Markly's. */
+    .showcase-card,
+    .floating-card {
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    .floating-card-one {
+      left: auto;
+      right: 0;
+      width: min(72%, 284px);
+      max-width: none;
+    }
+
+    .floating-card-two {
+      left: 0;
+      right: auto;
+      width: min(70%, 250px);
+      max-width: none;
+    }
+
+    .floating-card strong {
+      display: block;
+      overflow-wrap: break-word;
     }
 
     .main-card h4 {
