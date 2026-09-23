@@ -121,16 +121,19 @@ import GradientDivider from "../components/GradientDivider.astro";
 
         <div class="ecosystem-caption-grid">
           <article>
+            <img class="ecosystem-card-icon" src="/img/icons/sparkle/sparkle.svg" alt="" aria-hidden="true" />
             <strong>Same core forms</strong>
             <span>Each app uses the same support categories and submission flow.</span>
           </article>
 
           <article>
+            <img class="ecosystem-card-icon" src="/img/icons/sparkle/sparkle.svg" alt="" aria-hidden="true" />
             <strong>App-aware context</strong>
             <span>The originating app is carried with the report automatically.</span>
           </article>
 
           <article>
+            <img class="ecosystem-card-icon" src="/img/icons/sparkle/sparkle.svg" alt="" aria-hidden="true" />
             <strong>One support destination</strong>
             <span>Submissions flow into Voxiverse Support for review and follow-up.</span>
           </article>
@@ -2219,6 +2222,29 @@ import GradientDivider from "../components/GradientDivider.astro";
     width: 18px;
     height: 18px;
     display: block;
+    object-fit: contain;
+  }
+</style>
+
+
+<style>
+  .ecosystem-caption-grid article::before {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+  }
+
+  .ecosystem-card-icon {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 34px;
+    height: 34px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--surface-raised);
     object-fit: contain;
   }
 </style>
