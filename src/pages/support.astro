@@ -1932,4 +1932,200 @@ import GradientDivider from "../components/GradientDivider.astro";
       width: 100%;
     }
   }
+
+  /* Refined ecosystem map: rings stay behind the hub and never cut through app pills. */
+  .app-ring {
+    min-height: 560px;
+    padding: 1.25rem;
+  }
+
+  .app-ring::before {
+    width: min(62%, 300px);
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .app-ring::after {
+    width: min(46%, 220px);
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .ecosystem-center {
+    width: 172px;
+    height: 172px;
+    padding: 1rem;
+  }
+
+  .ecosystem-center strong {
+    font-size: 1.08rem;
+  }
+
+  .ecosystem-center small {
+    max-width: 135px;
+    font-size: 0.72rem;
+  }
+
+  .app-node {
+    min-width: 104px;
+    min-height: 42px;
+  }
+
+  .app-node-1 {
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .app-node-2 {
+    top: 25%;
+    right: 5%;
+  }
+
+  .app-node-3 {
+    bottom: 25%;
+    right: 5%;
+  }
+
+  .app-node-4 {
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .app-node-5 {
+    bottom: 25%;
+    left: 5%;
+  }
+
+  .app-node-6 {
+    top: 25%;
+    left: 5%;
+  }
+
+  @media (max-width: 680px) {
+    .app-ring {
+      min-height: 500px !important;
+      padding: 1rem !important;
+      border-radius: 24px;
+    }
+
+    .app-ring::before {
+      width: 245px !important;
+      height: 245px !important;
+    }
+
+    .app-ring::after {
+      width: 185px !important;
+      height: 185px !important;
+    }
+
+    .ecosystem-center {
+      width: 148px !important;
+      height: 148px !important;
+      padding: 0.8rem !important;
+    }
+
+    .ecosystem-center span {
+      font-size: 0.58rem;
+    }
+
+    .ecosystem-center strong {
+      font-size: 0.98rem;
+      line-height: 1.05;
+    }
+
+    .ecosystem-center small {
+      max-width: 116px;
+      font-size: 0.62rem;
+      line-height: 1.25;
+    }
+
+    .app-node {
+      min-width: 86px !important;
+      min-height: 38px !important;
+      padding: 0.45rem 0.58rem !important;
+      font-size: 0.68rem !important;
+      white-space: nowrap;
+    }
+
+    .app-node-1 {
+      top: 5% !important;
+      left: 50% !important;
+      right: auto !important;
+      bottom: auto !important;
+      transform: translateX(-50%) !important;
+    }
+
+    .app-node-2 {
+      top: 23% !important;
+      right: 4% !important;
+      left: auto !important;
+      bottom: auto !important;
+      transform: none !important;
+    }
+
+    .app-node-3 {
+      top: auto !important;
+      right: 4% !important;
+      bottom: 23% !important;
+      left: auto !important;
+      transform: none !important;
+    }
+
+    .app-node-4 {
+      top: auto !important;
+      right: auto !important;
+      bottom: 5% !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
+
+    .app-node-5 {
+      top: auto !important;
+      right: auto !important;
+      bottom: 23% !important;
+      left: 4% !important;
+      transform: none !important;
+    }
+
+    .app-node-6 {
+      top: 23% !important;
+      right: auto !important;
+      bottom: auto !important;
+      left: 4% !important;
+      transform: none !important;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .app-ring {
+      min-height: 455px !important;
+    }
+
+    .app-ring::before {
+      width: 210px !important;
+      height: 210px !important;
+    }
+
+    .app-ring::after {
+      width: 160px !important;
+      height: 160px !important;
+    }
+
+    .ecosystem-center {
+      width: 132px !important;
+      height: 132px !important;
+    }
+
+    .ecosystem-center small {
+      font-size: 0.57rem;
+    }
+
+    .app-node {
+      min-width: 78px !important;
+      font-size: 0.63rem !important;
+    }
+  }
+
 </style>
