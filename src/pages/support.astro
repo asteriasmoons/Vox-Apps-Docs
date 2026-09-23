@@ -195,7 +195,7 @@ import GradientDivider from "../components/GradientDivider.astro";
           <div class="card-glow"></div>
 
           <div class="report-icon" aria-hidden="true">
-            <span>✦</span>
+            <img src="/img/icons/sparkle/sparkle.svg" alt="" />
           </div>
 
           <div class="report-card-copy">
@@ -361,7 +361,7 @@ import GradientDivider from "../components/GradientDivider.astro";
         </article>
 
         <article class="submitted-card sample-two">
-          <div class="submitted-icon">✦</div>
+          <div class="submitted-icon"><img src="/img/icons/sparkle/sparkle.svg" alt="" aria-hidden="true" /></div>
           <strong>Testing the redesigned reading stats</strong>
           <span>Beta Feedback</span>
           <code>LUM-4D12E9AF</code>
@@ -1642,7 +1642,7 @@ import GradientDivider from "../components/GradientDivider.astro";
   }
 
   .ecosystem-caption-grid article::before {
-    content: "✦";
+    content: "";
     position: absolute;
     left: 1rem;
     top: 1rem;
@@ -2198,4 +2198,27 @@ import GradientDivider from "../components/GradientDivider.astro";
     }
   }
 
+
+  .ecosystem-caption-grid article::before {
+    background-image: url("/img/icons/sparkle/sparkle.svg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 18px 18px !important;
+  }
+
+  .report-icon img,
+  .control-number img {
+    width: 18px;
+    height: 18px;
+    display: block;
+    object-fit: contain;
+  }
+
+
+  .submitted-icon img {
+    width: 18px;
+    height: 18px;
+    display: block;
+    object-fit: contain;
+  }
 </style>
