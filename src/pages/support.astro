@@ -96,17 +96,26 @@ import GradientDivider from "../components/GradientDivider.astro";
 
       <div class="ecosystem-map" aria-label="Six Voxiverse apps connected to one report system">
         <div class="app-ring">
-          <span class="app-node app-node-1">Loomey</span>
+          <span class="app-node app-node-1">
+            <span class="app-name">Loomey</span>
+            <span class="report-type-pill">Bug Reports</span>
+          </span>
           <span class="app-node app-node-2">Lurelia</span>
-          <span class="app-node app-node-3">Lunixia</span>
+          <span class="app-node app-node-3">
+            <span class="app-name">Lunixia</span>
+            <span class="report-type-pill">Feature Requests</span>
+          </span>
           <span class="app-node app-node-4">VoxTerm</span>
-          <span class="app-node app-node-5">Sterium</span>
+          <span class="app-node app-node-5">
+            <span class="app-name">Sterium</span>
+            <span class="report-type-pill">Beta Feedback</span>
+          </span>
           <span class="app-node app-node-6">Markly</span>
 
           <div class="ecosystem-center">
             <span>VOXIVERSE</span>
             <strong>Report Center</strong>
-            <small>Bug Reports · Beta Feedback · Feature Requests</small>
+            <small>One connected support system</small>
           </div>
         </div>
 
@@ -2125,6 +2134,67 @@ import GradientDivider from "../components/GradientDivider.astro";
     .app-node {
       min-width: 78px !important;
       font-size: 0.63rem !important;
+    }
+  }
+
+
+  /* Report-type pills attached to three app nodes. */
+  .app-node-1,
+  .app-node-3,
+  .app-node-5 {
+    overflow: visible !important;
+  }
+
+  .app-node .app-name {
+    display: block;
+  }
+
+  .app-node-1,
+  .app-node-3,
+  .app-node-5 {
+    flex-direction: column;
+  }
+
+  .report-type-pill {
+    position: absolute;
+    top: calc(100% + 7px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: max-content;
+    min-height: 26px;
+    padding: 0.28rem 0.58rem;
+    border: 1px solid color-mix(in srgb, #67c7f3 70%, white 10%);
+    border-radius: 999px;
+    background: #67c7f3;
+    color: #101016;
+    font-family: var(--font-heading);
+    font-size: 0.58rem;
+    font-weight: 900;
+    line-height: 1;
+    box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.24),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+    z-index: 6;
+  }
+
+  @media (max-width: 680px) {
+    .report-type-pill {
+      top: calc(100% + 6px);
+      min-height: 23px;
+      padding: 0.25rem 0.48rem;
+      font-size: 0.52rem;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .report-type-pill {
+      min-height: 21px;
+      padding: 0.22rem 0.42rem;
+      font-size: 0.48rem;
     }
   }
 
