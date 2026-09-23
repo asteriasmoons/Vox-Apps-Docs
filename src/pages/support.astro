@@ -33,14 +33,12 @@ import GradientDivider from "../components/GradientDivider.astro";
       </div>
 
       <div class="hero-visual" aria-label="Voxiverse report flow">
-        <div class="hero-orbit hero-orbit-one"></div>
-        <div class="hero-orbit hero-orbit-two"></div>
-
         <article class="hero-system-card">
           <span class="system-kicker">SHARED VOXIVERSE REPORT SYSTEM</span>
           <strong>One support flow across six Voxiverse apps</strong>
           <span>
-            Use the same Report Center flow in Loomey, Lurelia, Lunixia, VoxTerm, Sterium, or Markly.
+            Use the same Report Center flow in Loomey, Lurelia, Lunixia, VoxTerm,
+            Sterium, or Markly.
           </span>
 
           <div class="system-flow">
@@ -52,22 +50,24 @@ import GradientDivider from "../components/GradientDivider.astro";
             <span class="flow-line"></span>
             <span>Reply</span>
           </div>
-        </article>
 
-        <article class="floating-status-card floating-status-one">
-          <span class="status-dot"></span>
-          <span>
-            <b>Automatic diagnostics</b>
-            <small>App, version, build, device, iOS, locale &amp; time zone</small>
-          </span>
-        </article>
+          <div class="hero-support-details">
+            <div class="hero-detail-card">
+              <span class="status-dot"></span>
+              <span>
+                <b>Automatic diagnostics</b>
+                <small>App, version, build, device, iOS, locale &amp; time zone</small>
+              </span>
+            </div>
 
-        <article class="floating-status-card floating-status-two">
-          <span class="message-pulse"></span>
-          <span>
-            <b>Private follow-up</b>
-            <small>Invitation, unread status, replies &amp; attachments</small>
-          </span>
+            <div class="hero-detail-card">
+              <span class="message-pulse"></span>
+              <span>
+                <b>Private follow-up</b>
+                <small>Invitation, unread status, replies &amp; attachments</small>
+              </span>
+            </div>
+          </div>
         </article>
       </div>
 
@@ -1835,5 +1835,101 @@ import GradientDivider from "../components/GradientDivider.astro";
   .support-page .secondary-button {
     font-family: var(--font-kicker) !important;
     font-weight: 900;
+  }
+
+  /* Mobile-safe hero composition: no decorative circles or overlapping cards. */
+  .hero-visual {
+    min-height: 0 !important;
+    display: block !important;
+    margin: 0 0 1rem !important;
+    padding: 0 !important;
+  }
+
+  .hero-orbit,
+  .floating-status-card {
+    display: none !important;
+  }
+
+  .hero-system-card {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 1.4rem !important;
+    animation: none !important;
+    overflow: hidden !important;
+  }
+
+  .hero-system-card::before {
+    display: none !important;
+  }
+
+  .hero-support-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .hero-detail-card {
+    position: static !important;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    min-width: 0;
+    padding: 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    background: var(--surface-standard);
+  }
+
+  .hero-detail-card > span:last-child {
+    min-width: 0;
+  }
+
+  .hero-detail-card b,
+  .hero-detail-card small {
+    display: block;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-detail-card b {
+    margin-bottom: 0.2rem;
+    color: var(--heading-small);
+  }
+
+  .hero-detail-card small {
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  .hero-detail-card .status-dot,
+  .hero-detail-card .message-pulse {
+    flex: 0 0 auto;
+    margin-top: 0.3rem;
+  }
+
+  @media (max-width: 680px) {
+    .hero-visual {
+      min-height: 0 !important;
+      margin-top: 0 !important;
+    }
+
+    .hero-system-card {
+      margin-top: 0 !important;
+      padding: 1.1rem !important;
+      border-radius: 22px !important;
+    }
+
+    .system-flow {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 0.55rem !important;
+    }
+
+    .hero-support-details {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-detail-card {
+      width: 100%;
+    }
   }
 </style>
