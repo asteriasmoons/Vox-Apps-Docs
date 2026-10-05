@@ -2756,3 +2756,23 @@ import GradientDivider from "../components/GradientDivider.astro";
     color: var(--accent-blue) !important;
   }
 </style>
+
+<style>
+  /* Exact support-flow fixes: blue report labels + larger destination eyebrow. */
+  .support-intake-board .shared-report-types span {
+    color: #69c9f2 !important;
+    -webkit-text-fill-color: #69c9f2 !important;
+  }
+
+  .support-intake-board .support-destination small {
+    font-size: 1.15rem !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  @media (max-width: 680px) {
+    .support-intake-board .support-destination small {
+      font-size: 1.05rem !important;
+    }
+  }
+</style>
