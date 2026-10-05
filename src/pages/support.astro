@@ -413,9 +413,9 @@ import GradientDivider from "../components/GradientDivider.astro";
           <div class="submitted-icon">
           <img src="/img/icons/bug.svg" alt="" />
           </div>
-          <strong>Book page freezes after editing notes</strong>
+          <strong>Lunixia mood history stops refreshing</strong>
           <span>Bug Report</span>
-          <code>LUM-8F31A2C4</code>
+          <code>LUN-8F31A2C4</code>
           <div class="submitted-status">
             <span class="status-badge status-new">Submitted</span>
           </div>
@@ -425,9 +425,9 @@ import GradientDivider from "../components/GradientDivider.astro";
           <div class="submitted-icon">
             <img src="/img/icons/feedback.svg" alt="" />
           </div>
-          <strong>Testing the redesigned reading stats</strong>
+          <strong>Testing the redesigned routine timeline</strong>
           <span>Beta Feedback</span>
-          <code>LUM-4D12E9AF</code>
+          <code>LUR-4D12E9AF</code>
           <div class="submitted-status">
             <span class="status-badge status-invite">
               <span class="tiny-live-dot"></span>
@@ -440,9 +440,9 @@ import GradientDivider from "../components/GradientDivider.astro";
           <div class="submitted-icon">
           <img src="/img/icons/bulb.svg" alt="" />
           </div>
-          <strong>Custom reading-session templates</strong>
+          <strong>Custom terminal command groups</strong>
           <span>Feature Request</span>
-          <code>LUM-2B77CC10</code>
+          <code>VXT-2B77CC10</code>
           <div class="submitted-status">
             <span class="status-badge status-unread">
               <span class="tiny-live-dot"></span>
@@ -3081,5 +3081,43 @@ import GradientDivider from "../components/GradientDivider.astro";
 <style>
   .diagnostic-board .diagnostic-summary .diagnostic-auto {
     margin-bottom: 0 !important;
+  }
+</style>
+
+
+<style>
+  /* Submitted report samples: readable titles and mobile-safe highlight. */
+  .submitted-showcase .submitted-card strong {
+    font-family: var(--font-kicker) !important;
+    font-size: 1.35rem !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+    min-height: 0 !important;
+  }
+
+  @media (max-width: 760px) {
+    .submitted-showcase {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      overflow: hidden !important;
+    }
+
+    .submitted-showcase .submitted-card {
+      box-sizing: border-box !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      transform: none !important;
+    }
+
+    .submitted-showcase .submitted-card:hover {
+      transform: translateY(-3px) !important;
+    }
+
+    .submitted-showcase .submitted-card strong {
+      font-size: 1.25rem !important;
+      overflow-wrap: anywhere;
+    }
   }
 </style>
