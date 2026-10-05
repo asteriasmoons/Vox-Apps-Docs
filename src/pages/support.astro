@@ -3291,3 +3291,26 @@ import GradientDivider from "../components/GradientDivider.astro";
   }
 }
 </style>
+
+<style>
+/* Footer support card: remove the mobile dead space above the card title. */
+@media (max-width: 760px) {
+  .support-page .footer-note {
+    display: block !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding-top: 1rem !important;
+    align-content: start !important;
+    justify-content: start !important;
+  }
+
+  .support-page .footer-note > .eyebrow {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .support-page .footer-note > h2 {
+    margin-top: .45rem !important;
+  }
+}
+</style>
