@@ -3238,3 +3238,56 @@ import GradientDivider from "../components/GradientDivider.astro";
   margin-top: .65rem !important;
 }
 </style>
+
+<style>
+/* Mobile card containment: every card stays inside the viewport/content column. */
+@media (max-width: 760px) {
+  .support-page,
+  .support-page section,
+  .support-page section > *,
+  .support-page article,
+  .support-page aside,
+  .support-page [class*="-grid"],
+  .support-page [class*="-stage"],
+  .support-page [class*="-showcase"],
+  .support-page [class*="-controls"] {
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .support-page article,
+  .support-page .control-card,
+  .support-page .report-card,
+  .support-page .diagnostic-item,
+  .support-page .submitted-card,
+  .support-page .conversation-thread {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    transform: none !important;
+  }
+
+  .support-page [class*="-grid"],
+  .support-page [class*="-stage"],
+  .support-page [class*="-controls"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .support-page article:hover,
+  .support-page .control-card:hover,
+  .support-page .report-card:hover,
+  .support-page .submitted-card:hover {
+    transform: none !important;
+  }
+
+  .support-page article *,
+  .support-page .control-card *,
+  .support-page .report-card *,
+  .support-page .diagnostic-item *,
+  .support-page .submitted-card * {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+</style>
