@@ -3146,3 +3146,33 @@ import GradientDivider from "../components/GradientDivider.astro";
     }
   }
 </style>
+
+
+<style>
+  /* Tighten the report-conversation demo card vertically. */
+  .conversation-demo {
+    padding-top: 2rem !important;
+  }
+
+  .conversation-demo h3,
+  .conversation-demo .conversation-title {
+    margin-top: 0 !important;
+    margin-bottom: .85rem !important;
+  }
+
+  .conversation-demo .conversation-id,
+  .conversation-demo > p:first-of-type {
+    margin-top: 0 !important;
+  }
+
+  @media (max-width: 760px) {
+    .conversation-demo {
+      padding-top: 1.5rem !important;
+    }
+
+    .conversation-demo h3,
+    .conversation-demo .conversation-title {
+      margin-bottom: .65rem !important;
+    }
+  }
+</style>
