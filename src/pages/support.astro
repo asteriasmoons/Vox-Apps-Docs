@@ -242,11 +242,6 @@ import GradientDivider from "../components/GradientDivider.astro";
             <span>Expected Behavior</span>
             <span>Steps to Reproduce</span>
           </div>
-
-          <div class="card-footer">
-            <span>Up to 3 screenshots</span>
-            <span class="mini-arrow">→</span>
-          </div>
         </article>
 
         <article class="report-card report-card-beta">
@@ -273,11 +268,6 @@ import GradientDivider from "../components/GradientDivider.astro";
             <span>What Worked Well</span>
             <span>What Could Be Better</span>
           </div>
-
-          <div class="card-footer">
-            <span>Unexpected behavior + extra thoughts</span>
-            <span class="mini-arrow">→</span>
-          </div>
         </article>
 
         <article class="report-card report-card-feature">
@@ -303,11 +293,6 @@ import GradientDivider from "../components/GradientDivider.astro";
             <span>Audience</span>
             <span>Desired Location</span>
             <span>Requirements</span>
-          </div>
-
-          <div class="card-footer">
-            <span>Saved data, notifications, sharing &amp; AI</span>
-            <span class="mini-arrow">→</span>
           </div>
         </article>
       </div>
@@ -2801,5 +2786,13 @@ import GradientDivider from "../components/GradientDivider.astro";
   .report-card:nth-child(3) .report-icon {
     transform: none !important;
     rotate: 0deg !important;
+  }
+</style>
+
+
+<style>
+  /* Restore report-meta; only card-footer was meant to be removed. */
+  .report-card .report-meta {
+    display: flex !important;
   }
 </style>
