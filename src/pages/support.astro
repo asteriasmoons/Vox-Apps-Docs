@@ -39,7 +39,7 @@ import GradientDivider from "../components/GradientDivider.astro";
           <strong>One support flow across six Voxiverse apps</strong>
           <span>
             Use the same Report Center flow in Loomey, Lurelia, Lunixia,
-            VoxTerm, Sterium, or Markly.
+            VoxTerm, Sterium, or Dotti.
           </span>
 
           <div class="system-flow">
@@ -92,7 +92,7 @@ import GradientDivider from "../components/GradientDivider.astro";
         </h2>
 
         <p>
-          Loomey, Lurelia, Lunixia, VoxTerm, Sterium, and Markly all use the
+          Loomey, Lurelia, Lunixia, VoxTerm, Sterium, and Dotti all use the
           same core reporting flow. The app you submit from becomes part of the
           report context automatically, while Voxiverse Support receives
           everything through one connected system.
@@ -100,31 +100,66 @@ import GradientDivider from "../components/GradientDivider.astro";
       </div>
 
       <div
-        class="ecosystem-map"
-        aria-label="Six Voxiverse apps connected to one report system"
+        class="ecosystem-map ecosystem-flowboard"
+        aria-label="Six Voxiverse apps feeding one shared support system"
       >
-        <div class="app-ring">
-          <span class="app-node app-node-1">
-            <span class="app-name">Loomey</span>
-            <span class="report-type-pill">Bug Reports</span>
-          </span>
-          <span class="app-node app-node-2">Lurelia</span>
-          <span class="app-node app-node-3">
-            <span class="app-name">Lunixia</span>
-            <span class="report-type-pill">Feature Requests</span>
-          </span>
-          <span class="app-node app-node-4">VoxTerm</span>
-          <span class="app-node app-node-5">
-            <span class="app-name">Sterium</span>
-            <span class="report-type-pill">Beta Feedback</span>
-          </span>
-          <span class="app-node app-node-6">Markly</span>
-
-          <div class="ecosystem-center">
-            <span>VOXIVERSE</span>
-            <strong>Report Center</strong>
-            <small>One connected support system</small>
+        <div class="support-intake-board">
+          <div class="intake-apps" aria-label="Voxiverse apps">
+            <span class="intake-app">Loomey</span>
+            <span class="intake-app">Lurelia</span>
+            <span class="intake-app">Lunixia</span>
+            <span class="intake-app">VoxTerm</span>
+            <span class="intake-app">Sterium</span>
+            <span class="intake-app">Dotti</span>
           </div>
+
+          <div class="intake-connector" aria-hidden="true">
+            <span></span>
+            <b>↓</b>
+          </div>
+
+          <article class="shared-report-center">
+            <p class="report-center-kicker">SHARED ACROSS EVERY APP</p>
+            <h3>Voxiverse Report Center</h3>
+            <p>
+              Start in the app you are already using. The same three report
+              paths are available across the Voxiverse.
+            </p>
+
+            <div class="shared-report-types">
+              <span>
+                <img src="/img/icons/bug.svg" alt="" aria-hidden="true" />
+                Bug Report
+              </span>
+              <span>
+                <img src="/img/icons/feedback.svg" alt="" aria-hidden="true" />
+                Beta Feedback
+              </span>
+              <span>
+                <img src="/img/icons/bulb.svg" alt="" aria-hidden="true" />
+                Feature Request
+              </span>
+            </div>
+          </article>
+
+          <div class="intake-connector" aria-hidden="true">
+            <span></span>
+            <b>↓</b>
+          </div>
+
+          <article class="support-destination">
+            <span class="destination-mark">
+              <img src="/img/icons/sparkle.svg" alt="" aria-hidden="true" />
+            </span>
+            <div>
+              <small>ONE CONNECTED DESTINATION</small>
+              <strong>Voxiverse Support</strong>
+              <p>
+                App context and diagnostics travel with the report, then any
+                follow-up stays connected to that submission.
+              </p>
+            </div>
+          </article>
         </div>
 
         <div class="ecosystem-caption-grid">
@@ -136,9 +171,7 @@ import GradientDivider from "../components/GradientDivider.astro";
               aria-hidden="true"
             />
             <strong>Same core forms</strong>
-            <span
-              >Each app uses the same support categories and submission flow.</span
-            >
+            <span>Each app uses the same support categories and submission flow.</span>
           </article>
 
           <article>
@@ -149,9 +182,7 @@ import GradientDivider from "../components/GradientDivider.astro";
               aria-hidden="true"
             />
             <strong>App-aware context</strong>
-            <span
-              >The originating app is carried with the report automatically.</span
-            >
+            <span>The originating app is carried with the report automatically.</span>
           </article>
 
           <article>
@@ -162,9 +193,7 @@ import GradientDivider from "../components/GradientDivider.astro";
               aria-hidden="true"
             />
             <strong>One support destination</strong>
-            <span
-              >Submissions flow into Voxiverse Support for review and follow-up.</span
-            >
+            <span>Submissions flow into Voxiverse Support for review and follow-up.</span>
           </article>
         </div>
       </div>
@@ -520,8 +549,8 @@ import GradientDivider from "../components/GradientDivider.astro";
             <span class="control-number">01</span>
             <strong>Invitation first</strong>
             <p>
-              If Voxiverse wants to discuss a report privately, Loomey shows an
-              invitation and first message.
+              If Voxiverse wants to discuss a report privately, the originating app shows
+              an invitation and first message.
             </p>
           </article>
 
@@ -2425,5 +2454,230 @@ import GradientDivider from "../components/GradientDivider.astro";
     border-radius: 12px;
     background: var(--surface-raised);
     object-fit: contain;
+  }
+</style>
+
+
+<style>
+  /* Ecosystem support flowboard — replaces the old orbital chart. */
+  .ecosystem-flowboard {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.65fr) !important;
+    gap: 1rem !important;
+    align-items: stretch;
+  }
+
+  .support-intake-board {
+    padding: clamp(1rem, 3vw, 1.6rem);
+    border: 1px solid var(--color-border);
+    border-radius: 28px;
+    background: var(--surface-standard);
+    overflow: hidden;
+  }
+
+  .intake-apps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.7rem;
+  }
+
+  .intake-app {
+    display: grid;
+    place-items: center;
+    min-height: 48px;
+    padding: 0.65rem 0.55rem;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    background: var(--surface-raised);
+    color: var(--heading-small);
+    font-family: var(--font-heading);
+    font-weight: 900;
+    text-align: center;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .intake-connector {
+    display: grid;
+    justify-items: center;
+    height: 54px;
+    color: var(--accent-periwinkle);
+  }
+
+  .intake-connector span {
+    width: 1px;
+    height: 30px;
+    background: linear-gradient(
+      180deg,
+      transparent,
+      var(--accent-periwinkle)
+    );
+  }
+
+  .intake-connector b {
+    margin-top: -4px;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .shared-report-center {
+    position: relative;
+    padding: clamp(1.1rem, 3vw, 1.55rem);
+    border: 1px solid color-mix(in srgb, var(--accent-periwinkle) 65%, var(--color-border));
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--accent-periwinkle) 12%, transparent), transparent 52%),
+      var(--surface-raised);
+    text-align: center;
+  }
+
+  .report-center-kicker {
+    margin: 0 0 0.35rem;
+    color: var(--text-muted);
+    font-family: var(--font-kicker);
+    font-size: 0.66rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+  }
+
+  .shared-report-center h3 {
+    margin: 0;
+    color: var(--heading-small);
+    font-size: clamp(1.25rem, 4vw, 1.65rem);
+  }
+
+  .shared-report-center > p:not(.report-center-kicker) {
+    max-width: 560px;
+    margin: 0.55rem auto 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .shared-report-types {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.65rem;
+    margin-top: 1rem;
+  }
+
+  .shared-report-types span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 44px;
+    padding: 0.55rem;
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    background: var(--surface-standard);
+    color: var(--heading-small);
+    font-size: 0.72rem;
+    font-weight: 900;
+    line-height: 1.2;
+  }
+
+  .shared-report-types img {
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+    flex: 0 0 auto;
+  }
+
+  .support-destination {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    background: var(--surface-raised);
+  }
+
+  .destination-mark {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    border: 1px solid var(--color-border);
+    border-radius: 15px;
+    background: var(--surface-standard);
+  }
+
+  .destination-mark img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+  }
+
+  .support-destination small,
+  .support-destination strong,
+  .support-destination p {
+    display: block;
+  }
+
+  .support-destination small {
+    color: var(--text-muted);
+    font-family: var(--font-kicker);
+    font-size: 0.62rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+  }
+
+  .support-destination strong {
+    margin-top: 0.15rem;
+    color: var(--heading-small);
+    font-size: 1.08rem;
+  }
+
+  .support-destination p {
+    margin: 0.25rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  @media (max-width: 980px) {
+    .ecosystem-flowboard {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .support-intake-board {
+      padding: 0.9rem;
+      border-radius: 22px;
+    }
+
+    .intake-apps {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.55rem;
+    }
+
+    .intake-app {
+      min-height: 42px;
+      border-radius: 14px;
+      font-size: 0.72rem;
+    }
+
+    .shared-report-center {
+      padding: 1rem;
+      border-radius: 20px;
+    }
+
+    .shared-report-types {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+
+    .shared-report-types span {
+      justify-content: flex-start;
+      min-height: 40px;
+      padding-inline: 0.8rem;
+    }
+
+    .support-destination {
+      align-items: flex-start;
+      padding: 0.9rem;
+    }
   }
 </style>
