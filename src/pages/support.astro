@@ -2685,8 +2685,23 @@ import GradientDivider from "../components/GradientDivider.astro";
 
 
 
+
 <style>
+  /* Donuts Chocolate only for the mint/green text inside the top shared-report box. */
+  .hero-system-card > strong,
   .hero-support-details .hero-detail-card b {
     font-family: var(--font-kicker) !important;
+  }
+
+  .hero-support-details .hero-detail-card b {
+    font-size: 1rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 680px) {
+    .hero-support-details .hero-detail-card b {
+      font-size: 0.95rem !important;
+    }
   }
 </style>
