@@ -3209,3 +3209,32 @@ import GradientDivider from "../components/GradientDivider.astro";
   }
 }
 </style>
+
+<style>
+/* Conversation mockup — intentionally compact; override the original 520px minimum. */
+#conversation .conversation-thread {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 1rem !important;
+}
+#conversation .conversation-header {
+  margin: 0 0 .65rem !important;
+  padding: 0 0 .65rem !important;
+  gap: .2rem !important;
+}
+#conversation .conversation-header .eyebrow {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#conversation .conversation-header > span:last-child {
+  width: 100% !important;
+  margin: .2rem 0 0 !important;
+}
+#conversation .message-row {
+  margin: .65rem 0 !important;
+}
+#conversation .typing-card {
+  margin-top: .65rem !important;
+}
+</style>
