@@ -3176,3 +3176,36 @@ import GradientDivider from "../components/GradientDivider.astro";
     }
   }
 </style>
+
+<style>
+/* Remove ALL excess vertical whitespace from the report conversation demo card */
+.conversation-demo {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  gap: 0 !important;
+}
+.conversation-demo h3,
+.conversation-demo .conversation-title {
+  margin: 0 0 .25rem 0 !important;
+  padding: 0 !important;
+}
+.conversation-demo .conversation-id,
+.conversation-demo > p:first-of-type {
+  margin: 0 0 .5rem 0 !important;
+  padding: 0 !important;
+}
+.conversation-demo hr {
+  margin: .35rem 0 .65rem !important;
+}
+.conversation-demo .conversation-thread,
+.conversation-demo .conversation-messages {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+@media (max-width: 760px) {
+  .conversation-demo {
+    padding-top: .75rem !important;
+    padding-bottom: .75rem !important;
+  }
+}
+</style>
