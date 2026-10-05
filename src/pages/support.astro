@@ -3121,3 +3121,28 @@ import GradientDivider from "../components/GradientDivider.astro";
     }
   }
 </style>
+
+
+<style>
+  /* Submitted cards: keep the first card below the section copy and make titles unmistakably larger. */
+  #submitted .submitted-showcase {
+    margin-top: 1.75rem !important;
+  }
+
+  #submitted .submitted-card strong {
+    font-family: var(--font-kicker) !important;
+    font-size: 1.75rem !important;
+    line-height: 1.18 !important;
+  }
+
+  @media (max-width: 760px) {
+    #submitted .submitted-showcase {
+      margin-top: 2rem !important;
+    }
+
+    #submitted .submitted-card strong {
+      font-size: 1.6rem !important;
+      line-height: 1.2 !important;
+    }
+  }
+</style>
