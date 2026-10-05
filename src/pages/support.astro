@@ -2705,3 +2705,30 @@ import GradientDivider from "../components/GradientDivider.astro";
     }
   }
 </style>
+
+<style>
+  /* Size tuning for green Donuts Chocolate text in the top shared-report box only. */
+  .hero-system-card > strong {
+    font-size: clamp(1.9rem, 5vw, 2.75rem) !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+  }
+
+  .hero-support-details .hero-detail-card b {
+    font-size: 1.3rem !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+  }
+
+  @media (max-width: 680px) {
+    .hero-system-card > strong {
+      font-size: 1.9rem !important;
+      line-height: 1.3 !important;
+    }
+
+    .hero-support-details .hero-detail-card b {
+      font-size: 1.2rem !important;
+      line-height: 1.25 !important;
+    }
+  }
+</style>
