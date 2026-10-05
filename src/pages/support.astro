@@ -148,9 +148,6 @@ import GradientDivider from "../components/GradientDivider.astro";
           </div>
 
           <article class="support-destination">
-            <span class="destination-mark">
-              <img src="/img/icons/sparkle.svg" alt="" aria-hidden="true" />
-            </span>
             <div>
               <small>ONE CONNECTED DESTINATION</small>
               <strong>Voxiverse Support</strong>
@@ -2730,5 +2727,32 @@ import GradientDivider from "../components/GradientDivider.astro";
       font-size: 1.2rem !important;
       line-height: 1.25 !important;
     }
+  }
+</style>
+
+
+<style>
+  /* Support-flow refinements */
+  .support-destination {
+    gap: 0 !important;
+  }
+
+  .support-destination > div {
+    width: 100%;
+  }
+
+  .support-destination small {
+    font-size: 0.9rem !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .support-destination strong {
+    font-size: 0.9rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .shared-report-types span {
+    color: var(--accent-blue) !important;
   }
 </style>
