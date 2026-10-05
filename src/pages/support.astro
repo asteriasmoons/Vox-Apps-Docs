@@ -3061,3 +3061,25 @@ import GradientDivider from "../components/GradientDivider.astro";
     }
   }
 </style>
+
+<style>
+  /* Make AUTO ATTACHED a real, readable eyebrow in the diagnostics animation. */
+  .diagnostic-board .diagnostic-summary .diagnostic-auto {
+    font-size: 1.15rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.1em !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  @media (max-width: 680px) {
+    .diagnostic-board .diagnostic-summary .diagnostic-auto {
+      font-size: 1.1rem !important;
+    }
+  }
+</style>
+
+<style>
+  .diagnostic-board .diagnostic-summary .diagnostic-auto {
+    margin-bottom: 0 !important;
+  }
+</style>
